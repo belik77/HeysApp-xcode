@@ -1,0 +1,31 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "fullscreen": true,
+        "id": "RatingScreen",
+        "itemId": "RatingScreen",
+        "designer|userClassName": "RatingScreen",
+        "layout": "fit"
+    },
+    "designerId": "2bf88e4f-07e0-4c26-ac82-5e912fa6435e",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "דרג את מקום הבילוי"
+            },
+            "designerId": "9e8c7b44-90c7-4fb4-b309-325c2275bca6"
+        }
+    ]
+}

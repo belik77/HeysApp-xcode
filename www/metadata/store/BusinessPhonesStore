@@ -1,0 +1,39 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "BusinessPhones",
+        "storeId": "BusinessPhonesStore",
+        "designer|userClassName": "BusinessPhonesStore"
+    },
+    "designerId": "70e043cb-75fd-4dbe-a128-679a9ae5584f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": null
+            },
+            "designerId": "c4e77f44-8793-48a4-9a1d-86204a77b605",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "f885ac94-16c5-436d-8aeb-8a9d97a98f31"
+                }
+            ]
+        }
+    ]
+}

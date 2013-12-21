@@ -1,0 +1,1205 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "businessbkgscreen"
+        ],
+        "fullscreen": true,
+        "html": null,
+        "id": "BusinessScreen",
+        "itemId": "BusinessScreen",
+        "designer|userClassName": "BusinessScreen"
+    },
+    "configAlternates": {
+        "business_id": "number",
+        "bus_id": "number",
+        "distance": "number"
+    },
+    "designerId": "f6d230c2-c2e5-496f-a941-a5117743396f",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "business_id",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "distance",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretchmax",
+                "cls": [
+                    "businessToolbar"
+                ],
+                "docked": "top",
+                "height": 35,
+                "id": "BusinessScreenTitle",
+                "itemId": "BusinessScreenTitle",
+                "title": null
+            },
+            "designerId": "59da37f1-67e3-427a-bc5f-1b43289e3b57",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "height": 48,
+                        "width": 315,
+                        "layout": "hbox"
+                    },
+                    "designerId": "170e3683-0f0b-400d-ac83-3924c53bebaa",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "baseCls": "backbtn",
+                                "docked": "left",
+                                "height": "",
+                                "id": "businessbackbtn",
+                                "itemId": "businessbackbtn",
+                                "margin": null,
+                                "minHeight": null,
+                                "width": "12%",
+                                "iconCls": null,
+                                "text": null
+                            },
+                            "designerId": "2ed49188-728e-438e-b3ad-d4f006a87ee3",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onbusinessbackbtnTap",
+                                        "implHandler": [
+                                            "//var Screen = Ext.ComponentQuery.query('#fbloginpanel');\r",
+                                            "\r",
+                                            "console.log('onbusinessbackbtnTap');\r",
+                                            "\r",
+                                            "Ext.Viewport.setActiveItem(Ext.ComponentQuery.query('#SearchScreen')[0]);\r",
+                                            "//Ext.Viewport.show();"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "e6527524-2697-4c41-bc4f-34e35f4149dc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "baseCls": "backbtn",
+                                "docked": "right",
+                                "id": "businessrefbtn",
+                                "itemId": "businessrefbtn",
+                                "padding": null,
+                                "width": "10%",
+                                "text": null
+                            },
+                            "designerId": "0d63a51c-c126-4c2f-b6e9-a7075b365dae",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onBusinessrefbtnTap",
+                                        "implHandler": [
+                                            "var controller = MyApp.app.getController( 'MyApp.controller.BusinessScreenControl');\r",
+                                            "controller.ReloadBusinessData();"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "b90a24ee-c509-4c3b-8054-afdb053cc4ad"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "baseCls": "backbtn",
+                                "docked": "right",
+                                "id": "contactbtn1",
+                                "itemId": "contactbtn1",
+                                "padding": null,
+                                "width": "10%",
+                                "text": null
+                            },
+                            "designerId": "ae1329f6-c26f-4a4a-b8d3-a82136261d87",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onMybutton29Tap1",
+                                        "implHandler": [
+                                            "//check if the screen was loaded already before\r",
+                                            "var Screen = Ext.ComponentQuery.query('#ContactScreen');\r",
+                                            "\r",
+                                            "if(Screen.length===0)//no\r",
+                                            "{\r",
+                                            "    Screen = Ext.create('MyApp.view.ContactScreen', {\r",
+                                            "        id: 'ContactScreen'\r",
+                                            "    });\r",
+                                            "\r",
+                                            "    Ext.Viewport.setActiveItem(Screen);\r",
+                                            "\r",
+                                            "\r",
+                                            "\r",
+                                            "}\r",
+                                            "else\r",
+                                            "{\r",
+                                            "    Ext.Viewport.setActiveItem(Screen[0]);\r",
+                                            "}"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "8d20e7f1-314a-44ad-8f7d-2223adf32764"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "html": "DEFAULT",
+                                "id": "businessnamelbl",
+                                "itemId": "businessnamelbl",
+                                "left": null,
+                                "margin": null
+                            },
+                            "designerId": "ab2227b3-e282-4f9b-ac4a-2624f36bddb4"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2
+                            },
+                            "designerId": "37081b2a-ec17-4342-8322-482454ce4fc3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "businessbottomToolbar"
+                ],
+                "docked": "bottom"
+            },
+            "designerId": "cda83075-d589-4b44-8744-4b315fb22647",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": "ratebutton",
+                        "id": "ratebtn",
+                        "itemId": "ratebtn",
+                        "left": null,
+                        "width": null,
+                        "text": null
+                    },
+                    "designerId": "b54e582a-3569-4af2-9985-ea6912b97701"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "scrollable": null
+            },
+            "designerId": "eef962c9-e6ac-45db-9275-2eace2a884ad",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "businessinnerbkgscreen"
+                        ],
+                        "height": "100%",
+                        "margin": "10 10 10 10",
+                        "layout": "vbox",
+                        "scrollable": "vertical"
+                    },
+                    "designerId": "b675526e-0de7-45c8-9b81-9dde341cb6aa",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "cls": [
+                                    "TransparentContainer",
+                                    "businessinfocont"
+                                ],
+                                "height": null,
+                                "ui": "",
+                                "layout": "vbox",
+                                "scrollable": "vertical"
+                            },
+                            "designerId": "1240ede0-ab92-4bd0-af67-c39d9eb55ca0",
+                            "cn": [
+                                {
+                                    "type": "Ext.TitleBar",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "baseCls": null,
+                                        "cls": [
+                                            "businesstitlestrip"
+                                        ],
+                                        "docked": null,
+                                        "height": null
+                                    },
+                                    "designerId": "681bfd8d-480d-4348-8d13-82c3bbeb9d27",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null,
+                                                "minWidth": "150%",
+                                                "width": null,
+                                                "layout": "hbox"
+                                            },
+                                            "designerId": "4b08d814-7144-44ac-ba64-6d8443afe73a",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Label",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 3,
+                                                        "baseCls": "BusinessScreenNameLabel",
+                                                        "docked": "left",
+                                                        "html": "Status",
+                                                        "id": null,
+                                                        "itemId": "statuslbl"
+                                                    },
+                                                    "designerId": "97e737e6-34ed-4c31-9237-8aace27ec562"
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "html": "<img src=\"resources/images/greydot.png\" height=\"8\" width=\"8\")>",
+                                                        "id": "dotcontainerbusiness",
+                                                        "itemId": "dotcontainerbusiness",
+                                                        "margin": "-6 4 0 20"
+                                                    },
+                                                    "designerId": "6cc2e0c6-ebf5-492f-b2f6-a71eeec1e7b2"
+                                                },
+                                                {
+                                                    "type": "Ext.Component",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 2,
+                                                        "baseCls": "lastupdateLabel",
+                                                        "docked": null,
+                                                        "height": null,
+                                                        "html": "Last Updated:<b>8 minutes ago</b>",
+                                                        "id": null,
+                                                        "itemId": "bslastupdatelbl",
+                                                        "left": null,
+                                                        "width": null
+                                                    },
+                                                    "designerId": "3a439597-988c-46f4-b403-1526b84a62cb"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 6,
+                                        "height": "100%",
+                                        "width": "100%",
+                                        "layout": "fit"
+                                    },
+                                    "designerId": "504b42c3-d5a7-49d9-96ca-2fb0fccab0bd",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "container|align": "stretchmax",
+                                                "height": null,
+                                                "margin": null,
+                                                "ui": "",
+                                                "width": "100%",
+                                                "layout": "hbox"
+                                            },
+                                            "designerId": "08c89930-0be2-4101-b4b7-63e2218735d1",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1.5,
+                                                        "margin": "10 0 10 10",
+                                                        "layout": "fit"
+                                                    },
+                                                    "designerId": "3bce889b-5e22-4bef-b2ab-7292a200d467",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "baseCls": null,
+                                                                "cls": [
+                                                                    "ListItemLogo"
+                                                                ],
+                                                                "docked": "top",
+                                                                "height": 70,
+                                                                "id": null,
+                                                                "itemId": "businessImage",
+                                                                "minHeight": null,
+                                                                "width": 70,
+                                                                "imageCls": null,
+                                                                "src": "resources/images/logo.png"
+                                                            },
+                                                            "designerId": "63ce34d9-118c-4adc-96e9-c2fa3f354079"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 4,
+                                                        "layout": "vbox"
+                                                    },
+                                                    "designerId": "f2854ba5-91d1-4d9d-8a18-c6e972a73938",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Container",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "layout|flex": 2,
+                                                                "layout": "hbox"
+                                                            },
+                                                            "designerId": "114a0222-77cf-4b6e-ba3d-efe442968f8a",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "Ext.Container",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "layout|flex": 3,
+                                                                        "margin": "10 10 10 0"
+                                                                    },
+                                                                    "designerId": "8527c9ab-027c-4e48-aec2-38675dffcea8",
+                                                                    "cn": [
+                                                                        {
+                                                                            "type": "Ext.Component",
+                                                                            "reference": {
+                                                                                "name": "items",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "cls": [
+                                                                                    "businessListItemInnerTitle"
+                                                                                ],
+                                                                                "docked": null,
+                                                                                "html": "line length: 103 min <br> 10.975 km <br> 48% full <br> +23",
+                                                                                "id": null,
+                                                                                "itemId": "businessTitle",
+                                                                                "styleHtmlCls": "BusinessListItemHtml",
+                                                                                "styleHtmlContent": true,
+                                                                                "width": "90%"
+                                                                            },
+                                                                            "designerId": "a63b14a4-0c6f-4bf7-baf8-a3f7b1c2fcae"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "type": "Ext.Container",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "layout|flex": 1.5,
+                                                                        "margin": "0 0 10 10",
+                                                                        "minHeight": null
+                                                                    },
+                                                                    "designerId": "276201fe-dca9-40aa-80cd-9e216f3bb0e6",
+                                                                    "cn": [
+                                                                        {
+                                                                            "type": "Ext.Component",
+                                                                            "reference": {
+                                                                                "name": "items",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "baseCls": "likesManWomCont",
+                                                                                "height": null,
+                                                                                "html": "78 <br> 51% <br> 49%",
+                                                                                "id": null,
+                                                                                "itemId": "businesslikeComp",
+                                                                                "margin": "0 10 10 0",
+                                                                                "maxHeight": 50,
+                                                                                "minHeight": null,
+                                                                                "padding": null,
+                                                                                "styleHtmlCls": "BusinessListItemHtml",
+                                                                                "styleHtmlContent": true,
+                                                                                "width": null
+                                                                            },
+                                                                            "designerId": "d2413020-3fc0-4820-95f1-fbc01fabb72e"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Ext.Container",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "layout|flex": 1,
+                                                                "layout": "hbox"
+                                                            },
+                                                            "designerId": "18e6abf7-39d2-4a6f-90cc-306d608f728a",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "Ext.Container",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "layout|flex": 2
+                                                                    },
+                                                                    "designerId": "17d017ce-9d36-470b-ab3b-98798ac98bbf"
+                                                                },
+                                                                {
+                                                                    "type": "Ext.Container",
+                                                                    "reference": {
+                                                                        "name": "items",
+                                                                        "type": "array"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "layout|flex": 1.5,
+                                                                        "docked": null,
+                                                                        "margin": "0 10 10 0",
+                                                                        "layout": "hbox"
+                                                                    },
+                                                                    "designerId": "1daae4a2-4e30-4b2d-ae92-cc5c43351e36",
+                                                                    "cn": [
+                                                                        {
+                                                                            "type": "Ext.Button",
+                                                                            "reference": {
+                                                                                "name": "items",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "layout|flex": 2,
+                                                                                "baseCls": "businessgoingbtn",
+                                                                                "html": null,
+                                                                                "id": "goingbutton",
+                                                                                "itemId": "goingbutton",
+                                                                                "styleHtmlCls": null,
+                                                                                "styleHtmlContent": true,
+                                                                                "text": null
+                                                                            },
+                                                                            "designerId": "0ae51421-2317-4665-9a6d-ea31f7e23a6c"
+                                                                        },
+                                                                        {
+                                                                            "type": "Ext.Container",
+                                                                            "reference": {
+                                                                                "name": "items",
+                                                                                "type": "array"
+                                                                            },
+                                                                            "codeClass": null,
+                                                                            "userConfig": {
+                                                                                "layout|flex": 1,
+                                                                                "cls": [
+                                                                                    "goinglbl"
+                                                                                ],
+                                                                                "html": "87",
+                                                                                "id": "goinglblcont",
+                                                                                "itemId": "goinglblcont",
+                                                                                "styleHtmlCls": "businessGoingLabel",
+                                                                                "styleHtmlContent": true
+                                                                            },
+                                                                            "designerId": "d7feb183-e8a7-4462-a537-639fa28070ae"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "baseCls": null,
+                                        "cls": [
+                                            "businesstitlestrip"
+                                        ],
+                                        "docked": null,
+                                        "height": null
+                                    },
+                                    "designerId": "0b82741b-a5d9-41e2-b15a-8a1b718afa66",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreenNameLabel",
+                                                "docked": "left",
+                                                "html": "Contact details",
+                                                "id": null,
+                                                "itemId": "contactdetaillbl"
+                                            },
+                                            "designerId": "80c4241a-bd9c-4793-ab86-b927786cdd5b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "businessdetailstrip"
+                                        ]
+                                    },
+                                    "designerId": "611ec1dc-df3b-40d4-bb53-10553a51ccf8",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreendetailLabel",
+                                                "docked": "bottom",
+                                                "html": "Website:www.mate.co.il <img src=\"resources/images/link.png\" height=\"14\" width=\"14\">",
+                                                "id": "websiteTitle",
+                                                "itemId": "websiteTitle",
+                                                "margin": null
+                                            },
+                                            "designerId": "67f6dd62-85d0-46bd-a3a2-ac7dd51683dc"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "businessdetailstrip"
+                                        ]
+                                    },
+                                    "designerId": "549ecb56-c57e-4494-a3a3-2f25abcaf242",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreendetailLabel",
+                                                "docked": "bottom",
+                                                "html": "Email:info@mate.co.il",
+                                                "id": "businessemail",
+                                                "itemId": null,
+                                                "margin": null
+                                            },
+                                            "designerId": "3e22d0ca-7147-441b-be14-b063c375bfd3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "businessdetailstrip"
+                                        ]
+                                    },
+                                    "designerId": "71d860af-44ea-4e74-8a90-c51d86ea6997",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreendetailLabel",
+                                                "docked": "bottom",
+                                                "html": "Address:14 ben yehuda Street",
+                                                "id": "businessaddress",
+                                                "itemId": null,
+                                                "margin": null
+                                            },
+                                            "designerId": "39905d0b-7853-4793-aff9-39272f5065ad"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "businessdetailstrip"
+                                        ],
+                                        "hidden": true
+                                    },
+                                    "designerId": "76f81623-2acc-4954-93d4-346762444a7c",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreendetailLabel",
+                                                "docked": "bottom",
+                                                "html": "Navigate with WAZE <img src=\"resources/images/link.png\" height=\"14\" width=\"14\">",
+                                                "id": "waze",
+                                                "itemId": null,
+                                                "margin": null
+                                            },
+                                            "designerId": "2ae318a3-2b7a-4763-aabc-68794d486551"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 2
+                                    },
+                                    "designerId": "9f8c37eb-82c8-43f8-a1a9-35c9a5af902e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "ShowPhonebtn",
+                                                "height": 25,
+                                                "id": "showphone",
+                                                "itemId": "showphone",
+                                                "text": "Show phone number"
+                                            },
+                                            "designerId": "15ecb53d-14fa-4221-8a07-9d4624e94bcc"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "baseCls": null,
+                                        "cls": [
+                                            "businesstitlestrip"
+                                        ],
+                                        "docked": null,
+                                        "height": null
+                                    },
+                                    "designerId": "dac05d96-c350-4156-a749-e4d90794f1cc",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreenNameLabel",
+                                                "docked": "left",
+                                                "html": "More info",
+                                                "id": null,
+                                                "itemId": "moreinfolbl"
+                                            },
+                                            "designerId": "370d72b6-7b04-4650-a009-c14af5a0a828"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "businessdetailstrip"
+                                        ]
+                                    },
+                                    "designerId": "e673933a-39ef-4ae3-9191-2c9773e2a135",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreendetailLabel",
+                                                "docked": "bottom",
+                                                "html": "Today style: Latin",
+                                                "id": "businesstodaystyle",
+                                                "itemId": null,
+                                                "margin": null
+                                            },
+                                            "designerId": "745400a4-16be-4b7d-8b87-7f170cfb3fdd"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "businessdetailstrip"
+                                        ]
+                                    },
+                                    "designerId": "76c660a1-4c4c-4bb1-808c-3dedd63ffe33",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreendetailLabel",
+                                                "docked": "bottom",
+                                                "html": "Today Deals: 1+1",
+                                                "id": "businesstodaydeals",
+                                                "itemId": null,
+                                                "margin": null
+                                            },
+                                            "designerId": "63fbbbda-62e7-4f31-8427-1804cdf0e7e9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 2,
+                                        "cls": [
+                                            "businessdetailstrip"
+                                        ],
+                                        "scrollable": "vertical"
+                                    },
+                                    "designerId": "c176c0e5-c89b-4431-a97f-4b8c8088ff1c",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreendetailLabel",
+                                                "docked": null,
+                                                "html": "blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla  blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla  1",
+                                                "id": "businesssummary",
+                                                "itemId": null,
+                                                "margin": null
+                                            },
+                                            "designerId": "96ac62e6-6702-4d9b-ac5d-d756beb45164"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "baseCls": null,
+                                        "cls": [
+                                            "businesstitlestrip"
+                                        ],
+                                        "docked": null,
+                                        "height": null
+                                    },
+                                    "designerId": "6ceedbf1-46eb-484d-8b06-167e6f28a4e0",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "baseCls": "BusinessScreenNameLabel",
+                                                "docked": "left",
+                                                "html": "Pictures",
+                                                "id": null,
+                                                "itemId": "pictureslbl"
+                                            },
+                                            "designerId": "1e7ebd62-4036-4420-bf4e-4599dac6bf3e"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 5,
+                                        "hidden": true,
+                                        "layout": "hbox"
+                                    },
+                                    "designerId": "595c5cb4-288d-473a-9494-e47bbe5f17fa",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 0.5,
+                                                "baseCls": "businesspicleftbtn",
+                                                "height": "20%",
+                                                "margin": "0 0 0 10",
+                                                "top": null,
+                                                "width": "20%",
+                                                "text": null
+                                            },
+                                            "designerId": "5b58017f-e4db-4ba9-9376-f50a533feccc"
+                                        },
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 4
+                                            },
+                                            "designerId": "f83f9be9-d5c7-4c9a-aeeb-c8b84935d2ab",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Img",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "height": "100%",
+                                                        "margin": null,
+                                                        "width": null,
+                                                        "src": "resources/images/party1.png"
+                                                    },
+                                                    "designerId": "46238d63-8eed-4b0d-8e56-98973565c086"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 0.5,
+                                                "baseCls": "businesspicrightbtn",
+                                                "height": "20%",
+                                                "margin": "0 10 0 0",
+                                                "width": "20%",
+                                                "text": null
+                                            },
+                                            "designerId": "24363395-637c-45c6-9fac-3b3c7b6c4bf5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 5,
+                                        "layout": "hbox"
+                                    },
+                                    "designerId": "a053e2d6-7e64-46c0-9cad-f71cb606b77d",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.carousel.Carousel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "centered": true,
+                                                "height": "100%",
+                                                "id": "photocarousel",
+                                                "itemId": "photocarousel",
+                                                "width": "50%"
+                                            },
+                                            "designerId": "1ca3d047-6d2b-46f9-98e0-87298e51a3c0",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Img",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "height": null,
+                                                        "margin": null,
+                                                        "width": null,
+                                                        "src": "resources/images/party1.png"
+                                                    },
+                                                    "designerId": "26350f89-f48d-4073-89c0-b98f4e30c05a"
+                                                },
+                                                {
+                                                    "type": "Ext.Img",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "height": null,
+                                                        "margin": null,
+                                                        "width": null,
+                                                        "src": "resources/images/party2.png"
+                                                    },
+                                                    "designerId": "79b66f60-b5d9-4cf6-bbf1-360ae347c0f6"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

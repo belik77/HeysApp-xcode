@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Location",
+        "storeId": "LocationStore",
+        "designer|userClassName": "LocationStore"
+    },
+    "designerId": "7d67d99e-fdb1-43b4-b4db-d4b41c0cc172",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": null
+            },
+            "designerId": "0bb551a0-efec-43cf-b8c8-6c1cb25fd02f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "145558c3-446d-41bb-86ea-43388b126068"
+                }
+            ]
+        }
+    ]
+}

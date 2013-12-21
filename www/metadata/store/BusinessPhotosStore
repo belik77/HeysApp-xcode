@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "BusinessPhotos",
+        "storeId": "BusinessPhotosStore",
+        "designer|userClassName": "BusinessPhotosStore"
+    },
+    "designerId": "58cc85cd-f2e8-429a-8254-97fa679f2345",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": null
+            },
+            "designerId": "038943ac-93f0-4012-8d28-78c88e496bcf",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "b736eb41-19a2-46f4-94a1-a64bc4248576"
+                }
+            ]
+        }
+    ]
+}

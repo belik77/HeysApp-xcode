@@ -1,0 +1,67 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ContactControl"
+    },
+    "designerId": "fd081134-16ff-4c04-9564-a7778867fc2d",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "sendbtn",
+                "selector": "#sendbtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "c63906ed-2805-4d81-ad4f-bce14432a72a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onsendbtnTap",
+                "implHandler": [
+                    "console.log('onsendbtnTap');\r",
+                    "\r",
+                    "var form = button.up('formpanel[id=contactform]');\r",
+                    "\r",
+                    "form.submit({\r",
+                    "    url: 'http://'+localStorage.serverpath+'/Server-side/contactform.php',\r",
+                    "    method: 'POST',\r",
+                    "    success: function(form, result) {\r",
+                    "        //var jsonoutput = Ext.decode(result);  // json parsing\r",
+                    "        //alert('form submitted successfully!');\r",
+                    "        console.log('form submit success');\r",
+                    "\r",
+                    "        Ext.Msg.alert('Contact us', 'Your message has been sent');\r",
+                    "\r",
+                    "    },\r",
+                    "    failure: function(form, result) {\r",
+                    "        //var jsonoutput = Ext.decode(result);  // json parsing\r",
+                    "        console.log('form submit failed, result:'+result);\r",
+                    "        //alert('form submitted failed!');\r",
+                    "        Ext.Msg.alert('Contact us', 'Your message has not been sent. please try again');\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "sendbtn"
+            },
+            "designerId": "f6bf46f3-8dc8-4c4a-9224-bee3d252acbf"
+        }
+    ]
+}

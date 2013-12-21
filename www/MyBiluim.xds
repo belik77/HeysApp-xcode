@@ -1,0 +1,583 @@
+{
+    "name": "MyBiluim",
+    "settings": {
+        "sdkPath": "C:/wamp/www/myprojects/MyBiluim",
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "86daf986-bb31-40b0-b9e6-8bf8973f7923": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "dbfef349-18c0-4479-b9f3-cf0873c368c7": {
+            "paths": [
+                "metadata/model/UserModel",
+                "app/model/override/UserModel.js",
+                "app/model/UserModel.js"
+            ],
+            "className": "UserModel"
+        },
+        "be9c0e02-6d0e-42f4-97c5-0fbd708e9fbf": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "1582462c-99b6-4df3-99f1-b1849cfc2107": {
+            "paths": [
+                "metadata/controller/Facebook",
+                "app/controller/override/Facebook.js",
+                "app/controller/Facebook.js"
+            ],
+            "className": "Facebook"
+        },
+        "1fa3abe0-2a3c-4273-a295-8cb8daa71c4b": {
+            "paths": [
+                "metadata/view/MyLocScreen",
+                "app/view/override/MyLocScreen.js",
+                "app/view/MyLocScreen.js"
+            ],
+            "className": "MyLocScreen"
+        },
+        "65d5e53e-1cb8-48f8-b29e-4a314bd63e57": {
+            "paths": [
+                "metadata/store/BusinessStore",
+                "app/store/override/BusinessStore.js",
+                "app/store/BusinessStore.js"
+            ],
+            "className": "BusinessStore"
+        },
+        "1572039d-7df6-4985-a6b0-78facdd1ff36": {
+            "paths": [
+                "metadata/model/Business",
+                "app/model/override/Business.js",
+                "app/model/Business.js"
+            ],
+            "className": "Business"
+        },
+        "379ad79f-3b5d-4c23-8f7e-afa07a979537": {
+            "paths": [
+                "metadata/controller/NearByListControl",
+                "app/controller/override/NearByListControl.js",
+                "app/controller/NearByListControl.js"
+            ],
+            "className": "NearByListControl"
+        },
+        "e7dbc346-a778-4b53-8d33-5e58501ab8a3": {
+            "paths": [
+                "metadata/view/LocateScreen",
+                "app/view/override/LocateScreen.js",
+                "app/view/LocateScreen.js"
+            ],
+            "className": "LocateScreen"
+        },
+        "2bf88e4f-07e0-4c26-ac82-5e912fa6435e": {
+            "paths": [
+                "metadata/view/RatingScreen",
+                "app/view/override/RatingScreen.js",
+                "app/view/RatingScreen.js"
+            ],
+            "className": "RatingScreen"
+        },
+        "dd000722-495b-4b96-acad-93f74b702d3a": {
+            "paths": [
+                "metadata/view/SearchList",
+                "app/view/override/SearchList.js",
+                "app/view/SearchList.js"
+            ],
+            "className": "SearchList"
+        },
+        "841fff61-84cf-4d04-b8a6-160df2a97bb5": {
+            "paths": [
+                "metadata/controller/SearchListControl",
+                "app/controller/override/SearchListControl.js",
+                "app/controller/SearchListControl.js"
+            ],
+            "className": "SearchListControl"
+        },
+        "7d67d99e-fdb1-43b4-b4db-d4b41c0cc172": {
+            "paths": [
+                "metadata/store/LocationStore",
+                "app/store/override/LocationStore.js",
+                "app/store/LocationStore.js"
+            ],
+            "className": "LocationStore"
+        },
+        "057b4377-4c32-495f-951b-a8ec7efc3f87": {
+            "paths": [
+                "metadata/model/Location",
+                "app/model/override/Location.js",
+                "app/model/Location.js"
+            ],
+            "className": "Location"
+        },
+        "b9d291be-f9c8-487d-b609-ea0278705725": {
+            "paths": [
+                "metadata/store/CategoryStore",
+                "app/store/override/CategoryStore.js",
+                "app/store/CategoryStore.js"
+            ],
+            "className": "CategoryStore"
+        },
+        "3691b85d-3394-49d1-b6cd-7a018807bc9e": {
+            "paths": [
+                "metadata/model/Category",
+                "app/model/override/Category.js",
+                "app/model/Category.js"
+            ],
+            "className": "Category"
+        },
+        "c5adf74f-7456-4d03-a0ec-e821e8bbf5e1": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI"
+            ],
+            "className": "GoogleMapsAPI"
+        },
+        "aeb7cdd9-af91-4617-9dcb-271c0c73f9d6": {
+            "paths": [
+                "metadata/store/LocalStore",
+                "app/store/override/LocalStore.js",
+                "app/store/LocalStore.js"
+            ],
+            "className": "LocalStore"
+        },
+        "b2e9e2fb-bd86-427e-9226-3b3a569b6980": {
+            "paths": [
+                "metadata/model/LocalData",
+                "app/model/override/LocalData.js",
+                "app/model/LocalData.js"
+            ],
+            "className": "LocalData"
+        },
+        "f6d230c2-c2e5-496f-a941-a5117743396f": {
+            "paths": [
+                "metadata/view/BusinessScreen",
+                "app/view/override/BusinessScreen.js",
+                "app/view/BusinessScreen.js"
+            ],
+            "className": "BusinessScreen"
+        },
+        "64ba0f18-128c-4bf1-a3d4-708ddeb1f3ee": {
+            "paths": [
+                "metadata/controller/BusinessScreenControl",
+                "app/controller/override/BusinessScreenControl.js",
+                "app/controller/BusinessScreenControl.js"
+            ],
+            "className": "BusinessScreenControl"
+        },
+        "51cb17b1-09ff-48ac-ad15-74ec4098fdbe": {
+            "paths": [
+                "metadata/model/BusinessSales",
+                "app/model/override/BusinessSales.js",
+                "app/model/BusinessSales.js"
+            ],
+            "className": "BusinessSales"
+        },
+        "b41bf817-20c0-4c1c-9f34-d9b80280cbb4": {
+            "paths": [
+                "metadata/model/BusinessPhotos",
+                "app/model/override/BusinessPhotos.js",
+                "app/model/BusinessPhotos.js"
+            ],
+            "className": "BusinessPhotos"
+        },
+        "f244e74d-3a89-4b65-8be2-d23bdc42a749": {
+            "paths": [
+                "metadata/model/BusinessPhones",
+                "app/model/override/BusinessPhones.js",
+                "app/model/BusinessPhones.js"
+            ],
+            "className": "BusinessPhones"
+        },
+        "5ef39254-981c-4f78-8dff-c3587fee6705": {
+            "paths": [
+                "metadata/model/BusinessLines",
+                "app/model/override/BusinessLines.js",
+                "app/model/BusinessLines.js"
+            ],
+            "className": "BusinessLines"
+        },
+        "704a354d-ee5d-4dd4-b4f1-9c6cbc3bca6f": {
+            "paths": [
+                "metadata/store/BusinessLinesStore",
+                "app/store/override/BusinessLinesStore.js",
+                "app/store/BusinessLinesStore.js"
+            ],
+            "className": "BusinessLinesStore"
+        },
+        "58cc85cd-f2e8-429a-8254-97fa679f2345": {
+            "paths": [
+                "metadata/store/BusinessPhotosStore",
+                "app/store/override/BusinessPhotosStore.js",
+                "app/store/BusinessPhotosStore.js"
+            ],
+            "className": "BusinessPhotosStore"
+        },
+        "f282b83d-324a-416a-9443-1cc6ac7956b3": {
+            "paths": [
+                "metadata/store/BusinessSalesStore",
+                "app/store/override/BusinessSalesStore.js",
+                "app/store/BusinessSalesStore.js"
+            ],
+            "className": "BusinessSalesStore"
+        },
+        "70e043cb-75fd-4dbe-a128-679a9ae5584f": {
+            "paths": [
+                "metadata/store/BusinessPhonesStore",
+                "app/store/override/BusinessPhonesStore.js",
+                "app/store/BusinessPhonesStore.js"
+            ],
+            "className": "BusinessPhonesStore"
+        },
+        "fc8332f4-7081-4168-ab37-5eee55d8d2e0": {
+            "paths": [
+                "metadata/store/GeneralAction",
+                "app/store/override/GeneralAction.js",
+                "app/store/GeneralAction.js"
+            ],
+            "className": "GeneralAction"
+        },
+        "ec8696d3-2b1f-4ecd-a001-1e99ed647845": {
+            "paths": [
+                "metadata/model/GeneralAction",
+                "app/model/override/GeneralAction.js",
+                "app/model/GeneralAction.js"
+            ],
+            "className": "GeneralAction"
+        },
+        "4e95d30b-67ea-475b-a80d-0eb375bb10cb": {
+            "paths": [
+                "metadata/view/UserActivityScreen",
+                "app/view/override/UserActivityScreen.js",
+                "app/view/UserActivityScreen.js"
+            ],
+            "className": "UserActivityScreen"
+        },
+        "aac51765-5f8c-4108-92ea-c776c9eab845": {
+            "paths": [
+                "metadata/model/BusinessUser",
+                "app/model/override/BusinessUser.js",
+                "app/model/BusinessUser.js"
+            ],
+            "className": "BusinessUser"
+        },
+        "b1d0ebfb-1f25-4b35-9127-ee278e3236f7": {
+            "paths": [
+                "metadata/store/BusinessUserStore",
+                "app/store/override/BusinessUserStore.js",
+                "app/store/BusinessUserStore.js"
+            ],
+            "className": "BusinessUserStore"
+        },
+        "e3e21589-017b-4341-85af-56e1cf800192": {
+            "paths": [
+                "metadata/view/RatingUserList",
+                "app/view/override/RatingUserList.js",
+                "app/view/RatingUserList.js"
+            ],
+            "className": "RatingUserList"
+        },
+        "84efcc5e-a68f-4058-9687-8ff9ae0cb7d2": {
+            "paths": [
+                "metadata/view/FirstScreen",
+                "app/view/override/FirstScreen.js",
+                "app/view/FirstScreen.js"
+            ],
+            "className": "FirstScreen"
+        },
+        "0845734a-b270-40f3-b7d3-5b2fb53524a7": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
+        },
+        "5bcc02f4-66dd-45b6-abb5-ac663bdc8331": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "8902df6e-9c26-44ae-90d3-5c82b3846963": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "481463c1-fe17-4669-a664-a69a440df130": {
+            "paths": [
+                "metadata/view/fbloginpanel",
+                "app/view/override/fbloginpanel.js",
+                "app/view/fbloginpanel.js"
+            ],
+            "className": "fbloginpanel"
+        },
+        "5eecf169-3079-41ea-8e75-cf82920aec58": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
+        },
+        "a3d44ede-44ec-4ef0-91c8-86ac2c179e05": {
+            "paths": [
+                "metadata/view/SearchScreen",
+                "app/view/override/SearchScreen.js",
+                "app/view/SearchScreen.js"
+            ],
+            "className": "SearchScreen"
+        },
+        "aabc7ba5-47b7-4f1c-a8f0-03da5acfab4c": {
+            "paths": [
+                "metadata/view/MyContainer20",
+                "app/view/override/MyContainer20.js",
+                "app/view/MyContainer20.js"
+            ],
+            "className": "MyContainer20"
+        },
+        "a2519f97-b4f0-4c32-a73c-2952269706aa": {
+            "paths": [
+                "metadata/controller/SearchScreen",
+                "app/controller/override/SearchScreen.js",
+                "app/controller/SearchScreen.js"
+            ],
+            "className": "SearchScreen"
+        },
+        "ae6146f7-b2a7-4792-ba96-816d5500b430": {
+            "paths": [
+                "metadata/model/SearchSort",
+                "app/model/override/SearchSort.js",
+                "app/model/SearchSort.js"
+            ],
+            "className": "SearchSort"
+        },
+        "d3285ccf-9ec0-4dd6-b27b-6f502d2c02d8": {
+            "paths": [
+                "metadata/store/SearchSortStore",
+                "app/store/override/SearchSortStore.js",
+                "app/store/SearchSortStore.js"
+            ],
+            "className": "SearchSortStore"
+        },
+        "8811f46a-ba2f-463b-92c0-9ed551df9bf6": {
+            "paths": [
+                "metadata/view/BusinessDataView",
+                "app/view/override/BusinessDataView.js",
+                "app/view/BusinessDataView.js"
+            ],
+            "className": "BusinessDataView"
+        },
+        "e0d20b67-ba53-4437-97a2-baf259f393b1": {
+            "paths": [
+                "metadata/view/BusinessDataItem",
+                "app/view/override/BusinessDataItem.js",
+                "app/view/BusinessDataItem.js"
+            ],
+            "className": "BusinessDataItem"
+        },
+        "be8bfdc8-41aa-43ca-8a19-458e688d4835": {
+            "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
+        },
+        "b30873f2-f4ea-48b8-9666-5899195df104": {
+            "paths": [
+                "metadata/view/MyDataView",
+                "app/view/override/MyDataView.js",
+                "app/view/MyDataView.js"
+            ],
+            "className": "MyDataView"
+        },
+        "d194cf62-cf32-41f3-9a65-1af85cc896cd": {
+            "paths": [
+                "metadata/store/BusinessStoreNearByScreen",
+                "app/store/override/BusinessStoreNearByScreen.js",
+                "app/store/BusinessStoreNearByScreen.js"
+            ],
+            "className": "BusinessStoreNearByScreen"
+        },
+        "41787705-0ebe-4670-8053-7dbd0a981dc1": {
+            "paths": [
+                "metadata/view/RatePlaceScreen",
+                "app/view/override/RatePlaceScreen.js",
+                "app/view/RatePlaceScreen.js"
+            ],
+            "className": "RatePlaceScreen"
+        },
+        "a6fe1236-fa7f-4547-8861-59edd5641f4b": {
+            "paths": [
+                "metadata/controller/RatingControl",
+                "app/controller/override/RatingControl.js",
+                "app/controller/RatingControl.js"
+            ],
+            "className": "RatingControl"
+        },
+        "88e87aaf-beec-4154-a848-82ee75374d71": {
+            "paths": [
+                "metadata/model/RatingBusiness",
+                "app/model/override/RatingBusiness.js",
+                "app/model/RatingBusiness.js"
+            ],
+            "className": "RatingBusiness"
+        },
+        "d5f1e297-f426-4edb-8997-899e52c10d74": {
+            "paths": [
+                "metadata/store/UserStore",
+                "app/store/override/UserStore.js",
+                "app/store/UserStore.js"
+            ],
+            "className": "UserStore"
+        },
+        "27e82420-fe58-4abc-b8cd-37fc582a90e8": {
+            "paths": [
+                "metadata/store/UserFavoBusinessStore",
+                "app/store/override/UserFavoBusinessStore.js",
+                "app/store/UserFavoBusinessStore.js"
+            ],
+            "className": "UserFavoBusinessStore"
+        },
+        "73ada55e-b151-48fb-8042-7e3b6b3646a4": {
+            "paths": [
+                "metadata/model/UserFavoBusiness",
+                "app/model/override/UserFavoBusiness.js",
+                "app/model/UserFavoBusiness.js"
+            ],
+            "className": "UserFavoBusiness"
+        },
+        "e6d43d1b-6764-48b9-85da-5b8e5280cbe3": {
+            "paths": [
+                "metadata/view/settingpanel",
+                "app/view/override/settingpanel.js",
+                "app/view/settingpanel.js"
+            ],
+            "className": "settingpanel"
+        },
+        "3e20bbb8-50af-4696-8b79-b993ddb2d80a": {
+            "paths": [
+                "metadata/store/BusinessStoreBusinessScreen",
+                "app/store/override/BusinessStoreBusinessScreen.js",
+                "app/store/BusinessStoreBusinessScreen.js"
+            ],
+            "className": "BusinessStoreBusinessScreen"
+        },
+        "f80ee20b-d65a-4107-aa23-26a9a32f6e11": {
+            "paths": [
+                "metadata/resource/packagerIOS",
+                "",
+                "packagerIOS.json"
+            ],
+            "className": "packagerIOS"
+        },
+        "31c900e4-6b76-4209-a37d-97db47199b07": {
+            "paths": [
+                "metadata/view/ContactScreen",
+                "app/view/override/ContactScreen.js",
+                "app/view/ContactScreen.js"
+            ],
+            "className": "ContactScreen"
+        },
+        "fd081134-16ff-4c04-9564-a7778867fc2d": {
+            "paths": [
+                "metadata/controller/ContactControl",
+                "app/controller/override/ContactControl.js",
+                "app/controller/ContactControl.js"
+            ],
+            "className": "ContactControl"
+        },
+        "ed08b3ca-46ce-432e-bc47-df9b59ffa0f6": {
+            "paths": [
+                "metadata/view/loginformpanel",
+                "app/view/override/loginformpanel.js",
+                "app/view/loginformpanel.js"
+            ],
+            "className": "loginformpanel"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "1fa3abe0-2a3c-4273-a295-8cb8daa71c4b",
+            "e6d43d1b-6764-48b9-85da-5b8e5280cbe3",
+            "41787705-0ebe-4670-8053-7dbd0a981dc1",
+            "2bf88e4f-07e0-4c26-ac82-5e912fa6435e",
+            "4e95d30b-67ea-475b-a80d-0eb375bb10cb",
+            "f6d230c2-c2e5-496f-a941-a5117743396f",
+            "31c900e4-6b76-4209-a37d-97db47199b07",
+            "a3d44ede-44ec-4ef0-91c8-86ac2c179e05",
+            "e7dbc346-a778-4b53-8d33-5e58501ab8a3",
+            "dd000722-495b-4b96-acad-93f74b702d3a",
+            "e3e21589-017b-4341-85af-56e1cf800192",
+            "84efcc5e-a68f-4058-9687-8ff9ae0cb7d2",
+            "481463c1-fe17-4669-a664-a69a440df130",
+            "aabc7ba5-47b7-4f1c-a8f0-03da5acfab4c",
+            "8811f46a-ba2f-463b-92c0-9ed551df9bf6",
+            "e0d20b67-ba53-4437-97a2-baf259f393b1",
+            "b30873f2-f4ea-48b8-9666-5899195df104",
+            "ed08b3ca-46ce-432e-bc47-df9b59ffa0f6"
+        ],
+        "store": [
+            "65d5e53e-1cb8-48f8-b29e-4a314bd63e57",
+            "d194cf62-cf32-41f3-9a65-1af85cc896cd",
+            "3e20bbb8-50af-4696-8b79-b993ddb2d80a",
+            "7d67d99e-fdb1-43b4-b4db-d4b41c0cc172",
+            "d5f1e297-f426-4edb-8997-899e52c10d74",
+            "27e82420-fe58-4abc-b8cd-37fc582a90e8",
+            "b9d291be-f9c8-487d-b609-ea0278705725",
+            "704a354d-ee5d-4dd4-b4f1-9c6cbc3bca6f",
+            "58cc85cd-f2e8-429a-8254-97fa679f2345",
+            "f282b83d-324a-416a-9443-1cc6ac7956b3",
+            "70e043cb-75fd-4dbe-a128-679a9ae5584f",
+            "b1d0ebfb-1f25-4b35-9127-ee278e3236f7",
+            "aeb7cdd9-af91-4617-9dcb-271c0c73f9d6",
+            "fc8332f4-7081-4168-ab37-5eee55d8d2e0",
+            "d3285ccf-9ec0-4dd6-b27b-6f502d2c02d8"
+        ],
+        "controller": [
+            "1582462c-99b6-4df3-99f1-b1849cfc2107",
+            "379ad79f-3b5d-4c23-8f7e-afa07a979537",
+            "841fff61-84cf-4d04-b8a6-160df2a97bb5",
+            "64ba0f18-128c-4bf1-a3d4-708ddeb1f3ee",
+            "a2519f97-b4f0-4c32-a73c-2952269706aa",
+            "a6fe1236-fa7f-4547-8861-59edd5641f4b",
+            "fd081134-16ff-4c04-9564-a7778867fc2d"
+        ],
+        "model": [
+            "dbfef349-18c0-4479-b9f3-cf0873c368c7",
+            "1572039d-7df6-4985-a6b0-78facdd1ff36",
+            "057b4377-4c32-495f-951b-a8ec7efc3f87",
+            "3691b85d-3394-49d1-b6cd-7a018807bc9e",
+            "b2e9e2fb-bd86-427e-9226-3b3a569b6980",
+            "51cb17b1-09ff-48ac-ad15-74ec4098fdbe",
+            "b41bf817-20c0-4c1c-9f34-d9b80280cbb4",
+            "f244e74d-3a89-4b65-8be2-d23bdc42a749",
+            "5ef39254-981c-4f78-8dff-c3587fee6705",
+            "ec8696d3-2b1f-4ecd-a001-1e99ed647845",
+            "aac51765-5f8c-4108-92ea-c776c9eab845",
+            "ae6146f7-b2a7-4792-ba96-816d5500b430",
+            "88e87aaf-beec-4154-a848-82ee75374d71",
+            "73ada55e-b151-48fb-8042-7e3b6b3646a4"
+        ],
+        "resource": [
+            "86daf986-bb31-40b0-b9e6-8bf8973f7923",
+            "be9c0e02-6d0e-42f4-97c5-0fbd708e9fbf",
+            "c5adf74f-7456-4d03-a0ec-e821e8bbf5e1",
+            "0845734a-b270-40f3-b7d3-5b2fb53524a7",
+            "f80ee20b-d65a-4107-aa23-26a9a32f6e11",
+            "5bcc02f4-66dd-45b6-abb5-ac663bdc8331",
+            "8902df6e-9c26-44ae-90d3-5c82b3846963",
+            "5eecf169-3079-41ea-8e75-cf82920aec58",
+            "be8bfdc8-41aa-43ca-8a19-458e688d4835"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

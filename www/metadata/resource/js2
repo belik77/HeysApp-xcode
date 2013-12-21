@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js2",
+        "url": "http://www.parsecdn.com/js/parse-1.2.8.min.js"
+    },
+    "designerId": "5eecf169-3079-41ea-8e75-cf82920aec58"
+}

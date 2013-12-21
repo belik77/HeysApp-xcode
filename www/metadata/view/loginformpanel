@@ -1,0 +1,455 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "baseCls": "fbloginpanel",
+        "id": "loginformpanel",
+        "itemId": "loginformpanel",
+        "ui": null,
+        "designer|userClassName": "loginformpanel",
+        "layout": "vbox",
+        "scrollable": [
+            "{direction:'vertical'}"
+        ]
+    },
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "462a8a31-1725-44aa-ae9c-f2ea9ac8fb5b",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 20,
+                "baseCls": null,
+                "cls": [
+                    "fblogin"
+                ],
+                "height": null,
+                "layout": "vbox"
+            },
+            "designerId": "0a34126a-a059-44db-88b3-099f1930d389",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 3,
+                        "cls": [
+                            "wholepageRelative"
+                        ]
+                    },
+                    "designerId": "6fc39142-6ce3-4a30-89ec-5d9b60e9e6b0"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 18,
+                        "cls": [
+                            "wholepageRelative"
+                        ],
+                        "height": null,
+                        "defaults": null,
+                        "layout": "vbox"
+                    },
+                    "designerId": "7cc8dca2-601a-4408-b772-57b44fae11be",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 8,
+                                "docked": "top",
+                                "layout": "vbox"
+                            },
+                            "designerId": "a460fac0-dd34-4100-b841-30a33ae0eff0",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 2,
+                                        "cls": [
+                                            "loginmargin"
+                                        ],
+                                        "docked": "top",
+                                        "title": "Existing User"
+                                    },
+                                    "designerId": "d642bb7b-4583-452e-97f0-9d64970ba231",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Email",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "email1",
+                                                "itemId": "email1",
+                                                "label": null,
+                                                "name": "email1",
+                                                "placeHolder": "Email"
+                                            },
+                                            "designerId": "22670873-0761-4df7-b6a1-b046bb107235"
+                                        },
+                                        {
+                                            "type": "Ext.field.Password",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "id": "password1",
+                                                "itemId": "password1",
+                                                "label": null,
+                                                "name": "password1",
+                                                "placeHolder": "Password"
+                                            },
+                                            "designerId": "5e8266ae-80f6-405c-b5e0-ff6c8d73f69f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "loginmargin",
+                                            "Signbutton"
+                                        ],
+                                        "docked": "bottom",
+                                        "id": "reglogin",
+                                        "itemId": "reglogin",
+                                        "ui": "round",
+                                        "icon": "",
+                                        "scope": [
+                                            "this\r",
+                                            ""
+                                        ],
+                                        "text": null
+                                    },
+                                    "designerId": "f8da3d78-98e1-47ee-9372-9aa493dccb3a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 10,
+                                "docked": null,
+                                "layout": "vbox"
+                            },
+                            "designerId": "1892fff0-c88f-4703-b291-417a87256c1c",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 10,
+                                        "docked": null,
+                                        "height": null,
+                                        "layout": "vbox"
+                                    },
+                                    "designerId": "ab148a8c-ab2b-4257-a16e-0b94c88b83c0",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.FieldSet",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 4,
+                                                "cls": [
+                                                    "loginmargin"
+                                                ],
+                                                "docked": "top",
+                                                "layout": "vbox",
+                                                "title": "New User"
+                                            },
+                                            "designerId": "63fea9b1-0340-4689-8295-d4850e0c6d89",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.field.Text",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "id": "username",
+                                                        "itemId": "username",
+                                                        "label": null,
+                                                        "name": "username",
+                                                        "placeHolder": "Username"
+                                                    },
+                                                    "designerId": "2121c2da-48d8-40e0-858d-aee3906e160b"
+                                                },
+                                                {
+                                                    "type": "Ext.field.Password",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "id": "password",
+                                                        "itemId": "password",
+                                                        "label": null,
+                                                        "name": "password",
+                                                        "placeHolder": "Password"
+                                                    },
+                                                    "designerId": "87573f74-3405-446a-a904-41baa4a0a571"
+                                                },
+                                                {
+                                                    "type": "Ext.field.Email",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "id": "email",
+                                                        "itemId": "email",
+                                                        "label": null,
+                                                        "name": "email",
+                                                        "placeHolder": "Email"
+                                                    },
+                                                    "designerId": "3690d765-6c37-4f31-9b2a-8cedb5935c3b"
+                                                },
+                                                {
+                                                    "type": "Ext.field.Password",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "hidden": true,
+                                                        "id": "hashpassword",
+                                                        "itemId": "hashpassword",
+                                                        "label": "ססמא",
+                                                        "name": "hashpassword"
+                                                    },
+                                                    "designerId": "38021755-151e-434d-95a7-e83a922dc0dd"
+                                                },
+                                                {
+                                                    "type": "Ext.field.Number",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "hidden": true,
+                                                        "label": "Field",
+                                                        "name": "bfacebook"
+                                                    },
+                                                    "designerId": "43928a76-b780-46b3-86bf-8584858b0e4b"
+                                                },
+                                                {
+                                                    "type": "Ext.field.Number",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "hidden": true,
+                                                        "label": "Field",
+                                                        "name": "bregister"
+                                                    },
+                                                    "designerId": "977264a9-5410-4218-b84b-c24aa57a906f"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 4,
+                                                "docked": null,
+                                                "minHeight": 100,
+                                                "layout": "vbox"
+                                            },
+                                            "designerId": "529d7495-d665-4215-b640-1c94c2c64ca7",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "loginmargin",
+                                                            "Regbutton"
+                                                        ],
+                                                        "docked": "top",
+                                                        "id": "regbtn",
+                                                        "itemId": "regbtn",
+                                                        "ui": "round",
+                                                        "icon": "",
+                                                        "scope": [
+                                                            "this\r",
+                                                            ""
+                                                        ],
+                                                        "text": null
+                                                    },
+                                                    "designerId": "3eb637d9-47b5-407a-80ee-16cc6d5029c9"
+                                                },
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "fbLoginbtn"
+                                                        ],
+                                                        "docked": "bottom",
+                                                        "height": "",
+                                                        "id": "fbloginbtn1",
+                                                        "itemId": "fbloginbtn1",
+                                                        "maxHeight": null,
+                                                        "maxWidth": null,
+                                                        "ui": "",
+                                                        "text": null
+                                                    },
+                                                    "designerId": "f9b8bce5-2bce-46b5-9d2d-5e71bec805d9"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 2,
+                                                "docked": "bottom",
+                                                "height": 50
+                                            },
+                                            "designerId": "02a8f74e-454f-4a87-a8d5-2f6add838bc9"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "registerToolbar"
+                ],
+                "docked": "top"
+            },
+            "designerId": "771a7c35-b0b3-400c-987d-9fddcac83365",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": "backbtn",
+                        "docked": "left",
+                        "height": "",
+                        "id": "loginbackbtn",
+                        "itemId": "loginbackbtn",
+                        "margin": null,
+                        "minHeight": null,
+                        "width": "18%",
+                        "iconCls": null,
+                        "text": null
+                    },
+                    "designerId": "64d10cda-f46f-4652-9efc-2d57dd85ba12",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLoginbackbtnTap",
+                                "implHandler": [
+                                    "//var Screen = Ext.ComponentQuery.query('#fbloginpanel');\r",
+                                    "\r",
+                                    "Ext.Viewport.setActiveItem(Ext.ComponentQuery.query('#fbloginpanel')[0]);\r",
+                                    "//Ext.Viewport.show();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "5e0adfca-3fb5-4570-acbc-b24ca995c117"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

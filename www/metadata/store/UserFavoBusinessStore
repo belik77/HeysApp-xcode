@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "UserFavoBusiness",
+        "storeId": "UserFavoBusinessStore",
+        "designer|userClassName": "UserFavoBusinessStore"
+    },
+    "designerId": "27e82420-fe58-4abc-b8cd-37fc582a90e8",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": null
+            },
+            "designerId": "fa4e0db9-f98b-4aec-8b6e-af6c2cb0a218",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "c0cf3361-8338-4222-8896-bebdd00970ae"
+                }
+            ]
+        }
+    ]
+}

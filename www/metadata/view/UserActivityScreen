@@ -1,0 +1,31 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "fullscreen": true,
+        "id": "UserActivityScreen",
+        "itemId": "UserActivityScreen",
+        "designer|userClassName": "UserActivityScreen",
+        "layout": "fit"
+    },
+    "designerId": "4e95d30b-67ea-475b-a80d-0eb375bb10cb",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "פעולות משתמש"
+            },
+            "designerId": "c435ebbc-90f2-4c6f-b614-71e7d76143f7"
+        }
+    ]
+}

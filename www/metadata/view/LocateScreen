@@ -1,0 +1,259 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "slide",
+        "fullscreen": true,
+        "id": "LocateScreen",
+        "itemId": "LocateScreen",
+        "designer|userClassName": "LocateScreen",
+        "useTitleForBackButtonText": true
+    },
+    "designerId": "e7dbc346-a778-4b53-8d33-5e58501ab8a3",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|animation": "slide"
+            },
+            "designerId": "6273fe45-b2b4-4258-ab58-a450776d9ad1",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top"
+                    },
+                    "designerId": "157702fb-ed32-42c0-ab29-85f690c99fd5",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "locatemebtn",
+                                "itemId": "locatemebtn",
+                                "iconCls": "locate",
+                                "iconMask": true,
+                                "text": ""
+                            },
+                            "designerId": "023e00f8-54cc-4259-ba98-1a67e08b6765"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "refreshbtn",
+                                "itemId": "refreshbtn",
+                                "iconCls": "refresh",
+                                "iconMask": true,
+                                "text": ""
+                            },
+                            "designerId": "1fb382e3-ef76-4e8d-a893-b5113b256834"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "CitySelect",
+                                "label": "עיר",
+                                "labelAlign": "right",
+                                "displayField": "LocationName",
+                                "store": "LocationStore"
+                            },
+                            "designerId": "8d09bc80-6d97-435a-8496-cae2b236c0e2"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "CatSelect",
+                                "label": "קטגוריה",
+                                "labelAlign": "right",
+                                "displayField": "TypeName",
+                                "store": "CategoryStore"
+                            },
+                            "designerId": "bcaeb927-fa91-4845-9c1d-b494e6521c05"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "myselectfield2",
+                                "designer|displayName": "SortSelect",
+                                "label": "מיון",
+                                "labelAlign": "right",
+                                "displayField": "value",
+                                "options": [
+                                    "[{text: 'distance',  value: 'מרחק'},\r",
+                                    "{text: 'Capacity', value: 'תכולה'},\r",
+                                    "{text: 'last_update_time',  value: 'שעת עדכון'},\r",
+                                    "{text: 'Likes',  value: 'Likes'},\r",
+                                    "{text: 'Age',  value: 'גילאים'}]"
+                                ],
+                                "store": null
+                            },
+                            "designerId": "91b28ea1-bae8-48cb-9518-f779a1f393cd"
+                        },
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "textsearchfield",
+                                "itemId": "textsearchfield",
+                                "label": "טקסט",
+                                "labelAlign": "right"
+                            },
+                            "designerId": "cb17c397-2bf9-4c99-bd5a-96d9ae48cf16"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "מפה",
+                        "height": "100%",
+                        "id": "MapTab",
+                        "itemId": "MapTab",
+                        "width": "100%",
+                        "layout": "vbox"
+                    },
+                    "designerId": "1ceaf634-f140-46d2-a164-effc143d5c06",
+                    "cn": [
+                        {
+                            "type": "Ext.Map",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "100%",
+                                "id": "detailMap",
+                                "itemId": "detailMap",
+                                "width": "100%"
+                            },
+                            "designerId": "ff7ff843-9141-41d7-a870-b523021842f0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "רשימה",
+                        "height": "100%",
+                        "ui": "",
+                        "width": "100%"
+                    },
+                    "designerId": "dc1fcb9a-b51c-4dc2-bbb8-e7b894100735",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "100%",
+                                "width": "100%"
+                            },
+                            "designerId": "f2d31610-f030-49e8-bc93-e6bb7968129f",
+                            "masterInstanceId": "dd000722-495b-4b96-acad-93f74b702d3a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "designerId": "b7e97adc-e6e9-48ae-8103-21b2dfd05172"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLocateScreenShow",
+                "implHandler": [
+                    "console.log('onLocateScreenShow');\r",
+                    "\r",
+                    "//check if the screen was loaded already before\r",
+                    "var Screen = Ext.ComponentQuery.query('#MyLocScreen');\r",
+                    "\r",
+                    "if(Screen.length===0)//no\r",
+                    "{\r",
+                    "    Screen = Ext.create('MyApp.view.MyLocScreen', {\r",
+                    "        id: 'MyLocScreen'\r",
+                    "    });\r",
+                    "\r",
+                    "    Screen.Show();\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    Screen[0].Show();\r",
+                    "}"
+                ],
+                "name": "show"
+            },
+            "designerId": "003a644d-56c7-47d1-934b-21ab8f3576cb"
+        }
+    ]
+}

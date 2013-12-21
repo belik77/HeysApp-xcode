@@ -1,0 +1,41 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "SearchList",
+        "itemId": "SearchList",
+        "style": [
+            "text-align:right"
+        ],
+        "designer|userClassName": "SearchList",
+        "designer|userAlias": "searchlist",
+        "emptyText": "אין מקומות בילוי בסביבה",
+        "loadingText": "טוען...",
+        "store": "BusinessStore"
+    },
+    "configAlternates": {
+        "style": "object"
+    },
+    "designerId": "dd000722-495b-4b96-acad-93f74b702d3a",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "'<div class=\"contact2\"><strong>{BusinessName}</strong> {id} {distance}</div>'"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "cf31d872-3c47-4c8f-ba84-cd3c512a70b4"
+        }
+    ]
+}

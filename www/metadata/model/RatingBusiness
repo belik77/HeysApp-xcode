@@ -1,0 +1,38 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RatingBusiness"
+    },
+    "designerId": "88e87aaf-beec-4154-a848-82ee75374d71",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "business_id"
+            },
+            "designerId": "5e0390f2-6a3a-46de-b70c-b62993a22020"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "capacity"
+            },
+            "designerId": "dafdac4c-07bd-40a0-8ab0-324ba393939e"
+        }
+    ]
+}

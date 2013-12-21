@@ -1,0 +1,29 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoSync": true,
+        "model": "LocalData",
+        "storeId": "LocalStore",
+        "designer|userClassName": "LocalStore"
+    },
+    "designerId": "aeb7cdd9-af91-4617-9dcb-271c0c73f9d6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "localDataProxy"
+            },
+            "designerId": "8e068aa3-048e-40a3-a690-e31d45e2ed04"
+        }
+    ]
+}

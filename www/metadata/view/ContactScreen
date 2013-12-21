@@ -1,0 +1,612 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "backscreen": "SearchScreen",
+        "baseCls": "businessbkgscreen",
+        "fullscreen": true,
+        "html": null,
+        "id": "ContactScreen",
+        "itemId": "ContactScreen",
+        "designer|userClassName": "ContactScreen",
+        "layout": "vbox",
+        "scrollable": "vertical"
+    },
+    "configAlternates": {
+        "business_id": "number",
+        "bus_id": "number",
+        "distance": "number"
+    },
+    "designerId": "31c900e4-6b76-4209-a37d-97db47199b07",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "business_id",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "distance",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "backscreen",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretchmax",
+                "cls": [
+                    "contactToolbar"
+                ],
+                "docked": "top",
+                "height": 35,
+                "id": "ContactScreenTitle",
+                "itemId": "ContactScreenTitle",
+                "title": null
+            },
+            "designerId": "bc5e864f-52aa-4e9b-9b52-15650b1b991b",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "height": 48,
+                        "width": 315,
+                        "layout": "hbox"
+                    },
+                    "designerId": "ecc5b264-1b66-4aae-80b3-6cf633f89497",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "baseCls": "backbtn",
+                                "docked": "left",
+                                "height": "",
+                                "id": "Contactbackbtn",
+                                "itemId": "Contactbackbtn",
+                                "margin": null,
+                                "minHeight": null,
+                                "width": 37,
+                                "iconCls": null,
+                                "text": null
+                            },
+                            "designerId": "6e594ec7-5706-4c0c-9cbc-a6f32735987c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onContactbackbtnTap",
+                                        "implHandler": [
+                                            "//var Screen = Ext.ComponentQuery.query('#fbloginpanel');\r",
+                                            "\r",
+                                            "console.log('onbusinessbackbtnTap');\r",
+                                            "\r",
+                                            "\r",
+                                            "if(localStorage.user_id!==\"-1\")\r",
+                                            "{\r",
+                                            "    var panel = button.up('panel[id=ContactScreen]');\r",
+                                            "    Ext.Viewport.setActiveItem(Ext.ComponentQuery.query('#SearchScreen')[0]);\r",
+                                            "}\r",
+                                            "else//back to login screen\r",
+                                            "{\r",
+                                            "    Ext.Viewport.setActiveItem(Ext.ComponentQuery.query('#fbloginpanel')[0]);\r",
+                                            "}"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "f2301262-e188-46dc-8f96-64d4dec07ec4"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2
+                            },
+                            "designerId": "35fc5c1a-99df-49ea-80be-f8dbe2b0d160"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 4,
+                "height": "100%",
+                "layout": "fit",
+                "scrollable": null
+            },
+            "designerId": "773f6fb9-d2d4-44c8-ac1a-a4ec719354d7",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": "contactinnerbkgscreen",
+                        "height": null,
+                        "id": "contactform",
+                        "itemId": "contactform",
+                        "margin": "10 10 10 10",
+                        "layout": "vbox",
+                        "scrollable": "vertical"
+                    },
+                    "designerId": "d11b223e-86ea-44f5-a266-b2663405359d",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": null,
+                                "layout": "vbox"
+                            },
+                            "designerId": "cfb294ee-3559-4b3e-b379-ca182f6d9adf",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "ContactLabel"
+                                        ],
+                                        "html": "Sign up as your Business's manager allows you  to edit and post on your business Page. <br> * Otherwise, you can just add a new place to our list.",
+                                        "margin": null,
+                                        "styleHtmlCls": null,
+                                        "styleHtmlContent": true
+                                    },
+                                    "designerId": "ba5e0052-a71b-4093-b4a4-5a97f7d352c8"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "baseCls": null,
+                                        "id": "fullname",
+                                        "itemId": "fullname",
+                                        "margin": null,
+                                        "styleHtmlCls": null,
+                                        "inputCls": null,
+                                        "label": "Full name:",
+                                        "labelCls": null,
+                                        "labelWidth": "50%",
+                                        "name": "fullname"
+                                    },
+                                    "designerId": "8bf1df94-798d-45e1-bee8-9342dc11295a"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "85935db6-cdc7-4638-bf39-eec98f48ec6e"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "businessname",
+                                        "itemId": "businessname",
+                                        "margin": null,
+                                        "label": "Business name:",
+                                        "labelWidth": "50%",
+                                        "name": "businessname"
+                                    },
+                                    "designerId": "a32d21c7-eeff-48b9-ae45-f62db66d5236"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "bfa304fe-2653-4293-8028-ac6627e1f056"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "Category",
+                                        "itemId": "Category",
+                                        "margin": null,
+                                        "label": "Category:",
+                                        "labelWidth": "50%",
+                                        "name": "Category"
+                                    },
+                                    "designerId": "401d247e-f511-409f-813d-ead87fc7e231"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "2640472f-34ba-43e8-80bf-2f0accfd7a70"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "Address",
+                                        "itemId": "Address",
+                                        "margin": null,
+                                        "label": "Address:",
+                                        "labelWidth": "50%",
+                                        "name": "Address"
+                                    },
+                                    "designerId": "6ee7ad0b-5c6d-4d44-9c65-ddf5968c97da"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "f0d01b7b-f331-4537-a9ae-c0bd5fcf9ae0"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "phonenumber",
+                                        "itemId": "phonenumber",
+                                        "margin": null,
+                                        "label": "Phone number:",
+                                        "labelWidth": "50%",
+                                        "name": "phonenumber"
+                                    },
+                                    "designerId": "dc962647-cdf2-4523-9c81-0e6413893a63"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "20128e09-e5b4-4d85-ab4a-f0ce8d1cdfe1"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "emailfield",
+                                        "itemId": "emailfield",
+                                        "margin": null,
+                                        "label": "Email:",
+                                        "labelWidth": "50%",
+                                        "name": "emailfield"
+                                    },
+                                    "designerId": "bb43bf31-6f9b-4a4f-8f6d-a66fb7d03666"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "d194d4d2-6076-469a-bc13-52754d596e88"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "capacity",
+                                        "itemId": "capacity",
+                                        "margin": null,
+                                        "label": "Capacity (optional):",
+                                        "labelWidth": "50%",
+                                        "name": "capacity"
+                                    },
+                                    "designerId": "a5a3961b-21e4-4cf2-9a75-f3e8f3ef5d27"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "bf4d45ee-d243-4956-8359-61cca0ec7a68"
+                                },
+                                {
+                                    "type": "Ext.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "baseCls": null,
+                                        "id": "businessowner",
+                                        "itemId": "businessowner",
+                                        "inputCls": null,
+                                        "label": "I'm the Manager of this place",
+                                        "labelCls": null,
+                                        "labelWidth": "80%",
+                                        "name": "businessowner"
+                                    },
+                                    "designerId": "b90c563f-0088-4e22-b898-31113f8b3fa9"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "contactstrip"
+                                        ],
+                                        "height": 2,
+                                        "html": null
+                                    },
+                                    "designerId": "16ddcba5-1a64-4fab-90cb-a1c77613fff2"
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "height": null,
+                                        "layout": "hbox"
+                                    },
+                                    "designerId": "33303df8-1d8d-4fe4-9b09-437b0051036e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 4,
+                                                "layout": "fit"
+                                            },
+                                            "designerId": "c0637b32-a566-48df-a8ff-56a3b6dcecb4",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "height": null
+                                                    },
+                                                    "designerId": "417e1481-997f-438a-a0a7-18926382fa08",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "ContactLabel"
+                                                                ],
+                                                                "height": null,
+                                                                "html": "For more details contact us: <br> heys.app@gmail.com, +(972) (0) 50372424",
+                                                                "styleHtmlContent": true
+                                                            },
+                                                            "designerId": "256a984b-8e4a-463f-b0f8-8d32fb0035ab"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "designerId": "f70336d6-7909-46de-ad28-00ffc3f7266e",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Img",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "contactfbLogo"
+                                                                ],
+                                                                "docked": "left",
+                                                                "height": null,
+                                                                "minHeight": null,
+                                                                "minWidth": null,
+                                                                "width": null,
+                                                                "src": "resources/images/fb.png"
+                                                            },
+                                                            "designerId": "1ff1b5b1-0b54-4f86-aa40-dcd7d9681701"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1
+                                            },
+                                            "designerId": "f3743fcf-7b12-41cb-a737-25376d9b9ff6",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Button",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "cls": [
+                                                            "sendbtn"
+                                                        ],
+                                                        "id": "sendbtn",
+                                                        "itemId": "sendbtn",
+                                                        "text": null
+                                                    },
+                                                    "designerId": "80903963-571d-4b61-a0fd-04ad1117523a"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

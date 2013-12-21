@@ -1,0 +1,73 @@
+<script type="text/javascript" src="../../external/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../external/jquery-ui-1.8.18.custom.min.js"></script>
+<script type="text/javascript" src="../../external/globalize.min.js"></script>
+<script type="text/javascript" src="../../external/jquery.mousewheel.min.js"></script>
+
+<script type="text/javascript" src="../../external/jquery.wijmo-open.all.2.1.1.min.js"></script>
+<script type="text/javascript" src="../../wijmo/jquery.wijmo.wijpager.js"></script>
+<script type="text/javascript" src="../../wijmo/jquery.wijmo.wijdatasource.js"></script>
+<script type="text/javascript" src="../../wijmo/jquery.wijmo.wijgrid.js"></script>
+
+<script id="scriptInit" type="text/javascript">// <![CDATA[
+$(document).ready(function () {
+           $("#demo").wijgrid({
+               allowPaging: true,
+               pageSize: 5,
+               pagerSettings: { position: "topAndBottom" },
+                data: new wijdatasource({
+                   proxy: new wijhttpproxy({
+                       url: "http://localhost/myprojects/Server-side/GetBusinessesByCords.php?longitude=35.187128&latitude=31.788777",
+                       dataType: "json",                    
+                   }),
+                   reader: new wijarrayreader([
+                    { name: "Company", mapping: "CompanyName" },
+                    { name: "Contact", mapping: "ContactName" },
+                    { name: "Title", mapping: "ContactTitle" },
+                    { name: "City", mapping: "City" }
+                 ])
+               })
+           });
+            $("#pagerPosition").change(function (e) {
+               var pagerSettings = $.extend({}, $("#demo").wijgrid("option", "pagerSettings"));
+               pagerSettings.position = $(e.target).val();
+               $("#demo").wijgrid("option", "pagerSettings", pagerSettings);
+           });
+
+           $("#pagerMode").bind("change", function (e) {
+               var pagerSettings = $.extend({}, $("#demo").wijgrid("option", "pagerSettings"));
+               pagerSettings.mode = $(e.target).val();
+               $("#demo").wijgrid("option", "pagerSettings", pagerSettings);
+           });
+
+           $("#pageSize").bind("change", function (e) {
+               $("#demo").wijgrid("option", "pageSize", parseInt($(e.target).val()));
+           });
+       });
+
+// ]]></script>
+<div class="container">
+<div class="header">
+<h2>WIJMO-SQLServer 2008 Grid</h2>
+</div>
+<div class="main demo"><!-- Begin demo markup --><!-- End demo markup -->
+<div class="demo-options"><!-- Begin options markup -->
+<div class="option-row"><label for="pagerPosition">
+Position</label>
+<select id="pagerPosition"> <option>bottom</option> <option>top</option> <option selected="selected">topAndBottom</option> </select></div>
+<div class="option-row"><label for="pagerMode">
+Mode</label>
+<select id="pagerMode"> <option>nextPrevious</option> <option>nextPreviousFirstLast</option> <option>numeric</option> <option>numericFirstLast</option> </select></div>
+<div class="option-row"><label for="pageSize">
+Page size</label>
+<select id="pageSize"> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option selected="selected">5</option> <option>10</option> <option>25</option> <option>50</option> <option>100</option> </select></div>
+<!-- End options markup -->
+
+</div>
+</div>
+<div class="footer demo-description">
+
+This sample demonstrates how you can create a pageable grid by setting the <strong>allowPaging</strong>,
+<strong>pageSize</strong> and <strong>pagerSettings</strong> options.
+
+</div>
+</div> 

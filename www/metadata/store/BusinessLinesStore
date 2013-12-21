@@ -1,0 +1,39 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "BusinessLines",
+        "storeId": "BusinessLinesStore",
+        "designer|userClassName": "BusinessLinesStore"
+    },
+    "designerId": "704a354d-ee5d-4dd4-b4f1-9c6cbc3bca6f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": null
+            },
+            "designerId": "d3459791-9f68-4682-b201-25d439fd3bc1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "e2f875fa-6bac-404b-b57e-04d41c641048"
+                }
+            ]
+        }
+    ]
+}

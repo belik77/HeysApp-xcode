@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "app/FacebookAPI.js"
+    },
+    "designerId": "5bcc02f4-66dd-45b6-abb5-ac663bdc8331"
+}

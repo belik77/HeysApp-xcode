@@ -1,0 +1,46 @@
+
+lat/lon
+31.746854,35.219421 - arnona- rabeno politi
+31.755175,35.221395 - talpiyot
+31.751817,35.208864 - haoman
+31.788777,35.187128 - am ve olamo
+
+31.754372,35.213842 - abu rami, pier kenig
+
+
+http://localhost/myprojects/MyBiluim/Server-side/GetBusinessesByCords.php?longitude=35.187128&latitude=31.788777
+
+
+http://localhost/myprojects/MyBiluim/Server-side/GetBusinessesByParams.php?longitude=35.187128&latitude=31.788777&filtered=0&sortingBy=distance
+
+http://localhost/elitest_sencha_phonegap%20-%20biluim%202/elitest_sencha_phonegap/android/assets/www/Server-side/GetBusinessesByParams.php?longitude=35.187128&latitude=31.788777&filtered=1&sortingBy=distance&location=0&cat=0&text=NOTEXTFILTER&lastrow=-1
+
+http://localhost/elitest_sencha_phonegap%20-%20biluim%202/elitest_sencha_phonegap/android/assets/www/Server-side/GetBusinessesByParams.php?filtered=2&sortingBy=id&id=5
+
+http://localhost/myprojects/MyBiluim/Server-side/BusinessesGoing.php?BusinessID=3
+http://localhost/myprojects/MyBiluim/Server-side/BusinessesGeneralAPI.php?MethodName=BusinessClickHomepage&BusinessID=3
+http://localhost/myprojects/MyBiluim/Server-side/BusinessesGeneralAPI.php?MethodName=BusinessLikeClick&BusinessID=3
+http://localhost/myprojects/MyBiluim/Server-side/BusinessesGeneralAPI.php?MethodName=BusinessAddToFavorite&BusinessID=3
+http://localhost/myprojects/MyBiluim/Server-side/BusinessesGeneralAPI.php?MethodName=BusinessRemoveFromFavorite&BusinessID=3
+
+
+http://localhost/elitest_sencha_phonegap%20-%20biluim%202/elitest_sencha_phonegap/android/assets/www/Server-side/BusinessesRank.php?BusinessID=5&capacity=3&MoreBoysGirls=0&LineLenght=10
+
+
+//fb app
+heys.biz
+
+Site URL?
+Mobile Site URL?
+Page Tab URL?
+http://www.heys.biz/client-side/app.html
+
+?Canvas URL?:
+http://www.heys.biz/client-side/
+
+localhost
+http://localhost/myprojects/mybiluim/app.html
+
+
+
+

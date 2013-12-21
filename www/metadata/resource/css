@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "resources/css/MyBiluim.css"
+    },
+    "designerId": "be9c0e02-6d0e-42f4-97c5-0fbd708e9fbf"
+}

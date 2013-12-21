@@ -1,0 +1,27 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GeneralAction"
+    },
+    "designerId": "ec8696d3-2b1f-4ecd-a001-1e99ed647845",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "result",
+                "type": "string"
+            },
+            "designerId": "787d9db9-8e44-46be-a759-9cdc583ade91"
+        }
+    ]
+}

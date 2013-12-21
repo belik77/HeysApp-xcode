@@ -1,0 +1,110 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Business",
+        "storeId": "BusinessStore",
+        "designer|userClassName": "BusinessStore"
+    },
+    "designerId": "65d5e53e-1cb8-48f8-b29e-4a314bd63e57",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": ""
+            },
+            "designerId": "57c5df68-8731-4d7e-9bc0-02a80cca21df",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "rows"
+                    },
+                    "designerId": "19ced5f2-27b8-4a55-b5ef-d3948d7078c1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "distance",
+                "designer|displayName": "distance"
+            },
+            "designerId": "21c772f8-64c1-47ff-8756-89e4b2bb1c8e"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "Capacity",
+                "designer|displayName": "Capacity"
+            },
+            "designerId": "562a009b-1ad1-4afa-9545-8f7f007ad4f1"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "last_update_time",
+                "designer|displayName": "last_update_time"
+            },
+            "designerId": "13c8f557-4f30-46ab-ad02-e1c67d012ec9"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "Likes",
+                "designer|displayName": "Likes"
+            },
+            "designerId": "ed95fb32-611b-488e-ad78-8c4e639668fc"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "Age",
+                "designer|displayName": "Age"
+            },
+            "designerId": "de99534e-68ce-4765-a83c-d3ef3d8eac8b"
+        }
+    ]
+}

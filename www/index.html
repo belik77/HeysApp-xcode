@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBiluim</title>
+    <script src="cordova-2.7.0.js"></script>
+     <script src="touch/sencha-touch-all-debug.js"></script>
+    <link rel="stylesheet" href="touch/resources/css/sencha-touch.css">
+    <link rel="stylesheet" href="resources/css/MyBiluim.css">
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="app/FacebookAPI.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+	<script src="Server-side/sha512.js" id="sha512"></script>
+	<script src="Server-side/GlobalVars.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+    <!-- cordova facebook plugin -->
+    <script src="cdv-plugin-fb-connect.js"></script>
+    <!-- facebook js sdk -->
+    <script src="facebook-js-sdk.js"></script>
+    
+    <script>
+        <!-- These are the notifications that are displayed to the user through pop-ups if the above JS files does not exist in the same directory-->
+        if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
+        if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
+        if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
+        
+                document.addEventListener('deviceready', function() {
+                                  try {
+                                  /*alert('Device is ready! Make sure you set your app_id below this alert.');*/
+                                  FB.init({ appId: "appid", nativeInterface: CDV.FB, useCachedDialogs: false });
+                                  } catch (e) {
+                                  alert(e);
+                                  }
+                                  }, false);
+    </script>
+</head>
+<body>
+</body>
+</html>

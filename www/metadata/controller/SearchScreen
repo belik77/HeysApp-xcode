@@ -1,0 +1,763 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SearchScreen"
+    },
+    "designerId": "a2519f97-b4f0-4c32-a73c-2952269706aa",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "CatSelectField",
+                "selector": "#CatSelectField",
+                "xtype": "Ext.picker.Picker"
+            },
+            "designerId": "5cc29b26-7923-45b0-a7a6-49906b8152c4"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "SearchScreen",
+                "selector": "#SearchScreen",
+                "xtype": "Ext.Panel"
+            },
+            "designerId": "22ef905d-6e3d-4be3-b59e-b1156f6ece6b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSearchScreenPanelInitialize",
+                "implHandler": [
+                    "\r",
+                    "console.log('onSearchScreenPanelInitialize');\r",
+                    "//load the category select field\r",
+                    "var CatSelect = this.getCatSelectField();\r",
+                    "var CitySelect = this.getCitySelectField();\r",
+                    "var url = 'http://'+localStorage.serverpath+'/Server-side/GetBusinessTypes.php';\r",
+                    "console.log(url);\r",
+                    "CatSelect.getStore().getProxy().setUrl(url);\r",
+                    "CatSelect.getStore().load({callback: function(records, operation, success) {\r",
+                    "    console.log(\"Total categories loaded:\"+CatSelect.getStore().getCount());\r",
+                    "\r",
+                    "    //load the category select field\r",
+                    "    var url = 'http://'+localStorage.serverpath+'/Server-side/GetLocations.php';\r",
+                    "    console.log(url);\r",
+                    "    CitySelect.getStore().getProxy().setUrl(url);\r",
+                    "    CitySelect.getStore().load({callback: function(records, operation, success) {\r",
+                    "        console.log(\"cities loaded\"+CitySelect.getStore().getCount());\r",
+                    "\r",
+                    "\r",
+                    "        var SortList = Ext.ComponentQuery.query(\"#SearchSortList\")[0];\r",
+                    "        //load the sorting list\r",
+                    "        var url = 'http://'+localStorage.serverpath+'/Server-side/SearchSort.php';\r",
+                    "        console.log(url);\r",
+                    "        SortList.getStore().getProxy().setUrl(url);\r",
+                    "        SortList.getStore().load({callback: function(records, operation, success) {\r",
+                    "            console.log(\"Total Sorts loaded:\"+SortList.getStore().getCount());\r",
+                    "            SortList.refresh();\r",
+                    "\r",
+                    "            /*var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "            controller.ReloadBusinessDataFromServer(function(){\r",
+                    "\r",
+                    "            //check if the screen was loaded already before\r",
+                    "            var Screen = Ext.ComponentQuery.query('#MyLocScreen');\r",
+                    "\r",
+                    "            if(Screen.length===0)//no\r",
+                    "            {\r",
+                    "                Screen = Ext.create('MyApp.view.MyLocScreen', {\r",
+                    "                    id: 'MyLocScreen'\r",
+                    "                });\r",
+                    "\r",
+                    "                //Screen.Show();\r",
+                    "            }\r",
+                    "            else\r",
+                    "            {\r",
+                    "                Screen[0].Show();\r",
+                    "            }\r",
+                    "        });*/\r",
+                    "    }\r",
+                    "});\r",
+                    "}\r",
+                    "});\r",
+                    "}\r",
+                    "});"
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.Panel",
+                "designer|controlQuery": "SearchScreen"
+            },
+            "designerId": "322e39ce-1182-49bd-b368-649495503c9a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "CitySelectField",
+                "selector": "#CitySelectField",
+                "xtype": "Ext.picker.Picker"
+            },
+            "designerId": "b3bcc69c-e795-49ee-a385-664916eb3de1"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "SearchSortList",
+                "selector": "#SearchSortList",
+                "xtype": "Ext.dataview.List"
+            },
+            "designerId": "a5dc6318-ce5d-4616-8032-d60770f89527"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "ReloadBusinessDataFromServer",
+                "designer|params": [
+                    "rowsLimit",
+                    "callback"
+                ],
+                "implHandler": [
+                    "//var MyNearByStore = Ext.getStore('MyApp.store.NearByStore');\r",
+                    "console.log('ReloadBusinessDataFromServer1');\r",
+                    "var longitude;\r",
+                    "var latitude;\r",
+                    "\r",
+                    "var dataView = Ext.ComponentQuery.query('businessdataview')[0];\r",
+                    "//dataView.getStore().setData();\r",
+                    "\r",
+                    "var NearByController = MyApp.app.getController( 'MyApp.controller.NearByListControl');\r",
+                    "NearByController.FindCurrentLocation(function(longitude,latitude){\r",
+                    "\r",
+                    "    //read the screen filter params:\r",
+                    "    var CityID=0;\r",
+                    "    if(Ext.ComponentQuery.query('#CitySelectField')[0].getRecord())\r",
+                    "    CityID = Ext.ComponentQuery.query('#CitySelectField')[0].getRecord().get('locationid');\r",
+                    "\r",
+                    "    var CatID =0;\r",
+                    "    if(Ext.ComponentQuery.query('#CatSelectField')[0].getRecord())\r",
+                    "    CatID = Ext.ComponentQuery.query('#CatSelectField')[0].getRecord().get('id');\r",
+                    "\r",
+                    "\r",
+                    "    var freeTxt = Ext.ComponentQuery.query('#SearchField')[0].getValue();\r",
+                    "    if(freeTxt===\"\")\r",
+                    "    freeTxt=\"NOTEXTFILTER\";\r",
+                    "\r",
+                    "\r",
+                    "    //load main business data\r",
+                    "    /*var UserStore = Ext.getStore('UserStore');\r",
+                    "    var aRecord = UserStore.getAt(0);\r",
+                    "    var user_id = aRecord.get('user_id');*/\r",
+                    "\r",
+                    "\r",
+                    "    //define the minimum of rows to retrieve.\r",
+                    "    if(rowsLimit<5 || rowsLimit===null )\r",
+                    "    {\r",
+                    "        rowsLimit=5;\r",
+                    "    }\r",
+                    "    var BusinessStore = Ext.getStore('BusinessStore');\r",
+                    "    BusinessStore.removeAll(true);\r",
+                    "    var sorter = 'distance';\r",
+                    "    var url = 'http://'+localStorage.serverpath+'/Server-side/GetBusinessesByParams.php?longitude='+longitude+'&latitude='+latitude+'&filtered=1&sortingBy=distance&location='+CityID+'&cat='+CatID+'&text='+freeTxt+'&lastrow=-1&user_id='+localStorage.user_id+'&rowsLimit='+rowsLimit;\r",
+                    "    //var url = 'http://'+localStorage.serverpath+'/Server-side/GetBusinessesByParams.php?longitude='+longitude+'&latitude='+latitude+'&filtered=1&sortingBy=distance&location='+CityID+'&cat=0&text='+freeTxt+'&lastrow=-1';\r",
+                    "    console.log(url);\r",
+                    "    console.log('rowsLimit='+rowsLimit);\r",
+                    "    var proxy= BusinessStore.getProxy();\r",
+                    "    proxy.setUrl(url);\r",
+                    "    //proxy.setExtraParam('id', BusinessID );\r",
+                    "    //proxy.setExtraParam('filtered', \"2\" );//business screen filter\r",
+                    "    //proxy.setExtraParam('sortingBy', \"id\" );\r",
+                    "\r",
+                    "    BusinessStore.load({callback: function(records, operation, success) {  \r",
+                    "        var count = BusinessStore.getCount();\r",
+                    "        var data = BusinessStore.getRange();\r",
+                    "        console.log('BusinessStore count : ' + count);\r",
+                    "        //console.log('BusinessStore data : ' + data);\r",
+                    "\r",
+                    "        //BusinessStore.sort(sorter,'DESC');\r",
+                    "\r",
+                    "        //TODO: if no data found, clear the dataview\r",
+                    "        /*if(count===0)\r",
+                    "        {\r",
+                    "        //dataView.removeAll(false,false);\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {*/\r",
+                    "        //dataView.getStore().setData(records);\r",
+                    "\r",
+                    "        //Draw the pins on the map\r",
+                    "        var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "        controller.DrawPinsOnMap(latitude, longitude,function(){\r",
+                    "            console.log(\"pins drawed on map\");\r",
+                    "\r",
+                    "            callback();\r",
+                    "        });\r",
+                    "        //}\r",
+                    "    }    \r",
+                    "});    \r",
+                    "});  \r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "6377268d-3820-4bd6-9cff-b128803fba1c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "businessdataview",
+                "selector": "#businessdataview",
+                "xtype": "Ext.dataview.DataView"
+            },
+            "designerId": "a0ecfdfa-0595-4619-a9d8-7ccb0f352749"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchscrnRefBtn",
+                "selector": "#searchscrnRefBtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "21391442-cfc4-4659-a9cd-ca97197684bd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onsearchscrnRefBtnTap",
+                "implHandler": [
+                    "console.log('onsearchscrnRefBtnTap');\r",
+                    "var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "controller.ReloadBusinessDataFromServer(Ext.getStore('BusinessStore').getCount(),function(){\r",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "searchscrnRefBtn"
+            },
+            "designerId": "e75942ea-2d07-4b28-bab3-670705ff1a90"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "SearchField",
+                "selector": "#SearchField",
+                "xtype": "Ext.field.Search"
+            },
+            "designerId": "c50ce4b9-bd24-497d-9f9b-8b3d9a965d8f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSearchSortListSelect",
+                "implHandler": [
+                    "console.log(\"onSearchSortListSelect\");\r",
+                    "var BusinessStore = Ext.getStore('BusinessStore');\r",
+                    "\r",
+                    "var sorter = record.get('SorterName');\r",
+                    "BusinessStore.sort(sorter,'DESC');\r",
+                    "\r",
+                    "//TODO: refresh the dataview"
+                ],
+                "name": "select",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "SearchSortList"
+            },
+            "designerId": "0e86f454-f6a5-47a1-afea-94cf7021094c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "detailmap",
+                "selector": "#detailmap",
+                "xtype": "Ext.Map"
+            },
+            "designerId": "b9a4814f-a368-4c6e-b175-7002d62ea6a4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "DrawPinsOnMap",
+                "designer|params": [
+                    "lat",
+                    "lon",
+                    "callback"
+                ],
+                "implHandler": [
+                    "\r",
+                    "console.log('DrawPinsOnMap');\r",
+                    "\r",
+                    "//remove all current markers from the map.\r",
+                    "if (markersArray) {\r",
+                    "    for (var i=0; i<markersArray.length; i++) {\r",
+                    "        markersArray[i].setMap(null);\r",
+                    "    }\r",
+                    "\r",
+                    "    markersArray.length = 0;\r",
+                    "}\r",
+                    "\r",
+                    "//build the map center\r",
+                    "var myOptions = {\r",
+                    "    zoom: 16,\r",
+                    "    center: new google.maps.LatLng(lat, lon),\r",
+                    "    mapTypeId: google.maps.MapTypeId.ROADMAP\r",
+                    "};\r",
+                    "\r",
+                    "var map = Ext.ComponentQuery.query('#detailmap')[0];\r",
+                    "\r",
+                    "//set some map options\r",
+                    "map.setMapOptions({\r",
+                    "    zoom: 16\r",
+                    "});\r",
+                    "\r",
+                    "map.setMapCenter({\r",
+                    "    latitude: lat,\r",
+                    "    longitude: lon\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "var store = Ext.getStore('BusinessStore');\r",
+                    "\r",
+                    "\r",
+                    "image = new google.maps.MarkerImage(\r",
+                    "'resources/images/marker1.png',\r",
+                    "new google.maps.Size(32, 31),\r",
+                    "new google.maps.Point(0, 0),\r",
+                    "new google.maps.Point(16, 31)\r",
+                    ");\r",
+                    "\r",
+                    "PremiumImage = new google.maps.MarkerImage(\r",
+                    "'resources/images/marker2.png',\r",
+                    "new google.maps.Size(32, 31),\r",
+                    "new google.maps.Point(0, 0),\r",
+                    "new google.maps.Point(16, 31)\r",
+                    ");\r",
+                    "\r",
+                    "store.each(function(record){\r",
+                    "\r",
+                    "    //draw Business Pins\r",
+                    "    var position = new google.maps.LatLng(record.get('latitude'), record.get('longitude'));  //Sencha HQ\r",
+                    "\r",
+                    "    //check account_level\r",
+                    "    if(record.get('account_level')===1)\r",
+                    "    {\r",
+                    "        var marker = new google.maps.Marker({\r",
+                    "            position: position,\r",
+                    "            title : record.get('business_name'),\r",
+                    "            map: map.getMap(),\r",
+                    "            icon: PremiumImage\r",
+                    "        });\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        var marker = new google.maps.Marker({\r",
+                    "            position: position,\r",
+                    "            title : record.get('business_name'),\r",
+                    "            map: map.getMap(),\r",
+                    "            icon: image\r",
+                    "        });\r",
+                    "    }\r",
+                    "    //saves the market to the array\r",
+                    "    markersArray.push(marker);\r",
+                    "});\r",
+                    "\r",
+                    "callback();"
+                ]
+            },
+            "designerId": "4a549d2e-3efe-4fc2-914b-bede386af2af"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BusinessDataItem",
+                "selector": "#BusinessDataItem",
+                "xtype": "Ext.dataview.component.DataItem"
+            },
+            "designerId": "aea84205-6d24-4bad-aa2b-9f0a6e25b2a4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onbusinessdataviewSelect",
+                "implHandler": [
+                    "console.log('onbusinessdataviewSelect');\r",
+                    "\r",
+                    "//TODO: change the button icon pic\r",
+                    "goBtn = this.getGoBtn();\r",
+                    "goBtn.setBaseCls('GoBusinessButtonSelected');\r",
+                    "\r",
+                    "//put the red circelled marker on the same coords of the record.\r",
+                    "\r",
+                    "if(google)\r",
+                    "{\r",
+                    "    if(SelectedMarkerCircle)\r",
+                    "    {\r",
+                    "        SelectedMarkerCircle.setMap(null);\r",
+                    "        SelectedMarkerCircle=null;\r",
+                    "    }\r",
+                    "    var map = Ext.ComponentQuery.query('#detailmap')[0];\r",
+                    "    image = new google.maps.MarkerImage(\r",
+                    "    'resources/images/marker3.png',\r",
+                    "    new google.maps.Size(42, 42),\r",
+                    "    new google.maps.Point(0, 0),\r",
+                    "    new google.maps.Point(28, 34)\r",
+                    "    );\r",
+                    "\r",
+                    "    //draw the circel around the Pin\r",
+                    "    var position = new google.maps.LatLng(record.get('latitude'), record.get('longitude'));  //Sencha HQ\r",
+                    "\r",
+                    "    //check account_level\r",
+                    "    var marker = new google.maps.Marker({\r",
+                    "        position: position,\r",
+                    "        title : record.get('business_name'),\r",
+                    "        map: map.getMap(),\r",
+                    "        icon: image\r",
+                    "    });\r",
+                    "    //save the marker\r",
+                    "    SelectedMarkerCircle=marker;\r",
+                    "}\r",
+                    "\r",
+                    ""
+                ],
+                "name": "select",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "businessdataview"
+            },
+            "designerId": "398f2530-1294-49a4-9d21-0ee66b8e4bea"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "hidebtn",
+                "selector": "#hidebtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "2f932600-adca-4327-b464-c6907a4bd54d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onhidebtnTap",
+                "implHandler": [
+                    "console.log('hidebutton tap');\r",
+                    "var filterPannel =  button.up('container[id=FilterPannel]');\r",
+                    "var BottomfilterPannel =  button.up('container[id=FilterPannel]').down('container[id=bottomFilterPannel]');\r",
+                    "\r",
+                    "var SeatchFieldCont = button.up('container[id=FilterPannel]').down('container[id=SeatchFieldCont]');\r",
+                    "var FilterTabBar = button.up('container[id=FilterPannel]').down('tabbar[id=FilterTabBar]');\r",
+                    "\r",
+                    "if(BottomfilterPannel.isHidden())\r",
+                    "{\r",
+                    "    BottomfilterPannel.show();\r",
+                    "    filterPannel.setFlex(4.5);\r",
+                    "    filterPannel.removeCls('ListMapTopContCollapse');\r",
+                    "    filterPannel.addCls('ListMapTopCont');\r",
+                    "    //SeatchFieldCont.setFlex(1);\r",
+                    "    BottomfilterPannel.setFlex(5.5);\r",
+                    "    //FilterTabBar.setHeight('15%');\r",
+                    "    SeatchFieldCont.setHeight('15%');\r",
+                    "    SeatchFieldCont.setFlex(2);\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    BottomfilterPannel.hide();\r",
+                    "    filterPannel.setFlex(1.5);\r",
+                    "    filterPannel.removeCls('ListMapTopCont');\r",
+                    "    filterPannel.addCls('ListMapTopContCollapse');\r",
+                    "    //SeatchFieldCont.setFlex(0.5);\r",
+                    "    BottomfilterPannel.setFlex(0);\r",
+                    "    //FilterTabBar.setHeight('40%');\r",
+                    "    SeatchFieldCont.setHeight('25%');\r",
+                    "    SeatchFieldCont.setFlex(3);\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "hidebtn"
+            },
+            "designerId": "67c9020d-07da-41d6-b8dc-fe4d961f91e4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCitySelectFieldChange",
+                "implHandler": [
+                    "console.log('onCitySelectFieldChange');\r",
+                    "\r",
+                    "var field = selectfield;\r",
+                    "\r",
+                    "if (!field.initialized) {\r",
+                    "    return;\r",
+                    "}\r",
+                    "\r",
+                    "var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "controller.ReloadBusinessDataFromServer(Ext.getStore('BusinessStore').getCount(),function(){\r",
+                    "});"
+                ],
+                "name": "change",
+                "designer|targetType": "Ext.field.Select",
+                "designer|controlQuery": "CitySelectField"
+            },
+            "designerId": "ea10e8c4-dc73-4b0d-ac4e-fa7f1320c7ef"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCatSelectFieldChange",
+                "implHandler": [
+                    "console.log('onCatSelectFieldChange');\r",
+                    "\r",
+                    "var field = selectfield;\r",
+                    "\r",
+                    "if (!field.initialized) {\r",
+                    "    return;\r",
+                    "}\r",
+                    "\r",
+                    "var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "controller.ReloadBusinessDataFromServer(Ext.getStore('BusinessStore').getCount(),function(){\r",
+                    "});"
+                ],
+                "name": "change",
+                "designer|targetType": "Ext.field.Select",
+                "designer|controlQuery": "CatSelectField"
+            },
+            "designerId": "6a51043d-831a-4339-baee-ac1705c504af"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "GoBtn",
+                "selector": "#GoBtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "0e02c0dc-32ce-47de-ba5f-05496ba895ef"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGoBtnTap",
+                "implHandler": [
+                    "console.log('GoBtn');\r",
+                    "\r",
+                    "//check if the screen was loaded already before\r",
+                    "var Screen = Ext.ComponentQuery.query('#BusinessScreen');\r",
+                    "\r",
+                    "if(Screen.length===0)//no\r",
+                    "{\r",
+                    "    Screen = Ext.create('MyApp.view.BusinessScreen', {\r",
+                    "        id: 'BusinessScreen'\r",
+                    "    });\r",
+                    "\r",
+                    "    //TODO: save the selected business ID\r",
+                    "\r",
+                    "    Ext.Viewport.setActiveItem(Screen);\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    Ext.Viewport.setActiveItem(Screen[0]);\r",
+                    "    //TODO: save the selected business ID\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "GoBtn"
+            },
+            "designerId": "cd143667-3fa3-42b6-b619-41bede511bde"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSearchScreenActive",
+                "implHandler": [
+                    "console.log('onSearchScreenActive');\r",
+                    "\r",
+                    "var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "controller.ReloadBusinessDataFromServer(Ext.getStore('BusinessStore').getCount(),function(){\r",
+                    "    //check if the screen was loaded already before\r",
+                    "\r",
+                    "    if(container.bshowMyLocScreen===true)\r",
+                    "    {\r",
+                    "        container.bshowMyLocScreen=false;\r",
+                    "        var Screen = Ext.ComponentQuery.query('#MyLocScreen');\r",
+                    "\r",
+                    "        if(Screen.length===0)//no\r",
+                    "        {\r",
+                    "            Screen = Ext.create('MyApp.view.MyLocScreen', {\r",
+                    "                id: 'MyLocScreen'\r",
+                    "            });\r",
+                    "\r",
+                    "            //Screen.Show();\r",
+                    "        }\r",
+                    "        else\r",
+                    "        {\r",
+                    "            Screen[0].Show();\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "activate",
+                "designer|targetType": "Ext.Panel",
+                "designer|controlQuery": "SearchScreen"
+            },
+            "designerId": "8f561988-b35e-4699-881a-955f3c8f8e04"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLoadMoreBtnTap",
+                "implHandler": [
+                    "console.log('onLoadMoreBtnTap');\r",
+                    "\r",
+                    "var rowsLimit=0;\r",
+                    "\r",
+                    "var BusinessStore = Ext.getStore('BusinessStore');\r",
+                    "\r",
+                    "if(BusinessStore.getCount()>0)\r",
+                    "{\r",
+                    "    rowsLimit=  BusinessStore.getCount()+5;//every time increas by 5\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "controller.ReloadBusinessDataFromServer(rowsLimit,function(){\r",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "LoadMoreBtn"
+            },
+            "designerId": "70fa10f9-2bf4-4234-bc20-264ee8b99c1d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "LoadMoreBtn",
+                "selector": "#LoadMoreBtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "3bb486ab-5a05-48c1-8f1b-5a0096a37f03"
+        }
+    ]
+}

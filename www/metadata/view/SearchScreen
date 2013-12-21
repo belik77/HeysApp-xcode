@@ -1,0 +1,646 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bshowMyLocScreen": false,
+        "id": "SearchScreen",
+        "itemId": "SearchScreen",
+        "style": null,
+        "designer|userClassName": "SearchScreen",
+        "layout": "vbox"
+    },
+    "configAlternates": {
+        "bshowMyLocScreen": "boolean"
+    },
+    "designerId": "a3d44ede-44ec-4ef0-91c8-86ac2c179e05",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "bshowMyLocScreen",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 12,
+                "cls": [
+                    "regbkgscreen"
+                ],
+                "height": "100%",
+                "layout": "vbox"
+            },
+            "designerId": "00c5bbb4-e533-4d9e-b45c-3bfc6b77910f",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 4.5,
+                        "cls": [
+                            "wholepageRelative",
+                            "ListMapTopCont"
+                        ],
+                        "docked": null,
+                        "height": null,
+                        "hidden": false,
+                        "id": "FilterPannel",
+                        "itemId": "FilterPannel",
+                        "ui": "",
+                        "width": null,
+                        "layout": "vbox",
+                        "scrollable": null
+                    },
+                    "designerId": "aec55fc1-1443-4717-800c-8393320a6747",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "baseCls": "ListMapTopTabPannel",
+                                "cls": [
+                                    "TransparentContainer"
+                                ],
+                                "docked": "top",
+                                "height": "98%",
+                                "top": null,
+                                "width": "98%"
+                            },
+                            "designerId": "14304533-e9c8-442e-b49f-c05fe233cc51",
+                            "cn": [
+                                {
+                                    "type": "Ext.tab.Bar",
+                                    "reference": {
+                                        "name": "tabBar",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "baseCls": null,
+                                        "cls": [
+                                            "TransparentContainer"
+                                        ],
+                                        "docked": "top",
+                                        "height": 15,
+                                        "id": "FilterTabBar",
+                                        "minHeight": "0.5",
+                                        "ui": "light",
+                                        "width": null
+                                    },
+                                    "designerId": "4ecc92d9-bf25-482a-8565-5a272fd49331"
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "LIST",
+                                        "cls": [
+                                            "TransparentContainer"
+                                        ],
+                                        "docked": null,
+                                        "height": null,
+                                        "id": "LIST",
+                                        "itemId": "LIST",
+                                        "ui": null,
+                                        "width": null,
+                                        "layout": "vbox",
+                                        "scrollable": "vertical"
+                                    },
+                                    "designerId": "6bc1e5a3-2723-49c9-b8f7-b343c1fbb7f9",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 2,
+                                                "cls": [
+                                                    "TransparentContainer",
+                                                    "ListMapTopContMargins"
+                                                ],
+                                                "height": null,
+                                                "id": "SeatchFieldCont",
+                                                "ui": null,
+                                                "layout": "fit"
+                                            },
+                                            "designerId": "a91c5f73-6ece-4044-a628-d626eb6f2356",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.field.Search",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "baseCls": "SearchField",
+                                                        "docked": null,
+                                                        "height": null,
+                                                        "id": "SearchField",
+                                                        "itemId": "SearchField",
+                                                        "maxHeight": null,
+                                                        "minHeight": 0.5,
+                                                        "width": "100%",
+                                                        "inputCls": null,
+                                                        "label": null,
+                                                        "labelCls": null,
+                                                        "labelWidth": null,
+                                                        "placeHolder": null,
+                                                        "ui": "none"
+                                                    },
+                                                    "designerId": "d7523b3f-df77-421c-8334-b4221dc93685"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Container",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 5.5,
+                                                "cls": [
+                                                    "ListMapTopContMargins"
+                                                ],
+                                                "hidden": false,
+                                                "id": "bottomFilterPannel",
+                                                "itemId": "bottomFilterPannel",
+                                                "layout": "vbox"
+                                            },
+                                            "designerId": "328a3c9f-faf0-44ca-bb4d-9293ac2ebf58",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 1.4,
+                                                        "cls": [
+                                                            "citycatback"
+                                                        ],
+                                                        "height": null,
+                                                        "layout": "hbox"
+                                                    },
+                                                    "designerId": "8d1a8d22-e6f0-4988-98c4-581029969aa3",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.field.Select",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "layout|flex": 0.5,
+                                                                "baseCls": "CityCatLabel-class",
+                                                                "centered": false,
+                                                                "height": null,
+                                                                "id": "CitySelectField",
+                                                                "itemId": "CitySelectField",
+                                                                "maxHeight": null,
+                                                                "style": null,
+                                                                "designer|displayName": null,
+                                                                "inputCls": null,
+                                                                "label": null,
+                                                                "labelAlign": null,
+                                                                "labelCls": null,
+                                                                "labelWidth": null,
+                                                                "placeHolder": "City",
+                                                                "autoSelect": false,
+                                                                "displayField": "locationname",
+                                                                "store": "LocationStore",
+                                                                "usePicker": null
+                                                            },
+                                                            "designerId": "9cae86b4-44ff-4c34-b956-c1bdfa4e5bdf"
+                                                        },
+                                                        {
+                                                            "type": "Ext.Container",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "layout|flex": 0.1
+                                                            },
+                                                            "designerId": "a0ca34a5-620a-4f1d-b3cc-a560518fb14f"
+                                                        },
+                                                        {
+                                                            "type": "Ext.field.Select",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "layout|flex": 0.5,
+                                                                "baseCls": "CityCatLabel-class",
+                                                                "cls": [
+                                                                    "TransparentContainer"
+                                                                ],
+                                                                "docked": null,
+                                                                "height": null,
+                                                                "id": "CatSelectField",
+                                                                "itemId": "CatSelectField",
+                                                                "style": null,
+                                                                "designer|displayName": null,
+                                                                "inputCls": null,
+                                                                "label": null,
+                                                                "labelCls": null,
+                                                                "placeHolder": "Category",
+                                                                "autoSelect": false,
+                                                                "displayField": "typename",
+                                                                "store": "CategoryStore",
+                                                                "usePicker": [
+                                                                    "false"
+                                                                ]
+                                                            },
+                                                            "designerId": "60732bea-9b67-4fc7-877e-3ff3cbf691c2"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 0.5,
+                                                        "layout": "fit"
+                                                    },
+                                                    "designerId": "c39b3ad9-f1cd-4fec-aa33-261124792045",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.Label",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "cls": [
+                                                                    "sortBylbl"
+                                                                ],
+                                                                "docked": null,
+                                                                "html": "sort by:"
+                                                            },
+                                                            "designerId": "053be67d-96b9-4c67-a139-e8ca23357441"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.Container",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "layout|flex": 2,
+                                                        "cls": [
+                                                            "ListMapTopContMargins",
+                                                            "ListTopCont"
+                                                        ],
+                                                        "height": null,
+                                                        "layout": "fit"
+                                                    },
+                                                    "designerId": "4b3fbf46-5d98-4188-b586-93e4d5f68d5f",
+                                                    "cn": [
+                                                        {
+                                                            "type": "Ext.dataview.List",
+                                                            "reference": {
+                                                                "name": "items",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "baseCls": null,
+                                                                "border": null,
+                                                                "height": null,
+                                                                "id": "SearchSortList",
+                                                                "itemId": "SearchSortList",
+                                                                "minHeight": 0.5,
+                                                                "minWidth": null,
+                                                                "padding": null,
+                                                                "style": "text-align:center",
+                                                                "itemCls": "Listitem",
+                                                                "store": "SearchSortStore",
+                                                                "itemHeight": 25,
+                                                                "variableHeights": false
+                                                            },
+                                                            "designerId": "cdf0d814-8f25-4dba-a92c-c05c8f717eb6",
+                                                            "cn": [
+                                                                {
+                                                                    "type": "Ext.XTemplate",
+                                                                    "reference": {
+                                                                        "name": "itemTpl",
+                                                                        "type": "object"
+                                                                    },
+                                                                    "codeClass": null,
+                                                                    "userConfig": {
+                                                                        "implHandler": [
+                                                                            "<div>{SorterValue}</div>"
+                                                                        ],
+                                                                        "designer|displayName": "itemTpl"
+                                                                    },
+                                                                    "designerId": "b2f90163-410c-4a04-ab8e-e824e7f47acf"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "title": "MAP",
+                                        "cls": [
+                                            "ListMapTopContMargins"
+                                        ]
+                                    },
+                                    "designerId": "ad467663-89b3-4d58-bc4f-7a936f0610ea",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Map",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": "100%",
+                                                "id": "detailmap",
+                                                "itemId": "detailmap"
+                                            },
+                                            "designerId": "af9d0947-3362-42ac-9fdd-b00fa354b75c"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "baseCls": "HideButton",
+                                "docked": "bottom",
+                                "height": "10%",
+                                "id": "hidebtn",
+                                "itemId": "hidebtn",
+                                "width": "20%",
+                                "text": null
+                            },
+                            "designerId": "fde1ec40-d21a-4006-b35b-384c05941408"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 5.5
+                    },
+                    "designerId": "cbf9aac5-4744-4a19-8ee9-1850d30cc2d7",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "100%"
+                            },
+                            "designerId": "143a752e-89d2-419f-a84f-09a9add6ffbf",
+                            "masterInstanceId": "8811f46a-ba2f-463b-92c0-9ed551df9bf6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "bottom": null,
+                        "cls": [
+                            "wholepageRelative"
+                        ],
+                        "docked": "bottom",
+                        "height": null
+                    },
+                    "designerId": "566520bf-57ad-4fab-9271-4f66409a2663",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "bottom": null,
+                                "cls": [
+                                    "LoadMorebtn"
+                                ],
+                                "docked": "top",
+                                "id": "LoadMoreBtn",
+                                "itemId": "LoadMoreBtn",
+                                "padding": null,
+                                "width": null,
+                                "text": null
+                            },
+                            "designerId": "bd446bfc-ffc4-4098-a35c-62a2c30f463f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2,
+                "cls": [
+                    "searchScreenToolbar"
+                ],
+                "docked": "top"
+            },
+            "designerId": "894033bc-369b-42d6-be16-c978761d6201",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": "backbtn",
+                        "docked": "left",
+                        "height": null,
+                        "id": "searchscrnback",
+                        "itemId": "searchscrnback",
+                        "width": "12%",
+                        "text": null
+                    },
+                    "designerId": "85e0d4f2-5cdd-4e31-a7d4-88eb13d72fde",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSearchscrnbackTap",
+                                "implHandler": [
+                                    "//drop the mask\r",
+                                    "var Screen1 = Ext.ComponentQuery.query('#fbloginpanel');\r",
+                                    "if(Screen1.length>0)\r",
+                                    "{\r",
+                                    "    Screen1[0].setMasked(false);  \r",
+                                    "}\r",
+                                    "\r",
+                                    "Ext.Viewport.setActiveItem(Ext.ComponentQuery.query('#fbloginpanel')[0]);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "803d5a24-bc44-4194-8489-e3f771943917"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": "backbtn",
+                        "docked": "right",
+                        "id": "searchscrnRefBtn",
+                        "itemId": "searchscrnRefBtn",
+                        "padding": null,
+                        "width": "12%",
+                        "text": null
+                    },
+                    "designerId": "b9f4dd4a-e191-43e3-a3e2-9c7b152d3737"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": "backbtn",
+                        "docked": "right",
+                        "id": "contactbtn",
+                        "itemId": "contactbtn",
+                        "padding": null,
+                        "width": "12%",
+                        "text": null
+                    },
+                    "designerId": "0b508488-4cd4-44e4-a449-c29b32c5b01e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMybutton29Tap",
+                                "implHandler": [
+                                    "//check if the screen was loaded already before\r",
+                                    "var Screen = Ext.ComponentQuery.query('#ContactScreen');\r",
+                                    "\r",
+                                    "if(Screen.length===0)//no\r",
+                                    "{\r",
+                                    "    Screen = Ext.create('MyApp.view.ContactScreen', {\r",
+                                    "        id: 'ContactScreen'\r",
+                                    "    });\r",
+                                    "\r",
+                                    "    Screen.bshowMyLocScreen=true;\r",
+                                    "    Ext.Viewport.setActiveItem(Screen);\r",
+                                    "\r",
+                                    "\r",
+                                    "\r",
+                                    "}\r",
+                                    "else\r",
+                                    "{\r",
+                                    "    Screen[0].bshowMyLocScreen=true;\r",
+                                    "    Ext.Viewport.setActiveItem(Screen[0]);\r",
+                                    "}"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "1fa9ad15-e43c-450d-9cba-a8abd0f3c312"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

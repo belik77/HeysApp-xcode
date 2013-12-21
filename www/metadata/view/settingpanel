@@ -1,0 +1,206 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "settingpanel",
+        "itemId": "settingpanel",
+        "designer|userClassName": "settingpanel",
+        "layout": "vbox"
+    },
+    "designerId": "e6d43d1b-6764-48b9-85da-5b8e5280cbe3",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 5,
+                "cls": [
+                    "settingbg"
+                ],
+                "height": "100%",
+                "layout": "vbox"
+            },
+            "designerId": "68dd65e7-d6b9-462c-a03c-5f4b6a961669",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 4,
+                        "cls": [
+                            "settinginnerbg"
+                        ],
+                        "docked": null,
+                        "height": "20%",
+                        "layout": "vbox"
+                    },
+                    "designerId": "50f2fb3c-add0-458a-9d9b-77bbd7621419",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "layout": "vbox"
+                            },
+                            "designerId": "05d7b6f4-cb9e-4682-87f5-5b370917a887",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "pushstrip"
+                                        ]
+                                    },
+                                    "designerId": "dd5facc8-ac13-484d-96d4-ef7b05c797e3",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Toggle",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "favotoggle"
+                                                ],
+                                                "label": "Push Notification",
+                                                "labelCls": "TransparentContainer",
+                                                "labelWidth": "70%"
+                                            },
+                                            "designerId": "a88a0057-8c79-4c77-b378-76a13e6b8303"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "scorestrip"
+                                        ]
+                                    },
+                                    "designerId": "739e1958-9781-426b-bf8b-1766fcee30d0"
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 0.5,
+                                        "cls": [
+                                            "favotrip"
+                                        ]
+                                    },
+                                    "designerId": "c5bfcb58-1137-45b0-9a78-e643bcf0de27"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 3
+                            },
+                            "designerId": "30b34f56-da8c-4032-bcf3-6694fc79fd50"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "settingToolbar"
+                ],
+                "docked": "top"
+            },
+            "designerId": "a5948e3b-0541-444e-804e-cfab00e2b584",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": "backbtn",
+                        "docked": "left",
+                        "height": "",
+                        "id": "settingbackbtn",
+                        "itemId": "settingbackbtn",
+                        "margin": null,
+                        "minHeight": null,
+                        "width": "18%",
+                        "iconCls": null,
+                        "text": null
+                    },
+                    "designerId": "92ba24bf-bf05-4863-a0ee-0b3b482cd8e1",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSettingbackbtnTap",
+                                "implHandler": [
+                                    "//var Screen = Ext.ComponentQuery.query('#fbloginpanel');\r",
+                                    "\r",
+                                    "Ext.Viewport.setActiveItem(Ext.ComponentQuery.query('#fbloginpanel')[0]);\r",
+                                    "//Ext.Viewport.show();"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "ef3027b3-16a0-4071-a31a-9112dcec9fc2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

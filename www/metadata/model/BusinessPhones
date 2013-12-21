@@ -1,0 +1,40 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BusinessPhones"
+    },
+    "designerId": "f244e74d-3a89-4b65-8be2-d23bdc42a749",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BusinessID",
+                "type": "int"
+            },
+            "designerId": "6bc02675-9c32-4d2b-a054-7b613a0ca76e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PhoneNumber",
+                "type": "string"
+            },
+            "designerId": "e9add67d-88a4-4230-8952-02800bb947c0"
+        }
+    ]
+}

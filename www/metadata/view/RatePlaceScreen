@@ -1,0 +1,486 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "cls": [
+            "RatingScreen"
+        ],
+        "docked": "top",
+        "fullscreen": true,
+        "height": null,
+        "id": "RatePlaceScreen",
+        "itemId": "RatePlaceScreen",
+        "showAnimation": [
+            "{type: \"popOut\", duration: 250, easing: \"ease-out\" }"
+        ],
+        "width": null,
+        "designer|userClassName": "RatePlaceScreen",
+        "hideOnMaskTap": false,
+        "layout": "fit",
+        "modal": true,
+        "scrollable": null
+    },
+    "configAlternates": {
+        "showAnimation": "object",
+        "business_id": "number"
+    },
+    "designerId": "41787705-0ebe-4670-8053-7dbd0a981dc1",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "business_id",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout": "vbox"
+            },
+            "designerId": "ef53fdf7-3135-429f-bdc3-e3d3e3ec3f86",
+            "cn": [
+                {
+                    "type": "Ext.TitleBar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "cls": [
+                            "RatingToolbar"
+                        ],
+                        "docked": "top",
+                        "height": null,
+                        "title": null
+                    },
+                    "designerId": "cb0eccb8-eb89-449d-a6b3-68d664e3f3f5"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 3,
+                        "cls": [
+                            "RatingCont"
+                        ],
+                        "height": null,
+                        "width": null,
+                        "layout": "vbox"
+                    },
+                    "designerId": "02c5ec60-d5be-4be1-95cc-60bfeaff1f90",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "cls": [
+                                    "RatingTopContMargins",
+                                    "sortBylbl"
+                                ],
+                                "html": "Capacity:"
+                            },
+                            "designerId": "10afa00b-c6fa-4177-b56b-c3ce0bdee386"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2,
+                                "cls": [
+                                    "RatingTopContMargins"
+                                ],
+                                "layout": "hbox"
+                            },
+                            "designerId": "daf0cc69-d784-4a22-a14c-30469b050b87",
+                            "cn": [
+                                {
+                                    "type": "Ext.SegmentedButton",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "selectedbtnidx": 1,
+                                        "layout|flex": 3,
+                                        "id": "capacitySegbtn",
+                                        "itemId": "capacitySegbtn",
+                                        "pressedCls": "btnPressed"
+                                    },
+                                    "configAlternates": {
+                                        "selectedbtnidx": "number"
+                                    },
+                                    "designerId": "8f2874cc-6068-4c08-bcdd-33062c7ba59b",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "selectedbtnidx",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "baseCls": null,
+                                                "cls": [
+                                                    "Emptybtn"
+                                                ],
+                                                "id": "emptyBtn",
+                                                "itemId": "emptyBtn",
+                                                "pressedCls": null,
+                                                "text": null
+                                            },
+                                            "designerId": "10070e52-406f-436d-a2ef-c5b94d558c10"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "baseCls": null,
+                                                "cls": [
+                                                    "coolbtn"
+                                                ],
+                                                "id": "coolBtn",
+                                                "itemId": "coolBtn",
+                                                "pressedCls": null,
+                                                "text": null
+                                            },
+                                            "designerId": "90346e68-7d30-4c7d-8e45-70348d493281"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "cls": [
+                                                    "hotbtn"
+                                                ],
+                                                "id": "hotBtn",
+                                                "itemId": "hotBtn",
+                                                "pressedCls": null,
+                                                "text": null
+                                            },
+                                            "designerId": "e887abad-4f1e-440e-be79-9da6bf146b20"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "cls": [
+                                                    "fullbtn"
+                                                ],
+                                                "id": "fullBtn",
+                                                "itemId": "fullBtn",
+                                                "pressedCls": null,
+                                                "text": null
+                                            },
+                                            "designerId": "a0c6495e-9889-42b9-9384-6071925f1582"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "cls": [
+                                    "RatingTopContMargins",
+                                    "sortBylbl"
+                                ],
+                                "html": "Line Lenght (minutes):"
+                            },
+                            "designerId": "bd085cbc-8b13-4985-aa9d-abc888a43b6b"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "RatingLeftRightContMargins"
+                                ],
+                                "height": "1.4em",
+                                "html": null
+                            },
+                            "designerId": "d2070fe1-3c93-4e43-8563-568529fe77dd",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Slider",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "baseCls": null,
+                                        "cls": [
+                                            "TransparentContainer"
+                                        ],
+                                        "height": null,
+                                        "id": "lineLengthSlider",
+                                        "itemId": "lineLengthSlider",
+                                        "minHeight": null,
+                                        "padding": null,
+                                        "label": null,
+                                        "maxValue": 120,
+                                        "minValue": 1
+                                    },
+                                    "designerId": "6b05448f-9a2f-470c-9518-c472b33c8627"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "cls": [
+                                    "RatingLeftRightContMargins"
+                                ],
+                                "height": 20,
+                                "margin": null,
+                                "padding": null,
+                                "layout": "hbox"
+                            },
+                            "designerId": "4341afb3-48e9-4194-9adc-baea28e9a57a",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "Rating01"
+                                        ]
+                                    },
+                                    "designerId": "d66835fd-46a0-4880-86a3-2f27de96421b"
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 10
+                                    },
+                                    "designerId": "1492e117-ea58-4d34-a9ee-2ce18ae72e31"
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "cls": [
+                                            "Rating120"
+                                        ]
+                                    },
+                                    "designerId": "77da8bbc-b3a1-4d1d-9e01-44d3e92c969a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "cls": [
+                                    "RatingTopContMargins",
+                                    "sortBylbl"
+                                ],
+                                "html": "More:"
+                            },
+                            "designerId": "51504100-e753-4d15-a9d0-c9fe1f45a172"
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2,
+                                "cls": [
+                                    "RatingTopContMargins"
+                                ],
+                                "layout": "fit"
+                            },
+                            "designerId": "d7e2629f-4942-48fd-a2ef-a0d79eed9cc8",
+                            "cn": [
+                                {
+                                    "type": "Ext.SegmentedButton",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "selectedbtnidx": 0,
+                                        "id": "boysgirlssegbtn",
+                                        "itemId": "boysgirlssegbtn",
+                                        "pressedCls": null
+                                    },
+                                    "configAlternates": {
+                                        "selectedbtnidx": "number"
+                                    },
+                                    "designerId": "debae3c5-11c7-4d89-907e-a7629dd9d7d5",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "selectedbtnidx",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "baseCls": "boysbtnselected",
+                                                "id": "boysBtn",
+                                                "itemId": "boysBtn",
+                                                "pressedCls": null,
+                                                "text": null
+                                            },
+                                            "designerId": "97ecd2d8-86e3-4ebc-8cea-fbe45845b3b8"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "baseCls": "girlsbtn",
+                                                "id": "girlsBtn",
+                                                "itemId": "girlsBtn",
+                                                "pressedCls": null,
+                                                "text": null
+                                            },
+                                            "designerId": "c1eb7573-ba6d-407a-88cd-e1dbafd99a5b"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2,
+                                "cls": [
+                                    "RatingTopContMargins"
+                                ]
+                            },
+                            "designerId": "290d3c25-df0d-4646-bbb6-405b45f98daf",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "baseCls": "okratingbtn",
+                                        "id": "ratingokbtn",
+                                        "itemId": "ratingokbtn",
+                                        "iconAlign": null,
+                                        "text": null
+                                    },
+                                    "designerId": "b6b9f76c-bda6-4193-be94-ab2f72e206b6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

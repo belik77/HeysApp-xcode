@@ -1,0 +1,172 @@
+{
+    "xdsVersion": "2.2.0",
+    "frameworkVersion": "touch21",
+    "internals": {
+        "type": "Ext.app.Controller",
+        "reference": {
+            "name": "items",
+            "type": "array"
+        },
+        "codeClass": null,
+        "userConfig": {
+            "designer|userClassName": "NearByListControl"
+        },
+        "cn": [
+            {
+                "type": "controllerref",
+                "reference": {
+                    "name": "items",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "designer|userClassName": "NearByList",
+                    "autoCreate": true,
+                    "ref": "NearByList",
+                    "selector": "#NearByList",
+                    "xtype": "list"
+                }
+            },
+            {
+                "type": "controlleraction",
+                "reference": {
+                    "name": "listeners",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "designer|userClassName": "onListInitialize",
+                    "fn": "onListInitialize",
+                    "implHandler": [
+                        "//var MyNearByStore = Ext.getStore('MyApp.store.NearByStore');\r",
+                        "\r",
+                        "var longitude;\r",
+                        "var latitude;\r",
+                        "\r",
+                        "if(Ext.os.is.iOS || Ext.os.is.Android)\r",
+                        "{\r",
+                        "    if (Ext.device)\r",
+                        "    {\r",
+                        "        Ext.device.Geolocation.getCurrentPosition({\r",
+                        "            scope: this,\r",
+                        "            success: function(position) {\r",
+                        "                this.setMasked(false);\r",
+                        "                //this.map.setMapCenter(position.coords);\r",
+                        "                latitude = position.coords.latitude;\r",
+                        "                longitude = position.coords.longitude;                         \r",
+                        "            },\r",
+                        "            failure: function() {\r",
+                        "                this.setMasked(false);\r",
+                        "                Ext.device.Notification.show({\r",
+                        "                    title: 'Geolocation',\r",
+                        "                    message: 'Cannot identify your location.'\r",
+                        "                });\r",
+                        "            }\r",
+                        "        });\r",
+                        "    }\r",
+                        "}\r",
+                        "/*else if (Ext.os.is.Windows || Ext.os.is.Windows.MacOS)\r",
+                        "{\r",
+                        "longitude = '35.187128';\r",
+                        "latitude = '31.788777';\r",
+                        "}*/\r",
+                        "else if (navigator.geolocation)\r",
+                        "{\r",
+                        "    console.log('os win!!');\r",
+                        "\r",
+                        "    var options = {\r",
+                        "        timeout: 10000,\r",
+                        "        maximumAge: 20000,\r",
+                        "        enableHighAccuracy: true\r",
+                        "    };\r",
+                        "\r",
+                        "\r",
+                        "    /* navigator.geolocation.getCurrentPosition(function(pos){\r",
+                        "    latitude = pos.coords.latitude;\r",
+                        "    longitude = pos.coords.longitude;  \r",
+                        "    console.log(latitude); //this works\r",
+                        "    console.log(longitude); //this works\r",
+                        "    }, function(){\r",
+                        "    console.log('failed');\r",
+                        "    latitude = '0';\r",
+                        "    longitude = '0';\r",
+                        "    }, options);*/\r",
+                        "\r",
+                        "    longitude = '35.187128';\r",
+                        "    latitude = '31.788777';\r",
+                        "}\r",
+                        "else\r",
+                        "{\r",
+                        "    longitude = '0';\r",
+                        "    latitude = '0'; \r",
+                        "}\r",
+                        "\r",
+                        "\r",
+                        "//var list = Ext.getCmp('#NearByList');\r",
+                        "var list = this.getNearByList();\r",
+                        "//var list2 = Ext.getCmp('NearByList');\r",
+                        "var url = 'http://'+localStorage.serverpath+'/Server-side/GetBusinessesByParams.php?longitude='+longitude+'&latitude='+latitude+'&filtered=0&sortingBy=distance';\r",
+                        "console.log(url);\r",
+                        "list.getStore().getProxy().setUrl(url);\r",
+                        "list.getStore().load({callback: function(records, operation, success) {\r",
+                        "    list.setMasked(false);\r",
+                        "    console.log('MASK IS REMOVED!!');\r",
+                        "    var count = list.getStore().getCount();\r",
+                        "    var data = list.getStore().getRange();\r",
+                        "    console.log('count : ' + count);\r",
+                        "    console.log('data : ' + data);\r",
+                        "    list.refresh();\r",
+                        "    //list.show();\r",
+                        "}\r",
+                        "});\r",
+                        "\r",
+                        ""
+                    ],
+                    "name": "initialize",
+                    "designer|targetType": "Ext.dataview.List",
+                    "designer|controlQuery": "NearByList"
+                }
+            },
+            {
+                "type": "controlleraction",
+                "reference": {
+                    "name": "listeners",
+                    "type": "array"
+                },
+                "codeClass": null,
+                "userConfig": {
+                    "designer|userClassName": "onListSelect",
+                    "fn": "onListSelect",
+                    "implHandler": [
+                        "//Ext.Msg.alert('Selected!', 'You selected ' + record.get('id'));\r",
+                        "var Screen;\r",
+                        "\r",
+                        "console.log(record.get('id'));\r",
+                        "\r",
+                        "if(record.get('id')>0)\r",
+                        "{\r",
+                        "    Screen = Ext.create('MyApp.view.RatingScreen', {\r",
+                        "        id: 'RatingScreen'\r",
+                        "    });\r",
+                        "}\r",
+                        "else\r",
+                        "{\r",
+                        "    Screen = Ext.create('MyApp.view.LocateScreen', {\r",
+                        "        id: 'LocateScreen'\r",
+                        "    });\r",
+                        "}\r",
+                        "\r",
+                        "Ext.Viewport.setActiveItem(Screen);\r",
+                        ""
+                    ],
+                    "name": "select",
+                    "designer|targetType": "Ext.dataview.List",
+                    "designer|controlQuery": "NearByList"
+                }
+            }
+        ]
+    },
+    "linkedNodes": {},
+    "boundStores": {},
+    "boundModels": {}
+}

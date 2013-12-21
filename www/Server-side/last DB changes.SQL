@@ -1,0 +1,1 @@
+ALTER TABLE `business` CHANGE `LogoURL` `LogoURL` VARCHAR( 1024 ) CHARACTER SET hebrew COLLATE hebrew_bin NULL DEFAULT 'resources/images/logo_heys_png.png' COMMENT 'URL to the logo'

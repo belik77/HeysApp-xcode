@@ -1,0 +1,79 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BusinessUser"
+    },
+    "designerId": "aac51765-5f8c-4108-92ea-c776c9eab845",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UserID",
+                "type": "int"
+            },
+            "designerId": "cef86386-75bd-4a3e-81c7-1f32490451d4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username",
+                "type": "string"
+            },
+            "designerId": "6e818088-4ef9-4000-8634-f23ff5e282dc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LastRatingTime",
+                "type": "date"
+            },
+            "designerId": "8b0f33a9-f709-41ba-bc21-14373c19f5ec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RatingScore",
+                "type": "int"
+            },
+            "designerId": "be2b88e9-43f0-4e8d-adae-55ea8bbfdead"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LastGoingClickTime",
+                "type": "date"
+            },
+            "designerId": "14882d5c-680c-4e6b-a35f-2bc9360e4c59"
+        }
+    ]
+}

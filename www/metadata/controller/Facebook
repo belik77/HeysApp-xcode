@@ -1,0 +1,830 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Facebook"
+    },
+    "designerId": "1582462c-99b6-4df3-99f1-b1849cfc2107",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "//if no connected to the net, alert the user\r",
+                    "if((Ext.os.is.iOS || Ext.os.is.Android) && Ext.device.Connection.isOnline()===false)\r",
+                    "{\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'אין חיבור לאינטרנט',\r",
+                    "        buttons: Ext.Msg.YES,\r",
+                    "        animEl: 'elId'\r",
+                    "    });\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    //this method, catch response from facebook and decide what to do\r",
+                    "    WL.Facebook.on({\r",
+                    "        exception: function() {\r",
+                    "            //Ext.create('WL.view.Dialog', { msg: 'The connection to Facebook has timed out' }).show();\r",
+                    "            console.log('The connection to Facebook has timed out');\r",
+                    "            //check if there is already loggin user and login automaticaly or stay in login screen.\r",
+                    "            //var controller = MyApp.app.getController( 'MyApp.controller.Facebook');\r",
+                    "            //controller.AutoLoginUser();\r",
+                    "        },\r",
+                    "        loginStatus: function() {\r",
+                    "            console.log(FB.getUserID());\r",
+                    "            console.log('fb loginStatus fired');                \r",
+                    "            FB.getLoginStatus(function(response) {\r",
+                    "                if (response.status === 'connected') {\r",
+                    "                    // the user is logged in and has authenticated your\r",
+                    "                    // app, and response.authResponse supplies\r",
+                    "                    // the user's ID, a valid access token, a signed\r",
+                    "                    // request, and the time the access token \r",
+                    "                    // and signed request each expire\r",
+                    "                    var uid = response.authResponse.userID;\r",
+                    "                    var accessToken = response.authResponse.accessToken;\r",
+                    "                    console.log('fb getLoginStatus connected');\r",
+                    "                    //this.SubmitLoginForm(\"1\");\r",
+                    "                    //console.log('SubmitLoginForm');\r",
+                    "                    //var form = button.up('formpanel');\r",
+                    "                    //var form = Ext.getCmp('loginformpanel');\r",
+                    "                    /*if(!form)\r",
+                    "                    {\r",
+                    "                    form = Ext.create(MyApp.view.loginformpanel);\r",
+                    "                    }*/\r",
+                    "                    //var form = Ext.ComponentQuery.query(\"loginformpanel\");\r",
+                    "\r",
+                    "                    var Screen = Ext.ComponentQuery.query('#loginformpanel');\r",
+                    "                    var loginScreen;\r",
+                    "\r",
+                    "                    if(Screen.length===0)//no\r",
+                    "                    {\r",
+                    "                        Screen = Ext.create('MyApp.view.loginformpanel', {\r",
+                    "                            id: 'loginformpanel'\r",
+                    "                        });\r",
+                    "\r",
+                    "                        loginScreen = Screen;\r",
+                    "\r",
+                    "\r",
+                    "                    }\r",
+                    "                    else\r",
+                    "                    {\r",
+                    "                        loginScreen = Screen[0];\r",
+                    "                    }\r",
+                    "\r",
+                    "                    var pwd = \"1234\";//default password to all facebook users\r",
+                    "\r",
+                    "                    //alert(pwd);\r",
+                    "                    //var hash_pwd = hex_sha512(pwd);\r",
+                    "                    //alert(hash_pwd);\r",
+                    "\r",
+                    "                    //read the FB user info to obtain his name, email etc.. and save it when register the user\r",
+                    "                    FB.api('/me', function(userInfo) {                    \r",
+                    "                        console.log(userInfo.name + ': ' + userInfo.email);\r",
+                    "\r",
+                    "                        //set the hidden fields and email for the form\r",
+                    "                        /* form.setValues({\r",
+                    "                        hashpassword: hash_pwd,\r",
+                    "                        bfacebook: 1,\r",
+                    "                        bregister: 0,\r",
+                    "                        email: userInfo.email\r",
+                    "                        });*/\r",
+                    "\r",
+                    "                        //set the form values and submit\r",
+                    "                        loginScreen.down('emailfield[id=email1]').setValue(userInfo.email);\r",
+                    "                        loginScreen.down('passwordfield[id=password1]').setValue(pwd);\r",
+                    "                        var controller = MyApp.app.getController( 'MyApp.controller.Facebook');\r",
+                    "                        controller.SubmitLoginForm(\"1\",\"0\");\r",
+                    "\r",
+                    "                        //console.log(localStorage.serverpath);\r",
+                    "                    });\r",
+                    "                    //console.log(\"email of fb user:\"+email);\r",
+                    "                    /*  FB.login(function(response) {*/\r",
+                    "                    /*if (response.authResponse){\r",
+                    "                    console.log(response.name + ': ' + response.email);\r",
+                    "                    } else {\r",
+                    "                    console.log('Auth cancelled.');\r",
+                    "                    }*/\r",
+                    "                    /* }, { scope: 'email' });*/\r",
+                    "\r",
+                    "                    /*FB.api('/me', function(response) {\r",
+                    "                    var html = '<table>';\r",
+                    "                    for (var key in response) {\r",
+                    "                    html += (\r",
+                    "                    key + ':' +\r",
+                    "                    response[key] + ', '\r",
+                    "                    );\r",
+                    "                    }\r",
+                    "                    console.log(html);\r",
+                    "                    });*/\r",
+                    "\r",
+                    "\r",
+                    "                } else if (response.status === 'not_authorized') {\r",
+                    "                    // the user is logged in to Facebook, \r",
+                    "                    // but has not authenticated your app\r",
+                    "                    console.log('fb getLoginStatus not_authorized');\r",
+                    "                    /*var Screen = Ext.create('MyApp.view.loginformpanel', {\r",
+                    "                    id: 'loginformpanel'\r",
+                    "                    });\r",
+                    "\r",
+                    "                    Ext.Viewport.setActiveItem(Screen);*/\r",
+                    "                } else {\r",
+                    "                    // the user isn't logged in to Facebook.\r",
+                    "                    console.log('fb getLoginStatus - the user isnt logged in to Facebook');\r",
+                    "                }\r",
+                    "            });\r",
+                    "        },\r",
+                    "        connected: function() {\r",
+                    "            console.log('fb connected');\r",
+                    "\r",
+                    "            //Ext.get('loading').destroy();\r",
+                    "        },\r",
+                    "        unauthorized: function() {\r",
+                    "            console.log('fb unauthorized');\r",
+                    "            //check if there is already loggin user and login automaticaly or stay in login screen.\r",
+                    "            var controller = MyApp.app.getController( 'MyApp.controller.Facebook');\r",
+                    "            controller.AutoLoginUser();\r",
+                    "        },\r",
+                    "        logout: function() {\r",
+                    "            console.log('fb logout');\r",
+                    "            //Ext.get('loading').destroy();\r",
+                    "            /*var Screen = Ext.create('MyApp.view.loginformpanel', {\r",
+                    "            id: 'loginformpanel'\r",
+                    "            });\r",
+                    "\r",
+                    "            Ext.Viewport.setActiveItem(Screen);*/\r",
+                    "        }\r",
+                    "    });\r",
+                    "}"
+                ]
+            },
+            "designerId": "c1b1f01b-f504-4023-a6d0-bc81439624f8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "reglogin",
+                "selector": "#reglogin",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "1e0973c0-1e86-4ac7-94ee-857b29bfff1c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onregloginTap",
+                "implHandler": [
+                    "\r",
+                    "\r",
+                    "var form = Ext.getCmp('loginformpanel');\r",
+                    "email = Ext.getCmp('email1').getValue();\r",
+                    "\r",
+                    "//verify the email format\r",
+                    "if(this.verifyEmail(email)===true)\r",
+                    "{\r",
+                    "    //regular login from login screen\r",
+                    "    this.SubmitLoginForm(\"0\",\"0\");\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'אנא הכנס כתובת מייל תקינה',\r",
+                    "        buttons: Ext.Msg.YES,\r",
+                    "        animEl: 'elId'\r",
+                    "    });\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "reglogin"
+            },
+            "designerId": "685ddf69-3a69-4edd-a516-6792087a556f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SubmitLoginForm",
+                "designer|params": [
+                    "bfacebook",
+                    "bregister"
+                ],
+                "implHandler": [
+                    "//this function submit logins and also register users.\r",
+                    "//it distinguish between fb login and regular login\r",
+                    "console.log('SubmitLoginForm');\r",
+                    "//var form = button.up('formpanel');\r",
+                    "var form = Ext.getCmp('loginformpanel');\r",
+                    "\r",
+                    "var pwd,email;\r",
+                    "//if(bfacebook==\"0\")\r",
+                    "//{\r",
+                    "if(bregister==\"0\")\r",
+                    "{\r",
+                    "    pwd = Ext.getCmp('password1').getValue();\r",
+                    "    email = Ext.getCmp('email1').getValue();\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    pwd = Ext.getCmp('password').getValue();\r",
+                    "    email = Ext.getCmp('email').getValue();\r",
+                    "}\r",
+                    "//}\r",
+                    "if(bfacebook==\"1\")\r",
+                    "{\r",
+                    "    pwd = \"1234\";//default password to all facebook users\r",
+                    "}\r",
+                    "\r",
+                    "//cach the email and password values\r",
+                    "localStorage.biluimemail = email;\r",
+                    "localStorage.biluimpwd = pwd;\r",
+                    "localStorage.biluimfb = bfacebook;\r",
+                    "\r",
+                    "//alert(pwd)\r",
+                    "var hash_pwd = hex_sha512(pwd);\r",
+                    "//alert(hash_pwd);\r",
+                    "\r",
+                    "//console.log(\"bfacebook:\"+bfacebook+\"bregister:\"+bregister+\"pwd:\"+pwd);\r",
+                    "\r",
+                    "form.setValues({\r",
+                    "    hashpassword: hash_pwd,\r",
+                    "    bfacebook: bfacebook,\r",
+                    "    bregister: bregister,\r",
+                    "    email:email\r",
+                    "});\r",
+                    "\r",
+                    "console.log(localStorage.serverpath);\r",
+                    "form.submit({\r",
+                    "    url: 'http://'+localStorage.serverpath+'/Server-side/process_login.php',\r",
+                    "    method: 'POST',\r",
+                    "    success: function(form, result) {\r",
+                    "        //var jsonoutput = Ext.decode(result);  // json parsing\r",
+                    "        //alert('form submitted successfully!');\r",
+                    "        console.log('form submit success');\r",
+                    "\r",
+                    "        localStorage.user_id = result.userid;\r",
+                    "        //load the user data\r",
+                    "        var controller = MyApp.app.getController( 'MyApp.controller.Facebook');\r",
+                    "        controller.LoadUserData(function(){\r",
+                    "            //check if the screen was loaded already before\r",
+                    "            var Screen = Ext.ComponentQuery.query('#SearchScreen');\r",
+                    "\r",
+                    "            if(Screen.length===0)//no\r",
+                    "            {\r",
+                    "                Screen = Ext.create('MyApp.view.SearchScreen', {\r",
+                    "                    id: 'SearchScreen'\r",
+                    "                });\r",
+                    "\r",
+                    "                Screen.bshowMyLocScreen=true;\r",
+                    "                Ext.Viewport.setActiveItem(Screen);\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "            }\r",
+                    "            else\r",
+                    "            {\r",
+                    "                Screen[0].bshowMyLocScreen=true;\r",
+                    "                Ext.Viewport.setActiveItem(Screen[0]);\r",
+                    "            }\r",
+                    "        });\r",
+                    "\r",
+                    "    },\r",
+                    "    failure: function(form, result) {\r",
+                    "        //var jsonoutput = Ext.decode(result);  // json parsing\r",
+                    "        console.log('form submit failed, result:'+result);\r",
+                    "        //alert('form submitted failed!');\r",
+                    "        Ext.Msg.alert('Login Error', 'Please enter valid email and password');\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "44e7686a-49d2-4cf6-b408-d33b8ac23da6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "fbloginbtn",
+                "selector": "#fbloginbtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "78a968f9-2099-4414-8c6d-5280cb50e12e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onfbloginbtnTap",
+                "implHandler": [
+                    "//FB login from first screen\r",
+                    "console.log('onfbloginbtnTap');\r",
+                    "console.log('isOnline:'+Ext.device.Connection.isOnline());\r",
+                    "if((Ext.os.is.iOS || Ext.os.is.Android) && !Ext.device.Connection.isOnline())\r",
+                    "{\r",
+                    "    console.log('connection type = '+Ext.device.Connection.getType()+', isOnline = '+Ext.device.Connection.isOnline());\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'אין חיבור לאינטרנט',\r",
+                    "        buttons: Ext.Msg.YES,\r",
+                    "        animEl: 'elId'\r",
+                    "    });\r",
+                    "}\r",
+                    "else\r",
+                    "\twindow.location = WL.Facebook.redirectUrl();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "fbloginbtn"
+            },
+            "designerId": "ce8c75ed-3ff5-4b84-8465-c805998899d5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "nofbbtn",
+                "selector": "#nofbbtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "4a15bb80-314b-4ef5-ad2a-07759df5decd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onnofbbtnTap",
+                "implHandler": [
+                    "\r",
+                    "//check if the screen was loaded already before\r",
+                    "var Screen = Ext.ComponentQuery.query('#loginformpanel');\r",
+                    "\r",
+                    "if(Screen.length===0)//no\r",
+                    "{\r",
+                    "    console.log('no fb button tap');\r",
+                    "    Screen = Ext.create('MyApp.view.loginformpanel', {\r",
+                    "        id: 'loginformpanel'\r",
+                    "    });\r",
+                    "\r",
+                    "    Ext.Viewport.setActiveItem(Screen);\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    Ext.Viewport.setActiveItem(Screen[0]);\r",
+                    "}\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "nofbbtn"
+            },
+            "designerId": "065e8e51-54de-40a5-9cfe-8ff9684757c0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "fbloginbtn1",
+                "selector": "#fbloginbtn1",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "55d9f927-2a87-4ec5-87d2-784fbd941558"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onfbloginbtn1Tap",
+                "implHandler": [
+                    "//FB login from login screen\r",
+                    "//if no connected to the net, alert the user\r",
+                    "console.log('onfbloginbtn1Tap');\r",
+                    "console.log('isOnline:'+Ext.device.Connection.isOnline());\r",
+                    "if((Ext.os.is.iOS || Ext.os.is.Android) && !Ext.device.Connection.isOnline())\r",
+                    "{\r",
+                    "    console.log('connection type = '+Ext.device.Connection.getType()+', isOnline = '+Ext.device.Connection.isOnline());\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'אין חיבור לאינטרנט',\r",
+                    "        buttons: Ext.Msg.YES,\r",
+                    "        animEl: 'elId'\r",
+                    "    });\r",
+                    "}\r",
+                    "else\r",
+                    "    window.top.location = WL.Facebook.redirectUrl();\r",
+                    "//Android.onFBLogin();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "fbloginbtn1"
+            },
+            "designerId": "bf66f3c8-0514-4f3e-a34e-38161ccaaf50"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "regbtn",
+                "selector": "#regbtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "4b6e208e-480b-4729-be96-696e3924a989"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onregbtnTap",
+                "implHandler": [
+                    "\r",
+                    "var form = Ext.getCmp('loginformpanel');\r",
+                    "email = Ext.getCmp('email').getValue();\r",
+                    "\r",
+                    "//verify the email format\r",
+                    "if(this.verifyEmail(email)===true)\r",
+                    "{\r",
+                    "    //user try to register a new user, not FB.\r",
+                    "    this.SubmitLoginForm(\"0\",\"1\");\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    Ext.Msg.show({\r",
+                    "        title:'אנא הכנס כתובת מייל תקינה',\r",
+                    "        buttons: Ext.Msg.YES,\r",
+                    "        animEl: 'elId'\r",
+                    "    });\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "regbtn"
+            },
+            "designerId": "f081bf49-8882-4414-a925-f84f2acbd05f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginbackbtn",
+                "selector": "#loginbackbtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "aa168e24-aabc-4f0d-8010-ba5be294cf95"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LaunchLocateScreen",
+                "implHandler": [
+                    "console.log(\"LaunchLocateScreen function called\");\r",
+                    "var Screen = Ext.ComponentQuery.query('#SearchScreen');\r",
+                    "\r",
+                    "if(Screen.length===0)//no\r",
+                    "{\r",
+                    "    Screen = Ext.create('MyApp.view.SearchScreen', {\r",
+                    "        id: 'SearchScreen'\r",
+                    "    });\r",
+                    "\r",
+                    "    Ext.Viewport.setActiveItem(Screen);\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    Ext.Viewport.setActiveItem(Screen[0]);\r",
+                    "}"
+                ]
+            },
+            "designerId": "60d9ba8d-ee46-44ef-a80e-b271c56de180"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "login_check",
+                "designer|params": [
+                    "callback"
+                ],
+                "implHandler": [
+                    "console.log(\"login_check\");\r",
+                    "//check if the user is logged-in\r",
+                    "var GeneralActionStore = Ext.getStore('GeneralActionStore');\r",
+                    "var url = 'http://'+localStorage.serverpath+'/Server-side/login_check.php';\r",
+                    "var proxy= GeneralActionStore.getProxy();\r",
+                    "proxy.setUrl(url);\r",
+                    "console.log(url);\r",
+                    "GeneralActionStore.load({callback: function(records, operation, success) {\r",
+                    "\r",
+                    "    /* if(records.length>0)\r",
+                    "    {\r",
+                    "    var ResultRecord = GeneralActionStore.getAt(0);\r",
+                    "    var result = ResultRecord.get('result');\r",
+                    "    console.log('Result:'+result);\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "    result=\"false\";\r",
+                    "    }*/\r",
+                    "\r",
+                    "    callback(success);\r",
+                    "}\r",
+                    "});"
+                ]
+            },
+            "designerId": "39049570-583b-4552-a005-d475f6f8a5cb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AutoLoginUser",
+                "implHandler": [
+                    "//check if there is already loggin user\r",
+                    "var controller = MyApp.app.getController( 'MyApp.controller.Facebook');\r",
+                    "controller.login_check(function(result){\r",
+                    "    console.log(\"login_check returned:\"+result);\r",
+                    "    if(result===true)\r",
+                    "    {\r",
+                    "        //check if the screen was loaded already before\r",
+                    "        var Screen = Ext.ComponentQuery.query('#SearchScreen');\r",
+                    "\r",
+                    "        if(Screen.length===0)//no\r",
+                    "        {\r",
+                    "            Screen = Ext.create('MyApp.view.SearchScreen', {\r",
+                    "                id: 'SearchScreen'\r",
+                    "            });\r",
+                    "\r",
+                    "            Ext.Viewport.setActiveItem(Screen);\r",
+                    "        }\r",
+                    "        else\r",
+                    "        {\r",
+                    "            Ext.Viewport.setActiveItem(Screen[0]);\r",
+                    "        }\r",
+                    "    }\r",
+                    "\r",
+                    "    //drop the mask\r",
+                    "    var Screen1 = Ext.ComponentQuery.query('#fbloginpanel');\r",
+                    "    if(Screen1.length>0)\r",
+                    "    {\r",
+                    "        Screen1[0].setMasked(false);  \r",
+                    "    }\r",
+                    "\r",
+                    "});"
+                ]
+            },
+            "designerId": "c326abc1-66c2-4ae9-8d5a-fb0e9b8639b1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "verifyEmail",
+                "designer|params": [
+                    "email"
+                ],
+                "implHandler": [
+                    "var status = false;     \r",
+                    "\r",
+                    "var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i;\r",
+                    "\r",
+                    "if (email.search(emailRegEx) == -1) {\r",
+                    "\r",
+                    "    console.log(\"Please enter a valid email address.\");\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "else\r",
+                    "\r",
+                    "{\r",
+                    "\r",
+                    "    status = true;\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "return status;"
+                ]
+            },
+            "designerId": "4e230b08-be91-4908-b9fb-bc00e733491f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "fbloginpanel",
+                "selector": "#fbloginpanel",
+                "xtype": "Ext.Panel"
+            },
+            "designerId": "b02a8692-9ca3-41fd-9d4a-5abc55aad422"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onfbloginpanelInitialize",
+                "implHandler": [
+                    "console.log('onfbloginpanelInitialize');\r",
+                    "\r",
+                    "/*else\r",
+                    "{\r",
+                    "var Screen1 = Ext.ComponentQuery.query('#fbloginpanel');\r",
+                    "\r",
+                    "WL.Facebook.initialize('204911179670306');\r",
+                    "\r",
+                    "if(Screen1.length>0)\r",
+                    "{\r",
+                    "Screen1[0].setMasked({\r",
+                    "xtype: 'loadmask',\r",
+                    "message: 'Loading...'\r",
+                    "});\r",
+                    "}\r",
+                    "}*/\r",
+                    ""
+                ],
+                "name": "initialize",
+                "designer|targetType": "Ext.Panel",
+                "designer|controlQuery": "panel"
+            },
+            "designerId": "aef22f0e-f3c9-46fc-b702-2c50b5296564"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginformpanel",
+                "selector": "#loginformpanel",
+                "xtype": "Ext.Panel"
+            },
+            "designerId": "ae9d8232-64fb-44ac-b2ca-eadb3ec1da89"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LoadUserData",
+                "designer|params": [
+                    "callback"
+                ],
+                "implHandler": [
+                    "console.log('LoadUserData');\r",
+                    "var UserStore = Ext.getStore('UserStore');\r",
+                    "var url = 'http://'+localStorage.serverpath+'/Server-side/GetUserData.php';\r",
+                    "var proxy= UserStore.getProxy();\r",
+                    "proxy.setUrl(url);\r",
+                    "UserStore.load({callback: function(records, operation, success) {\r",
+                    "    var count = UserStore.getCount();\r",
+                    "    console.log('UserStore count : ' + count);\r",
+                    "    \r",
+                    "    callback();\r",
+                    "}\r",
+                    "});"
+                ]
+            },
+            "designerId": "ff16616e-1868-443c-945e-0e9037bdeae5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "signmanagerbtn",
+                "selector": "#signmanagerbtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "1bd5fe54-90fe-4b86-8be6-ed44c35d03db"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onsignmanagerbtnTap",
+                "implHandler": [
+                    "console.log('onsignmanagerbtnTap- contact from login screen');\r",
+                    "\r",
+                    "//check if the screen was loaded already before\r",
+                    "var Screen = Ext.ComponentQuery.query('#ContactScreen');\r",
+                    "\r",
+                    "if(Screen.length===0)//no\r",
+                    "{\r",
+                    "    Screen = Ext.create('MyApp.view.ContactScreen', {\r",
+                    "        id: 'ContactScreen'\r",
+                    "    });\r",
+                    "\r",
+                    "    Screen.bshowMyLocScreen=true;\r",
+                    "    Ext.Viewport.setActiveItem(Screen);\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    Screen[0].bshowMyLocScreen=true;\r",
+                    "    Ext.Viewport.setActiveItem(Screen[0]);\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "signmanagerbtn"
+            },
+            "designerId": "cfd639d0-b3ac-4718-942e-1da3a5356c83"
+        }
+    ]
+}

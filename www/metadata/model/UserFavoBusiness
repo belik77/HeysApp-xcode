@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UserFavoBusiness"
+    },
+    "designerId": "73ada55e-b151-48fb-8042-7e3b6b3646a4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "businessid"
+            },
+            "designerId": "af721b03-093f-4039-8915-a2210432a93b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "business_name"
+            },
+            "designerId": "c5d3e4e8-3f4b-463a-b1c5-f24d288df423"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "logourl"
+            },
+            "designerId": "5024c08e-ae7c-4f81-9255-2078f5550159"
+        }
+    ]
+}

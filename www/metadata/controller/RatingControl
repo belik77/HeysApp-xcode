@@ -1,0 +1,237 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RatingControl"
+    },
+    "designerId": "a6fe1236-fa7f-4547-8861-59edd5641f4b",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ratingokbtn",
+                "selector": "#ratingokbtn",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "11061030-1aa8-4b6b-8868-bd593e45e28f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onratingokbtnTap",
+                "implHandler": [
+                    "console.log('onratingokbtnTap');\r",
+                    "\r",
+                    "//if the user forget to rate something, ask him to do:\r",
+                    "if(button.up('panel').down('segmentedbutton[id=capacitySegbtn]').selectedbtnidx!==undefined\r",
+                    "&& button.up('panel').down('segmentedbutton[id=boysgirlssegbtn]').selectedbtnidx!==undefined)\r",
+                    "{\r",
+                    "\r",
+                    "    //Hide the \"rating\" screen\r",
+                    "    var Screen = Ext.ComponentQuery.query('#RatePlaceScreen');\r",
+                    "    var business_id;\r",
+                    "\r",
+                    "    if(Screen.length===0)//no\r",
+                    "    {\r",
+                    "        Screen = Ext.create('MyApp.view.RatePlaceScreen', {\r",
+                    "            id: 'RatePlaceScreen'\r",
+                    "        });\r",
+                    "\r",
+                    "        business_id = Screen.business_id;\r",
+                    "        Screen.hide();\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        Screen[0].hide();\r",
+                    "        business_id = Screen[0].business_id;\r",
+                    "    }\r",
+                    "\r",
+                    "    //TODO: save the rating data to the DB.\r",
+                    "    //load main business data\r",
+                    "    var GeneralActionStore = Ext.getStore('GeneralActionStore');\r",
+                    "    var url = 'http://'+localStorage.serverpath+'/Server-side/BusinessesRank.php';\r",
+                    "    var proxy= GeneralActionStore.getProxy();\r",
+                    "    proxy.setUrl(url);\r",
+                    "    proxy.setExtraParam('BusinessID', business_id );\r",
+                    "    proxy.setExtraParam('capacity', button.up('panel').down('segmentedbutton[id=capacitySegbtn]').selectedbtnidx);\r",
+                    "    proxy.setExtraParam('MoreBoysGirls', button.up('panel').down('segmentedbutton[id=boysgirlssegbtn]').selectedbtnidx);\r",
+                    "    proxy.setExtraParam('LineLenght', button.up('panel').down('sliderfield[id=lineLengthSlider]').getValue()[0]);\r",
+                    "    proxy.setExtraParam('user_id', localStorage.user_id );\r",
+                    "\r",
+                    "    GeneralActionStore.load({callback: function(records, operation, success) {\r",
+                    "        //console.log('callback onhomepagebtnTap');\r",
+                    "        var count = GeneralActionStore.getCount();\r",
+                    "        var data = GeneralActionStore.getRange();\r",
+                    "        console.log('GeneralActionStore (rating) count : ' + count);\r",
+                    "        //console.log('GeneralActionStore (rating) data : ' + data);\r",
+                    "\r",
+                    "        var ResultRecord = GeneralActionStore.getAt(0);\r",
+                    "        var Result = ResultRecord.get('result');\r",
+                    "        console.log('Result:'+Result);\t\r",
+                    "        \r",
+                    "        //Realod the business data in order to update the rating data\r",
+                    "        var controller = MyApp.app.getController( 'MyApp.controller.SearchScreen');\r",
+                    "\t\tcontroller.ReloadBusinessDataFromServer(Ext.getStore('BusinessStore').getCount());\r",
+                    "    }   \r",
+                    "});\r",
+                    "\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "Ext.Msg.show({\r",
+                    "    title:'Please Rate all fields',\r",
+                    "    buttons: Ext.Msg.YES,\r",
+                    "    animEl: 'elId'\r",
+                    "});\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "ratingokbtn"
+            },
+            "designerId": "dc9eecc5-8d9d-4d94-a1c3-f2720f4599af"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "capacitySegbtn",
+                "selector": "#capacitySegbtn",
+                "xtype": "Ext.SegmentedButton"
+            },
+            "designerId": "be9fdfa1-b3d3-48de-a0a5-b4800f1ced78"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "oncapacitySegbtnToggle",
+                "implHandler": [
+                    "console.log('oncapacitySegbtnToggle');\r",
+                    "segmentedbutton.selectedbtnidx = segmentedbutton.getItems().indexOf(button);"
+                ],
+                "name": "toggle",
+                "designer|targetType": "Ext.SegmentedButton",
+                "designer|controlQuery": "capacitySegbtn"
+            },
+            "designerId": "66c1953d-d195-481e-98e2-2c8f244b2d19"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "RatePlaceScreen",
+                "selector": "#RatePlaceScreen",
+                "xtype": "Ext.Panel"
+            },
+            "designerId": "33d2c6ed-be9c-4b49-b0b5-a0edf4a2a261"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onRatePlaceScreenshow",
+                "implHandler": [
+                    "console.log('onRatePlaceScreenshow');\r",
+                    "this.getcapacitySegbtn().selectedbtnidx=-1;\r",
+                    "this.getboysgirlssegbtn().selectedbtnidx=-1;"
+                ],
+                "name": "show",
+                "designer|targetType": "Ext.Panel",
+                "designer|controlQuery": "RatePlaceScreen"
+            },
+            "designerId": "067420f6-b2ca-4071-8af8-dbd50bf3af22"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "boysgirlssegbtn",
+                "selector": "#boysgirlssegbtn",
+                "xtype": "Ext.SegmentedButton"
+            },
+            "designerId": "1032c4f1-2432-4933-892e-6d9456ad9b48"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onboysgirlssegbtnToggle",
+                "implHandler": [
+                    "console.log('onboysgirlssegbtnToggle');\r",
+                    "segmentedbutton.selectedbtnidx = segmentedbutton.getItems().indexOf(button);\r",
+                    "\r",
+                    "var boysbtn = segmentedbutton.down('button[id=boysBtn]');\r",
+                    "var girlsbtn = segmentedbutton.down('button[id=girlsBtn]');\r",
+                    "\r",
+                    "if(segmentedbutton.selectedbtnidx===0)//boys\r",
+                    "{\r",
+                    "    boysbtn.setBaseCls('boysbtnselected');\r",
+                    "    girlsbtn.setBaseCls('girlsbtn');\r",
+                    "}\r",
+                    "else//girls\r",
+                    "{\r",
+                    "    boysbtn.setBaseCls('boysbtn');\r",
+                    "    girlsbtn.setBaseCls('girlsbtnselected');\r",
+                    "}"
+                ],
+                "name": "toggle",
+                "designer|targetType": "Ext.SegmentedButton",
+                "designer|controlQuery": "boysgirlssegbtn"
+            },
+            "designerId": "ec9f2701-9019-4cbd-9107-2bce527e0016"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "lineLengthSlider",
+                "selector": "#lineLengthSlider",
+                "xtype": "Ext.field.Slider"
+            },
+            "designerId": "b0103855-43ca-43b7-bacf-0542f28bd964"
+        }
+    ]
+}

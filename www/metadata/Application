@@ -1,0 +1,148 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "UserModel",
+            "Business",
+            "Location",
+            "Category",
+            "LocalData",
+            "BusinessSales",
+            "BusinessPhotos",
+            "BusinessPhones",
+            "BusinessLines",
+            "GeneralAction",
+            "BusinessUser",
+            "SearchSort",
+            "RatingBusiness",
+            "UserFavoBusiness"
+        ],
+        "stores": [
+            "BusinessStore",
+            "LocationStore",
+            "CategoryStore",
+            "LocalStore",
+            "BusinessLinesStore",
+            "BusinessPhotosStore",
+            "BusinessSalesStore",
+            "BusinessPhonesStore",
+            "GeneralAction",
+            "BusinessUserStore",
+            "SearchSortStore",
+            "BusinessStoreNearByScreen",
+            "UserStore",
+            "UserFavoBusinessStore",
+            "BusinessStoreBusinessScreen"
+        ],
+        "views": [
+            "loginformpanel",
+            "MyLocScreen",
+            "LocateScreen",
+            "RatingScreen",
+            "SearchList",
+            "BusinessScreen",
+            "UserActivityScreen",
+            "RatingUserList",
+            "FirstScreen",
+            "fbloginpanel",
+            "SearchScreen",
+            "MyContainer20",
+            "BusinessDataView",
+            "BusinessDataItem",
+            "MyDataView",
+            "RatePlaceScreen",
+            "settingpanel",
+            "ContactScreen"
+        ],
+        "requires": [
+            "Ext.device.Geolocation",
+            "Ext.device.Notification",
+            "Ext.TitleBar",
+            "Ext.data.*",
+            "Ext.device.Connection"
+        ],
+        "controllers": [
+            "Facebook",
+            "NearByListControl",
+            "BusinessScreenControl",
+            "SearchListControl",
+            "SearchScreen",
+            "RatingControl",
+            "ContactControl"
+        ],
+        "name": "MyApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableCaching": false,
+                "paths": [
+                    "{\"Ext\":\"touch/src\",\"Ext.device\":\"device\",\"MyApp.Facebook\":\"app/\"}"
+                ]
+            },
+            "designerId": "8b1e0dbf-3193-436a-a545-8a18b2cb0e7c"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "console.log('app launch');\r",
+                    "WL.Facebook.initialize('204911179670306');\r",
+                    "//localStorage.serverpath = 'localhost/myprojects/MyBiluim';\r",
+                    "localStorage.serverpath = 'localhost/elitest_sencha_phonegap - biluim 2/elitest_sencha_phonegap/android/assets/www';\r",
+                    "//localStorage.serverpath = '10.0.2.2:80/elitest_sencha_phonegap - biluim 2/elitest_sencha_phonegap/android/assets/www';\r",
+                    "//localStorage.serverpath = 'www.heys.biz/client-side';\r",
+                    "localStorage.user_id =-1;\r",
+                    "console.log(localStorage.serverpath);\r",
+                    "\r",
+                    "//if the user already did login to the app, automate the login.\r",
+                    "if(localStorage.biluimemail && localStorage.biluimpwd && localStorage.biluimfb)\r",
+                    "{\r",
+                    "    var Screen = Ext.ComponentQuery.query('#loginformpanel');\r",
+                    "    var loginScreen;\r",
+                    "\r",
+                    "    if(Screen.length===0)//no\r",
+                    "    {\r",
+                    "        Screen = Ext.create('MyApp.view.loginformpanel', {\r",
+                    "            id: 'loginformpanel'\r",
+                    "        });\r",
+                    "\r",
+                    "        loginScreen = Screen;\r",
+                    "\r",
+                    "\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        loginScreen = Screen[0];\r",
+                    "    }\r",
+                    "\r",
+                    "\r",
+                    "    loginScreen.down('emailfield[id=email1]').setValue(localStorage.biluimemail);\r",
+                    "    loginScreen.down('passwordfield[id=password1]').setValue(localStorage.biluimpwd);\r",
+                    "    var controller = MyApp.app.getController( 'MyApp.controller.Facebook');\r",
+                    "    controller.SubmitLoginForm(localStorage.biluimfb,\"0\");\r",
+                    "}"
+                ]
+            },
+            "designerId": "60ae757f-2fcf-41fa-a740-0f20d3e2d217"
+        }
+    ]
+}

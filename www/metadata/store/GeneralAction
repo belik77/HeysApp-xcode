@@ -1,0 +1,36 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "GeneralAction",
+        "storeId": "GeneralActionStore",
+        "designer|userClassName": "GeneralAction"
+    },
+    "designerId": "fc8332f4-7081-4168-ab37-5eee55d8d2e0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "f653373b-aff7-482d-ada4-0f1bdf4b5af1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "6e4f976b-9c91-4a09-b588-7f36b6e00f27"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "RatingUserList",
+        "itemId": "RatingUserList",
+        "style": [
+            "text-align:right"
+        ],
+        "designer|userClassName": "RatingUserList",
+        "designer|userAlias": "RatingUserList",
+        "emptyText": "אין מדרגים",
+        "loadingText": "טוען...",
+        "store": "BusinessUserStore"
+    },
+    "configAlternates": {
+        "style": "object"
+    },
+    "designerId": "e3e21589-017b-4341-85af-56e1cf800192",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "'<div class=\"contact2\"><strong>{username}</strong> {RatingScore}</div>'"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "0d18c6db-3304-4a52-8f83-5b72fb2cb731"
+        }
+    ]
+}

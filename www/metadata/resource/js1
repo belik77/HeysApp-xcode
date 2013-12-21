@@ -1,0 +1,14 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js1",
+        "url": "Server-side/sha512.js",
+        "id": "sha512"
+    },
+    "designerId": "8902df6e-9c26-44ae-90d3-5c82b3846963"
+}

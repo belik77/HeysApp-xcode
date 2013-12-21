@@ -1,0 +1,67 @@
+{
+    "type": "Ext.dataview.DataView",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": null,
+        "itemId": "BusinessDataView",
+        "designer|userClassName": "BusinessDataView",
+        "designer|userAlias": "businessdataview",
+        "scrollable": "vertical",
+        "deselectOnContainerClick": false,
+        "mode": null,
+        "defaultType": "BusinessDataItem",
+        "itemCls": null,
+        "maxItemCache": 0,
+        "pressedCls": "Dataitem-selected",
+        "selectedCls": "Dataitem-selected",
+        "store": "BusinessStore",
+        "useComponents": true
+    },
+    "designerId": "8811f46a-ba2f-463b-92c0-9ed551df9bf6",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBusinessDataViewItemTap",
+                "implHandler": [
+                    "console.log('onBusinessDataViewItemTap');\r",
+                    "\r",
+                    "//check if the screen was loaded already before\r",
+                    "var Screen = Ext.ComponentQuery.query('#BusinessScreen');\r",
+                    "\r",
+                    "if(Screen.length===0)//no\r",
+                    "{\r",
+                    "    Screen = Ext.create('MyApp.view.BusinessScreen', {\r",
+                    "        id: 'BusinessScreen'\r",
+                    "    });\r",
+                    "\r",
+                    "    //Screen.business_id = record.get('business_id');\r",
+                    "    Screen.business_id = target.getRecord(0)._data.business_id;\r",
+                    "    Screen.distance = target.getRecord(0)._data.distance;\r",
+                    "\r",
+                    "    Ext.Viewport.setActiveItem(Screen);\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "    //Screen[0].business_id = record.get('business_id');\r",
+                    "    Screen[0].business_id=target.getRecord(0)._data.business_id;\r",
+                    "    Screen[0].distance = target.getRecord(0)._data.distance;;\r",
+                    "    Ext.Viewport.setActiveItem(Screen[0]);\r",
+                    "    //TODO: save the selected business ID\r",
+                    "}"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "1c8e4ac6-e953-45e3-bc55-63cbef49aac9"
+        }
+    ]
+}

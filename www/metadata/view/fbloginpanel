@@ -1,0 +1,176 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "fbloginpanel",
+        "itemId": "fbloginpanel",
+        "designer|userClassName": "fbloginpanel",
+        "designer|initialView": true,
+        "layout": "vbox"
+    },
+    "designerId": "481463c1-fe17-4669-a664-a69a440df130",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 5,
+                "cls": [
+                    "fblogin"
+                ],
+                "height": "100%",
+                "layout": "vbox"
+            },
+            "designerId": "67d0d804-d932-4753-9ebf-3afaedc2841f",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 2,
+                        "container|align": "start",
+                        "docked": null,
+                        "height": "50%",
+                        "left": null,
+                        "top": "10%",
+                        "ui": "light",
+                        "width": "100%",
+                        "layout": "vbox"
+                    },
+                    "designerId": "d404c9f1-62c1-4146-9053-6b99efc221bc",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "cls": [
+                                    "fbLoginbtn"
+                                ],
+                                "docked": "top",
+                                "id": "fbloginbtn",
+                                "itemId": "fbloginbtn",
+                                "left": null,
+                                "ui": null,
+                                "text": ""
+                            },
+                            "designerId": "52b6d73a-1772-4f15-8730-cd9c2326ab98"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "FBloginScreendetailLabel"
+                                ],
+                                "html": "We will never post by your <br> Facebook acocunt <br>  without your permission"
+                            },
+                            "designerId": "aea70eac-e123-4c4d-b497-a57bbd6e9560"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "baseCls": "nofbbtn",
+                                "cls": [
+                                    "nofbbtn"
+                                ],
+                                "docked": null,
+                                "hidden": false,
+                                "html": "I don't have Facebook",
+                                "id": "nofbbtn",
+                                "itemId": "nofbbtn",
+                                "left": null,
+                                "minHeight": 20,
+                                "style": "text-decoration: underline",
+                                "text": null
+                            },
+                            "designerId": "cc542a5e-54b5-4549-be66-e58cd30b351b"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "baseCls": null,
+                                "cls": [
+                                    "signmanager"
+                                ],
+                                "docked": "bottom",
+                                "height": null,
+                                "html": null,
+                                "id": "signmanagerbtn",
+                                "itemId": "signmanagerbtn",
+                                "left": null,
+                                "style": "text-decoration: underline",
+                                "text": null
+                            },
+                            "designerId": "b7f03de5-2732-486f-bd3e-62ebed8d9533"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 4,
+                        "cls": [
+                            "wholepageRelative"
+                        ],
+                        "docked": "top",
+                        "height": "20%"
+                    },
+                    "designerId": "81951c0e-430e-4b76-ad6f-3b31fc8c15c4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "signinToolbar"
+                ],
+                "docked": "top"
+            },
+            "designerId": "09df477b-ab31-4ff0-a341-fd67413aeae0"
+        }
+    ]
+}

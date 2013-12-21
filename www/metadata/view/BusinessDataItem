@@ -1,0 +1,579 @@
+{
+    "type": "Ext.dataview.component.DataItem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": "25%",
+        "id": null,
+        "itemId": "BusinessDataItem",
+        "minHeight": 100,
+        "padding": 10,
+        "designer|userClassName": "BusinessDataItem",
+        "designer|userAlias": "BusinessDataItem",
+        "layout": "fit",
+        "itemCls": "Dataitem"
+    },
+    "designerId": "e0d20b67-ba53-4437-97a2-baf259f393b1",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateRecord",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "// Provide an implementation to update this container's child items\r",
+                    "\r",
+                    "this.callParent(arguments);\t\r",
+                    "\r",
+                    "if(record)\r",
+                    "{\r",
+                    "\r",
+                    "    var capacitypercent = 0;\r",
+                    "    if(record.get('capacitypercent'))\r",
+                    "    capacitypercent= record.get('capacitypercent');\r",
+                    "    var moreboys =0;\r",
+                    "    if(record.get('moreboys'))\r",
+                    "    moreboys= record.get('moreboys');\r",
+                    "    var moregirls=0;\r",
+                    "    if(record.get('moregirls'))\r",
+                    "    moregirls= record.get('moregirls');\r",
+                    "    var likescounter = \"\";\r",
+                    "    if(record.get('likescounter'))\r",
+                    "    likescounter= \"\";//record.get('likescounter');\r",
+                    "\r",
+                    "\r",
+                    "    var logo = record.get('logourl');\r",
+                    "    if(!logo || logo === null || logo===\"\")\r",
+                    "    {\r",
+                    "        logo='resources/images/logo.png';\r",
+                    "    }\r",
+                    "    if(this.down('image[itemId=Image]')===null)\r",
+                    "\t\tthis.applyImage();\r",
+                    "    \r",
+                    "    this.down('image[itemId=Image]').setSrc(logo);\r",
+                    "    \r",
+                    "    this.down('component[itemId=Title]').setHtml(''+record.get('distance')+' km <br> '+capacitypercent+'% full <br> +'+record.get('minage')+'');\r",
+                    "    this.down('label[itemId=BusinessNamelbl]').setHtml(record.get('business_name'));\r",
+                    "    this.down('component[itemId=likeComp]').setHtml(''+likescounter+'<br> '+moregirls+'%<br>'+moreboys+'%');\r",
+                    "\r",
+                    "    //calculate the last update minutes\r",
+                    "    //set the Rating button\r",
+                    "    //console.log(record.get('last_update_time'));\r",
+                    "    var LastupdateTime = record.get('last_update_time');\r",
+                    "    //console.log(\"LastRatingTime:\"+LastRatingTime);\r",
+                    "    var diff;//the time diff between now and the last update time by user\r",
+                    "    var now = new Date(); // now\r",
+                    "    if(LastupdateTime)\r",
+                    "    {                       \r",
+                    "        //calculate the diff in minutes since last update\r",
+                    "        diff= now - LastupdateTime;\r",
+                    "        var sign=diff<0?-1:1;\r",
+                    "        diff/=sign; // or diff=Math.abs(diff);\r",
+                    "        var minutes,milliseconds,seconds;\r",
+                    "        diff=(diff-(milliseconds=diff%1000))/1000;\r",
+                    "        //diff=(diff-(seconds=diff%60))/60;\r",
+                    "        diff=((diff-(minutes=diff%60))/60);\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        diff=-1;//dummy value\t\r",
+                    "    }\r",
+                    "    if(diff===-1)\r",
+                    "    {\r",
+                    "        this.down('component[itemId=lastupdatelbl2]').setHtml('Last Updated:');\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        this.down('component[itemId=lastupdatelbl2]').setHtml('Last Updated:<b>'+diff+' minutes ago</b>');\r",
+                    "    }\r",
+                    "    if(diff<5 && diff>=0)\r",
+                    "    {\r",
+                    "        this.down('container[itemId=dotcontainer]').setHtml('<img src=\"resources/images/green_b.png\" height=\"8\" width=\"8\")>');\r",
+                    "    }\r",
+                    "    else\r",
+                    "    {\r",
+                    "        this.down('container[itemId=dotcontainer]').setHtml('<img src=\"resources/images/greydot.png\" height=\"8\" width=\"8\")>');\r",
+                    "    }\r",
+                    "\r",
+                    "\r",
+                    "    //this.show();\r",
+                    "\r",
+                    "    //this.down('component[itemId=Title]').destroy();\r",
+                    "}"
+                ]
+            },
+            "designerId": "621e6f76-68ff-461f-b10b-bd67673f22cc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "applyImage",
+                "designer|params": [
+                    "config"
+                ],
+                "implHandler": [
+                    "return Ext.factory(config, Ext.Img, this.down('image[itemId=Image]'));"
+                ]
+            },
+            "designerId": "9f7f647e-a35d-44b6-80d8-73cd9723b58c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "applyTitle",
+                "designer|params": [
+                    "config"
+                ],
+                "implHandler": [
+                    "return Ext.factory(config, Ext.Component, this.getTitle());"
+                ]
+            },
+            "designerId": "bb912c43-5870-4832-9246-780369dac3be"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "applygoBtn",
+                "designer|params": [
+                    "config"
+                ],
+                "implHandler": [
+                    "return Ext.factory(config, Ext.Button, this.getGoBtn());"
+                ]
+            },
+            "designerId": "9a41b5d0-3ef0-4d7e-b91e-495b06be358e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateImage",
+                "designer|params": [
+                    "newImage",
+                    "oldImage"
+                ],
+                "implHandler": [
+                    "if (newImage) {\r",
+                    "    this.add(newImage);\r",
+                    "}\r",
+                    "\r",
+                    "if (oldImage) {\r",
+                    "    this.remove(oldImage);\r",
+                    "}"
+                ]
+            },
+            "designerId": "ce3e4527-5b79-4259-9345-326b7160e983"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateTitle",
+                "designer|params": [
+                    "oldTitle",
+                    "newTitle"
+                ],
+                "implHandler": [
+                    "if (newTitle) {\r",
+                    "    this.add(newTitle);\r",
+                    "}\r",
+                    "\r",
+                    "if (oldTitle) {\r",
+                    "    this.remove(oldTitle);\r",
+                    "}"
+                ]
+            },
+            "designerId": "84ffe9bd-c7cd-46ef-93b3-474fc872c17f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updategoBtn",
+                "designer|params": [
+                    "oldgoBtn",
+                    "newgoBtn"
+                ],
+                "implHandler": [
+                    "if (newgoBtn) {\r",
+                    "    this.add(newgoBtn);\r",
+                    "}\r",
+                    "\r",
+                    "if (oldgoBtn) {\r",
+                    "    this.remove(oldgoBtn);\r",
+                    "}"
+                ]
+            },
+            "designerId": "3c1c1d57-02cf-4c33-8f7c-64135d4e227c"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "width": "100%",
+                "layout": "fit"
+            },
+            "designerId": "40b6d3c2-830d-49cc-8b82-6b8f751b88af",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretchmax",
+                        "height": null,
+                        "margin": null,
+                        "ui": "",
+                        "width": "100%",
+                        "layout": "hbox"
+                    },
+                    "designerId": "22f538e7-ab5d-4c2a-987d-50419635081a",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2,
+                                "margin": "10 0 10 10"
+                            },
+                            "designerId": "09166ddb-6447-4b91-88b5-6d9aa6bb72e0",
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "baseCls": null,
+                                        "cls": [
+                                            "ListItemLogo"
+                                        ],
+                                        "docked": null,
+                                        "height": 70,
+                                        "id": null,
+                                        "itemId": "Image",
+                                        "maxHeight": null,
+                                        "minHeight": null,
+                                        "minWidth": null,
+                                        "width": 70,
+                                        "imageCls": null,
+                                        "src": "resources/images/logo.png"
+                                    },
+                                    "designerId": "effe1dd5-b95d-4b9e-8eaa-58044fd383a3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 3,
+                                "margin": "10 10 10 0"
+                            },
+                            "designerId": "5732907f-0ec5-42d2-a710-83e04f0de024",
+                            "cn": [
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "ListItemInnerTitle"
+                                        ],
+                                        "docked": null,
+                                        "html": "10.975 km <br> 48% full <br> +23",
+                                        "id": null,
+                                        "itemId": "Title",
+                                        "styleHtmlCls": "ListItemHtml",
+                                        "styleHtmlContent": true,
+                                        "width": "90%"
+                                    },
+                                    "designerId": "8aee4cfc-745b-4e18-82a7-5546ea6f9863"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1.5,
+                                "margin": "0 0 10 0",
+                                "minHeight": null,
+                                "layout": "vbox"
+                            },
+                            "designerId": "ecdf86ab-b120-490f-9950-53af2c468c71",
+                            "cn": [
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 0.5,
+                                        "baseCls": null,
+                                        "bottom": null,
+                                        "cls": [
+                                            "likesManWomCont"
+                                        ],
+                                        "height": null,
+                                        "html": "78 <br>51% <br> 49%",
+                                        "id": null,
+                                        "itemId": "likeComp",
+                                        "margin": null,
+                                        "minHeight": 60,
+                                        "padding": null,
+                                        "styleHtmlCls": "ListItemHtml",
+                                        "styleHtmlContent": true,
+                                        "top": null,
+                                        "width": null
+                                    },
+                                    "designerId": "faad0e93-31a7-4c88-a3f1-5d5a64d6d0eb"
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1
+                                    },
+                                    "designerId": "a2c03906-b5a1-43aa-a580-42637ae4e55b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "margin": "0 0 0 10"
+                            },
+                            "designerId": "3aeb1b6c-ca6e-424e-9d4d-c9584994bdbc",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "baseCls": "GoBusinessButton",
+                                        "docked": null,
+                                        "height": null,
+                                        "id": null,
+                                        "itemId": "GoBtn",
+                                        "margin": "18 0 10 10",
+                                        "maxHeight": null,
+                                        "minHeight": 70,
+                                        "top": null,
+                                        "width": null,
+                                        "iconCls": null,
+                                        "text": null
+                                    },
+                                    "designerId": "dfcafb58-d00b-4008-91f1-d3f02a1b89ef"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "dataitemTitle"
+                ],
+                "docked": "top",
+                "height": "auto"
+            },
+            "designerId": "e8c7aeab-8584-49dc-a45a-39dbb5c2b493",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 5,
+                        "docked": "right",
+                        "left": null,
+                        "minWidth": "150%",
+                        "right": null,
+                        "width": null,
+                        "layout": "hbox"
+                    },
+                    "designerId": "1e0dbc34-c9f3-4fea-b534-351a78ed229d",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "<img src=\"resources/images/green_b.png\" height=\"8\" width=\"8\")>",
+                                "itemId": "dotcontainer",
+                                "margin": "-6 4 0 20"
+                            },
+                            "designerId": "8ecf1282-5c77-434c-899a-9a9182c206f0"
+                        },
+                        {
+                            "type": "Ext.Component",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 2,
+                                "baseCls": "lastupdateLabel",
+                                "docked": null,
+                                "height": null,
+                                "html": "Last Updated:<b>8 minutes ago</b>",
+                                "id": null,
+                                "itemId": "lastupdatelbl2",
+                                "left": null,
+                                "width": null
+                            },
+                            "designerId": "a6a033b4-ea2e-4973-ba47-c8f03910597c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 3,
+                        "baseCls": "BusinessNameLabel",
+                        "docked": "left",
+                        "html": "BusinessName",
+                        "id": null,
+                        "itemId": "BusinessNamelbl"
+                    },
+                    "designerId": "c7248016-b1d2-4ee8-9447-dfa3f44fb6c5"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "\r",
+                    "\r",
+                    "this.getItems().first().on('updatedata', this.updateItem, this);\r",
+                    "this.updateItem(this);"
+                ]
+            },
+            "designerId": "6402bbb8-4717-4bbc-8195-59ae90552401"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "updateItem",
+                "designer|params": [
+                    "me"
+                ],
+                "implHandler": [
+                    "console.log('updateItem');"
+                ]
+            },
+            "designerId": "718e71b4-43df-4341-8e31-f7a342e55557"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BusinessPhotos"
+    },
+    "designerId": "b41bf817-20c0-4c1c-9f34-d9b80280cbb4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "businessid",
+                "type": "int"
+            },
+            "designerId": "32e9a930-babd-4dee-919d-d598681c92c8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photoid",
+                "type": "int"
+            },
+            "designerId": "783258bc-0bbb-447d-b692-09df14c5bbc5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photourl",
+                "type": "string"
+            },
+            "designerId": "c9004d92-c7ae-4d8f-9250-3c988603d098"
+        }
+    ]
+}

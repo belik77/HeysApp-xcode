@@ -1,0 +1,27 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FirstScreen"
+    },
+    "designerId": "84efcc5e-a68f-4058-9687-8ff9ae0cb7d2",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "מסך ראשון"
+            },
+            "designerId": "0096eddc-4818-40d5-adb7-6bd6339831a2"
+        }
+    ]
+}

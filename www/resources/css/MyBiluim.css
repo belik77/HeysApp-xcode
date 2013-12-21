@@ -1,0 +1,1392 @@
+
+
+/************General**************/
+
+
+/* line 498, ../themes/stylesheets/sencha-touch/default/widgets/_form.scss */
+
+
+
+/*Fix for missing padding on iPhone and iPad*/
+.x-phone,
+.x-tablet {
+    .x-input-search {
+        padding: 0.2em 25px !important;
+    }
+}
+
+
+.x-field.x-field-labeled .x-form-label {
+  display: block !important;
+  background: transparent;
+}
+/* line 173, ../themes/stylesheets/sencha-touch/default/widgets/_form.scss */
+.x-field .x-field-input, .x-field .x-input-el {
+  width:100%;
+  background: white;
+}
+
+/* line 63, ../themes/stylesheets/sencha-touch/default/widgets/_form-sliders.scss */
+.x-thumb:after {
+  content: "";
+  position: absolute;
+  width: 1.85em;
+  height: 0.8em;
+  top: 0.737em;
+  left: 0;
+  right: 0;
+  border: 1px solid #919191;
+  -webkit-border-radius: 0.925em;
+  border-radius: 0.925em;
+  background-image: none;
+  background-color: #dddddd;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(3%, #eaeaea), color-stop(100%, #d0d0d0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #eaeaea 3%, #d0d0d0);
+  background-image: linear-gradient(top, #ffffff, #eaeaea 3%, #d0d0d0);
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+/* line 81, ../themes/stylesheets/sencha-touch/default/widgets/_form-sliders.scss */
+.x-slider:after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  margin-left: 5%;
+  margin-right: 15%;
+  background-image: none;
+  background-color: #dddddd;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4c4c4), color-stop(10%, #d0d0d0), color-stop(65%, #dddddd), color-stop(100%, #dedede));
+  background-image: -webkit-linear-gradient(top, #c4c4c4, #d0d0d0 10%, #dddddd 65%, #dedede);
+  background-image: linear-gradient(top, #c4c4c4, #d0d0d0 10%, #dddddd 65%, #dedede);
+  border: 0.1em solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.7) 0 0.1em 0;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 0.1em 0;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+}
+
+.heys_logo{
+	padding-top:10%;
+	height: 8%;
+	width: 8%;
+}
+
+.TransparentContainer{
+	background-color : transparent;
+}
+
+
+
+.x-field-select .x-component-outer:after {
+    background-color: transparent;
+}
+
+.x-list .x-list-item{
+	background:url(../images/gal02.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.x-list .x-list-item.x-item-selected .x-dock-horizontal {
+	background:url(../images/gal01.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.x-list .x-list-item.x-item-pressed .x-dock-horizontal {
+  background: #eeeeee none;
+}
+
+/* line 214, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
+.x-list-normal .x-list-item.x-item-pressed .x-dock-horizontal {
+  background:url(../images/gal01.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  border-top-color: #eeeeee;
+  background-color: #eeeeee;
+}
+/* line 219, ../themes/stylesheets/sencha-touch/default/widgets/_list.scss */
+.x-list-normal .x-list-item.x-item-selected .x-dock-horizontal {
+  background:url(../images/gal01.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  border-top-color: #eeeeee;
+  border-bottom: 1px solid #003e6a;
+}
+
+.Listitem{
+	color: #CCC;
+    font-size:60%;
+	background-color: transparent;
+}
+
+.x-tabbar.x-docked-top .x-tab {
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+	resizeTabs: true;
+	width: 50%;
+	height: 100%;
+}
+
+.x-tabbar.x-docked-top .x-tab{
+	background:url(../images/map02_1.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.x-tabbar.x-docked-top .x-tab-active {
+  background:url(../images/map01_1.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.x-tabbar.x-docked-top .x-tab .x-button-label, .x-tabbar.x-docked-top .x-tab .x-hasbadge .x-badge, .x-hasbadge .x-tabbar.x-docked-top .x-tab .x-badge {
+  font:  60% Helvetica;
+  line-height: .4em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.x-tabbar.x-docked-top {
+  border-bottom-width: 0em;
+  border-bottom-style: solid;
+  height: 2.6em;
+  padding: 0 0em;
+  background-color: transparent;
+}
+
+
+.boldfonts{
+	font-weight: bold;
+}
+
+.btnPressed{
+	opacity: 0.4;
+}
+/************Login/Reg**************/
+.fblogin{
+	background:url(../images/bg2.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	overflow:auto;
+}
+
+.regbkgscreen{
+	background:url(../images/bg.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	overflow:auto;
+}
+
+.backbtnico{
+	background:url(../images/back_arrow_heys.png) no-repeat;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.backbtn{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+
+
+.fbLoginbtn{
+	background:url(../images/login.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	color: #000000;
+	margin-right:5%;
+	margin-left:5%;
+	border: 0;
+}
+.signmanager{
+	background:url(../images/signmanager.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	color: #000000;
+	margin-right:5%;
+	margin-left:5%;
+	border: 0;
+}
+
+.signmanagrlbl{
+	color: white;
+	font:  60% Helvetica;
+}
+
+.loginmargin{
+	margin-right:5%;
+	margin-left:5%;
+	display:block;
+	margin-top: 8%;
+}
+
+.nofbbtn{
+	display:block;
+	margin:15px 0;
+	color: #fff;
+	font:  15px/26px Helvetica;
+	margin-right:5%;
+	margin-left:5%;
+	background: transparent;
+	background-color:transparent;
+	border: activeborder;
+}
+
+
+
+.SignRegbutton {
+	padding-bottom:5%;
+	padding-top:5%;
+}
+
+.Regbutton {
+    background:url(../images/register_PNG02.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+	
+.Signbutton {
+    background:url(../images/loginbtn.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.registerToolbar{
+	background:url(../images/register_png.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.signinToolbar{
+	background:url(../images/sginin_png.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+/************Search Screen - TOP panel**************/
+.LoadMorebtn{
+	background:url(../images/load_more.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	color: #000000;
+	margin-right:5%;
+	margin-left:5%;
+	border: 0;
+	margin-top: 2%;
+	margin-bottom: 4%;
+}
+
+.CityCatLabel-class{
+    background:url(../images/Category_2.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-text-fill-color: black;
+	text-align:center!important;
+	box-sizing: inherit;
+	font:  Helvetica;
+	font-size:50%;
+	margin: 0 0 0 0;
+}
+
+
+.CatLabel-class{
+    background:url(../images/Category.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-text-fill-color: black;
+	text-align:center!important;
+	font:  Helvetica;
+	font-size:50%;
+	box-sizing: inherit;
+	margin: 0 0 0 0;
+	font-weight: bold;
+}
+
+.CityLabel-class{
+    background:url(../images/CITY.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-text-fill-color: black;
+	text-align:center!important;
+	font:  Helvetica;
+	font-size:50%;
+	box-sizing: inherit;
+	margin: 0 0 0 0;
+	font-weight: bold;
+}
+
+.ListMapTopCont{
+	background:url(../images/12346.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-right:1%;
+	margin-left:1%;
+	display:block;
+	margin-top: 1%;
+}
+.ListMapTopContNoBtn{
+	background:url(../images/123456-2.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-right:1%;
+	margin-left:1%;
+	display:block;
+	margin-top: 1%;
+}
+
+.ListTopCont{
+	margin-bottom:4%;
+}
+
+.ListMapTopContCollapse{
+	background:url(../images/12345.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-right:1%;
+	margin-left:1%;
+	display:block;
+	margin-top: 1%;
+}
+
+
+/*the button which hid the search pannel*/
+.HideButton{
+	  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+	left: 40%;
+	bottom: 30px;
+	height: 20px;
+}
+
+
+.ListMapTopBar{
+	background:url(../images/list_map.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.ListMapTopContMargins{
+	margin-top: 1%;
+}
+
+
+.SearchField1{
+	background:url(../images/search_.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	font:  40% Helvetica;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.SearchField{
+		height: 26px;
+        font-size: 0.8em;
+        line-height: 25px;
+        padding: 0px 15px;
+        border-radius: 12px;
+        border-top: 0.1em solid rgba(0, 0, 0, 0.2);
+        border-left: 0.1em solid rgba(0, 0, 0, 0.125);
+        border-right: 0.1em solid rgba(0, 0, 0, 0.125);
+        border-bottom: 0.1em solid rgba(0, 0, 0, 0.05);
+        background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABUhJREFUeNrUW/1zFEUQ3b27JAYluUMNhCKU+EGiiCBUYSlIWer/rD+ohUjiVxVYCooCSUoMAXOBfEFIJFnfY99Z51Vumd6Zvdx11au9H3Zm+2339HT37MVJkkQ+EsdxCZcKUAb2AMNA86QxsAw8AraAJ3jmdrRLUvEg+gIue4ExYBTYB/RlDCHJOjCPsfdwvQ/iK50mHFstDGWHRPI14IDHs0l+FvgTOtS7jjCIDuLyDnAEGAqoA139DnAVuvy964RBNJZFz8hti5KHwI/AzSLXeCZhcO3H5STwts96NwiJXgd+gF6bHSUMsgxAH8mFOy0zIr3cEcIg+xwu54BXo92TJeAz6LcactJSmzX73i6TpVSph15+cYQViY9G3SF86SeV3IRPPDDxARGOc8630YRtzTMg5LUU9eF2NR2UMMjy9ylgMMc8i9pLF4AHWHeLLYlKTdkY8XKO+U9jnjnMuxEsaGFCus/Hbdw8a+/8nmQxzyOH5IVWPggcB/YbnkMlf8UzJoOsYWVR40ayd4HPocRNF7JPtU6SxwBd80vgVkuRkfmugMPQ86VQQYtudsgwju77RbPrWgTj1nC5APxmGMZC5fV0E/EgrAh42BCoGEAuuFo1gzRLxSngtmHYqEfw+8/Cg4Y9lySnZCFvUc58kYHOcUhN9bYX4RHDW7utSBxMQJqB72fDrlLzJXzIYN0biW+LZGeZA+453juiLTQ3YdfItwyudwrKqNYMa7nqU7mVHIt5WnW+qPxRTlNXdvYsGfIlPOBw35YUKlK4lh873MdGYTlk8dCuMH/YgeI/KfgZpsyq6NZqHHVASgZl+qPukbhowmVDNM8rA44vldvjEx/CDxzv218wYWZQfQ73bfosLxK573jvPp02hPfPtDs66nj7kq+FXbcbkn2lIOtWDRlf3ZfwnKOLcLOfgDUGAluX8eEtQ6el7tOoL8lFXI84ePJwImRTLUqb/K5Nw1Xp67UtMYuaNio47luIy7qsw08YhiyIdH7Cqn7+itIzXNcS7X26Yd6qJU7lDfw8byhN2cCb9q3WGq5Jsr8bxpHoWeADdSUtZJkLs/X6ofJiV2H5OOvrVRVVKwkUmZW7uipBn57QdsWXNY9pljKIVhUD2CwcM+rJvfeXEKeKlaYSbQlKXcXP08ZqZERYw/gV1barwh6hprJur0cq2RcFkP8dpunE8JMober5Vj7bWjKhIjqrte+g761gxQMm+4eTGrKvrHkrAclSnmewhFEOBq2WtA4vdaD+zSNcHud9SGcdiLNY+FRvttuEFdMkdJ8JRlikGYzOdaA0zLump6ykXT5qYdFwRoVDpQst/ZWlm+r02ZLSyDeBY1ExX/IwbqyoRLRuPxx30ZW06cM0ZVXHVcoNByDKvZqKXuPHaZif59OnckR3ZopfY467QQm3EK/JzceMKeJ6lB61cu0ttH6pg7knFDdKOdz7EuabDU64SbmKkn++gBdl9SFlaokypC25HYkt6vdmu++wtHwmlKuXcwSyb3UGHZ7wTlVQtHNHMbFWOZhqXJYuhwxkcTFnY8Fe4Lta0+VQgayrCYv0UVnauiWua03PZKaW3SZQ+I8o/VLAWhoOql4/0lOEJdeV31u7lUyLz4L0aKMl1ROEueyABumtPAVHIz3uFQs3u/eVHKS5XR5jS7inCIv0ZVnauqb5l4X+niMsYQ9t0kiaUX64JwlrTfOjtm+M7r3eqxZuEKelLzuSZga20dOERfqKLP2sLesn5vA9T7glOWn3x5Br3MvZ1+761NKQgvJSVaNiREUMrX4jSv8a9NTt/xVgADf/+DWpDs3NAAAAAElFTkSuQmCC') no-repeat 7px 5px;
+        background-size: 15px;
+        -webkit-background-image-opacity: 0.5;
+        -webkit-box-shadow: #DFDFDF 0px 1px 1px inset;
+}
+
+.SearchFieldStyle{
+font-size:.9em;
+border-radius:.9em;
+webkit-input-border-radius:.9em;
+}
+
+
+.sortBylbl{
+	font:  60% Helvetica;
+	font-weight: bold;
+}
+
+
+.ListMapTopTabPannel{
+	margin-right:4%;
+	margin-left:4%;
+	display:block;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+
+.searchScreenToolbar{
+	background:url(../images/list_map_bar.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+/************Search Screen - Dataitem panel**************/
+
+.dataitemTitle{
+	background:url(../images/b3.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+
+.BusinessNameLabel{
+	color: yellow;
+	margin-left:5%;
+	font:  60% Helvetica;
+	font-weight: bold;
+}
+
+.lastupdateLabel{
+	color: white;
+	margin-right:5%;
+	font:  50% Helvetica;
+	font-weight: bold;
+	width: auto;
+}
+
+.dot{
+}
+
+.likesManWomCont{
+	background:url(../images/likes2.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.ListItemLogo{
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.ListItemHtml{
+  -webkit-user-select: auto;
+  -webkit-touch-callout: inherit;
+  font-size: 80%;
+	color: white;
+	font-weight: bold;
+	text-align:left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.BusinessListItemHtml{
+  -webkit-user-select: auto;
+  -webkit-touch-callout: inherit;
+  font-size: 65%;
+	color: white;
+	font-weight: bold;
+	text-align:left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.ListItemInnerTitle{
+	margin-left:2%;
+	margin-top:5%;
+	margin-bottom:5%;
+	height: auto;
+	width: 50%;
+}
+
+.GoBusinessButton {
+    background:url(../images/b1.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: .8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.GoBusinessButtonSelected {
+    background:url(../images/b2.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: .8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+
+.GreenDot{
+	width: 10%;
+	height: auto;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-right:2%;
+	margin-top:2%;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.1em;
+  border-radius: 0.1em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.Dataitem{
+	border-top: 0px solid rgb(0,0,0);
+	border-bottom: 0px solid rgb(0,0,0);
+}
+
+.Dataitem-selection{
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+}
+
+
+/************Where are you Screen **************/
+
+.WhereAreYouScreen{
+	height: 25%;
+	width: 90%;
+	top: 20%;
+	-webkit-border-radius: 0em;
+    border-radius: 0em;
+	background: transparent;
+	background-color:transparent;
+}
+.WhereAreYouToolbar{
+	background:url(../images/where-are-you.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.WhereAreYouListCont{
+	background:url(../images/bg_where.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.WhereAreYouList{
+	margin-right:4%;
+	margin-left:4%;
+	margin-top:4%;
+	margin-bottom:4%;
+}
+
+/************Rating Screen **************/
+
+.RatingScreen{
+	height: 60%;
+	width: 90%;
+	top: 10%;
+	-webkit-border-radius: 0em;
+    border-radius: 0em;
+	background: transparent;
+	background-color:transparent;
+}
+.RatingToolbar{
+	background:url(../images/rate.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.RatingCont{
+	background:url(../images/bg_where.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.Emptybtn{
+	background:url(../images/Empty.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.coolbtn{
+	background:url(../images/cool.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.hotbtn{
+	background:url(../images/hot.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.fullbtn{
+	background:url(../images/full.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.boysbtn{
+	background:url(../images/b&g2.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.boysbtnselected{
+	background:url(../images/b&g1.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.girlsbtn{
+	background:url(../images/b&g3.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.girlsbtnselected{
+	background:url(../images/b&g4.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.okratingbtn{
+	background:url(../images/ok.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+  width:25%;
+  left:37.5%;
+}
+
+.RatingTopContMargins{
+	margin-top: 2%;
+	margin-right:5%;
+	margin-left:5%;
+}
+
+.RatingLeftRightContMargins{
+	margin-right:2%;
+	margin-left:2%;
+}
+
+.Rating01{
+background:url(../images/01.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.Rating120{
+background:url(../images/120.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.RatingSlider{
+	height: 10px;
+}
+
+
+/************setting Screen **************/
+.settingToolbar{
+	background:url(../images/Settings_bar.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.settingbg{
+	background:url(../images/setting_bg.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	overflow:auto;
+}
+
+.settinginnerbg{
+	background:url(../images/setting_bg.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-right:2%;
+	margin-left:2%;
+	margin-top:2%;
+	margin-bottom:2%;
+	
+}
+
+.pushstrip{
+	background:url(../images/strip01.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.scorestrip{
+	background:url(../images/strip02.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.favotrip{
+	background:url(../images/favobar.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.favotoggle{
+	background-color : transparent;
+}
+
+/************business Screen **************/
+
+.businessToolbar{
+	background:url(../images/list_map_bar.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.businessbottomToolbar{
+	background:url(../images/bar.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.businessbkgscreen{
+	background:url(../images/bg.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.businessinnerbkgscreen{
+	background:url(../images/bg01.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-right:4%;
+	margin-left:4%;
+	margin-top:2%;
+	margin-bottom:2%;
+}
+
+.businessinnercont{
+	margin-top:4%;
+	margin-bottom:2%;
+}
+
+.businesstitlestrip{
+	background:url(../images/Title_strip.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.businessdetailstrip{
+	background:url(../images/strip.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.BusinessScreenNameLabel{
+	color: yellow;
+	margin-left:4%;
+	font:  80% Helvetica;
+	font-weight: bold;
+}
+
+.BusinessNameLabelBusinessScreen{
+	-webkit-user-select: auto;
+	-webkit-touch-callout: inherit;
+	color: white;
+	font-size: 60%;
+	padding: 0.2em;
+	
+}
+
+.BusinessScreendetailLabel{
+	color: white;
+	font:  80% Helvetica;
+	margin-left:4px;
+}
+.ShowPhonebtn{
+	background:url(../images/Show-phone-number.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	color: grey;
+	margin-right:2%;
+	margin-left:2%;
+	border: 0;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.businessinfocont{
+	overflow:auto;
+}
+
+.businesspicleftbtn{
+	background:url(../images/Arrow2.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.businesspicrightbtn{
+	background:url(../images/Arrow.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.businessgoingbtn{
+	background:url(../images/goging_g_1.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+.businessgoingbtnactive{
+	background:url(../images/goging_w_1.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+.businessListItemInnerTitle{
+	margin-left:2%;
+	height: auto;
+	width: 50%;
+}
+
+.businessGoingLabel{
+	color: grey;
+	margin-left:2%;
+	font:  100% Helvetica;
+	font-weight: bold;
+	text-align:center!important;
+}
+
+.goinglbl{
+	background:url(../images/goging_g_2.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.businessphoto{
+}
+
+.ratebutton{
+	background:url(../images/r01.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+  width:10%;
+  left:45%;
+}
+
+.ratebuttonpressed{
+	background:url(../images/r012.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	-webkit-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0.4em;
+  border-radius: 0.4em;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  min-height: 1.8em;
+  padding: .3em .6em;
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  z-index: 1;
+   width:10%;
+  left:45%;
+}
+
+/************contact Screen **************/
+
+.contactToolbar{
+	background:url(../images/Contact.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.contactinnerbkgscreen{
+	background:url(../images/bg01.png) repeat-y center center;
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	overflow:auto;
+}
+
+.sendbtn{
+	background:url(../images/contact_send.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	color: #000000;
+	margin-right:5%;
+	margin-left:5%;
+	border: 0;
+	margin-top: 20%;
+}
+
+.ContactLabel{
+	font:  60% Helvetica;
+	font-weight: bold;
+}
+
+.contactfbLogo{
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	margin-left:5%;
+	width:79px;
+	height:21px;
+}
+
+.x-field:businessowner .x-field-input:businessowner, .x-field:businessowner .x-input-el:businessowner {
+  width:100%;
+  background: transparent;
+}
+
+.contactstrip{
+	background:url(../images/contact_strip.png) no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.FBloginScreendetailLabel{
+	color: white;
+	font:  80% Helvetica;
+	margin-left:4px;
+	-webkit-box-align: center;
+	box-align: center;
+	text-align:center!important;
+	margin-left: 25%;
+}
